@@ -56,6 +56,28 @@ func facultyHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func facultyTimetableHandler(w http.ResponseWriter, r *http.Request) {
+	faculty, err := ReadFaculty(r)
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		log.Fatal(err)
+	}
+
+	timetable, err := GetTimetable(faculty.Name)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal(err)
+	}
+
+	response := TimeTableResponse{Timetable: *timetable}
+	encoder := json.NewEncoder(w)
+	err = encoder.Encode(response)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal(err)
+	}
+}
+
 func main() {
 	port := 8080
 
@@ -63,6 +85,7 @@ func main() {
 	mux.HandleFunc("/departments", departmentsHandler)
 	mux.HandleFunc("/courses", coursesHandler)
 	mux.HandleFunc("/faculty", facultyHandler)
+	mux.HandleFunc("/faculty/timetable", facultyTimetableHandler)
 
 	log.Printf("Server starting on port %v\n", port)
 	log.Printf("Go to http://127.0.0.1:%v\n", port)
