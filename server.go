@@ -24,11 +24,45 @@ func departmentsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func coursesHandler(w http.ResponseWriter, r *http.Request) {
+	courses, err := GetCourses()
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal(err)
+	}
+
+	response := CoursesResponse(*courses)
+	encoder := json.NewEncoder(w)
+	err = encoder.Encode(response)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal(err)
+	}
+}
+
+func facultyHandler(w http.ResponseWriter, r *http.Request) {
+	faculty, err := GetFaculty()
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal(err)
+	}
+
+	response := FacultyResponse(*faculty)
+	encoder := json.NewEncoder(w)
+	err = encoder.Encode(response)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal(err)
+	}
+}
+
 func main() {
 	port := 8080
 
 	mux := http.DefaultServeMux
 	mux.HandleFunc("/departments", departmentsHandler)
+	mux.HandleFunc("/courses", coursesHandler)
+	mux.HandleFunc("/faculty", facultyHandler)
 
 	log.Printf("Server starting on port %v\n", port)
 	log.Printf("Go to http://127.0.0.1:%v\n", port)
