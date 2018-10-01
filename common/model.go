@@ -1,4 +1,4 @@
-package main
+package common
 
 // Department represents the metadata related to a department.
 type Department struct {
