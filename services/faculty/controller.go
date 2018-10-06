@@ -1,7 +1,6 @@
 package faculty
 
 import (
-	"context"
 	"log"
 	"net/http"
 
@@ -9,14 +8,14 @@ import (
 )
 
 func (sf *serviceFaculty) facultyHandler(w http.ResponseWriter, r *http.Request) {
-	ctx := context.Background()
-	conn, err := sf.GetDBConnection(ctx)
-	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
-		log.Fatal("Error connecting to DB:", err)
-	}
+	// ctx := context.Background()
+	// conn, err := sf.GetDBConnection(ctx)
+	// if err != nil {
+	// 	w.WriteHeader(http.StatusInternalServerError)
+	// 	log.Fatal("Error connecting to DB:", err)
+	// }
 
-	faculty, err := GetFaculty(conn)
+	faculty, err := GetFaculty(sf.DB)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Println(err)
@@ -25,7 +24,7 @@ func (sf *serviceFaculty) facultyHandler(w http.ResponseWriter, r *http.Request)
 }
 
 func (sf *serviceFaculty) facultyTimetableHandler(w http.ResponseWriter, r *http.Request) {
-	ctx := context.Background()
+	// ctx := context.Background()
 
 	faculty, err := ReadFaculty(r)
 	if err != nil {
@@ -33,13 +32,13 @@ func (sf *serviceFaculty) facultyTimetableHandler(w http.ResponseWriter, r *http
 		log.Println(err)
 	}
 
-	conn, err := sf.GetDBConnection(ctx)
-	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
-		log.Fatal("Error connecting to DB:", err)
-	}
+	// conn, err := sf.GetDBConnection(ctx)
+	// if err != nil {
+	// 	w.WriteHeader(http.StatusInternalServerError)
+	// 	log.Fatal("Error connecting to DB:", err)
+	// }
 
-	timetable, err := GetTimetable(conn, faculty.Name)
+	timetable, err := GetTimetable(sf.DB, faculty.Name)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Println(err)

@@ -1,7 +1,6 @@
 package course
 
 import (
-	"context"
 	"log"
 	"net/http"
 
@@ -9,15 +8,15 @@ import (
 )
 
 func (sc *serviceCourse) handlerCourseInfoAll(w http.ResponseWriter, r *http.Request) {
-	ctx := context.Background()
-	conn, err := sc.GetDBConnection(ctx)
-	if err != nil {
-		// Respond with http.StatusInternalServerError
-	}
-	// TODO: Catch the error returned while closing connection
-	defer conn.Close()
+	// ctx := context.Background()
+	// conn, err := sc.GetDBConnection(ctx)
+	// if err != nil {
+	// 	// Respond with http.StatusInternalServerError
+	// }
+	// // TODO: Catch the error returned while closing connection
+	// defer conn.Close()
 
-	courses, err := GetCourses(conn)
+	courses, err := GetCourses(sc.DB)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Fatal(err)
@@ -32,7 +31,7 @@ func (sc *serviceCourse) handlerCourseInfoAll(w http.ResponseWriter, r *http.Req
 }
 
 func (sc *serviceCourse) handlerCourseInfo(w http.ResponseWriter, r *http.Request) {
-	ctx := context.Background()
+	// ctx := context.Background()
 
 	var course *common.Course
 	err := common.DecodeFromJSON(r, course)
@@ -41,15 +40,16 @@ func (sc *serviceCourse) handlerCourseInfo(w http.ResponseWriter, r *http.Reques
 		log.Println("Bad Request:", err)
 	}
 
-	conn, err := sc.GetDBConnection(ctx)
-	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
-		log.Fatal(err)
-	}
-	// TODO: Catch the error returned while closing connection
-	defer conn.Close()
+	// conn, err := sc.GetDBConnection(ctx)
+	// if err != nil {
+	// 	w.WriteHeader(http.StatusInternalServerError)
+	// 	log.Fatal(err)
+	// }
 
-	err = GetCourse(conn, course)
+	// TODO: Catch the error returned while closing connection
+	// defer conn.Close()
+
+	err = GetCourse(sc.DB, course)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Fatal(err)

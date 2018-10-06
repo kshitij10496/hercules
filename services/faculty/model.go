@@ -9,7 +9,7 @@ import (
 )
 
 // GetFaculty returns the list of faculty members in IITKGP.
-func GetFaculty(conn *sql.Conn) (data common.Faculty, err error) {
+func GetFaculty(db *sql.DB) (data common.Faculty, err error) {
 	// TODO: Fetch data from http://www.iitkgp.ac.in/facultylist
 	faculty := common.Faculty{
 		common.FacultyMember{
@@ -46,7 +46,7 @@ func ReadFaculty(r *http.Request) (facultyMember common.FacultyMember, err error
 	return facultyMember, err
 }
 
-func GetTimetable(conn *sql.Conn, name string) (data *common.Timetable, err error) {
+func GetTimetable(db *sql.DB, name string) (data *common.Timetable, err error) {
 	timetable := &common.Timetable{
 		Monday: []common.Slot{
 			common.Slot{

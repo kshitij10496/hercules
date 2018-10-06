@@ -31,7 +31,7 @@ type Course struct {
 type Courses []Course
 
 // GetCourse returns all the information related to a course given the course code.
-func (c *Course) GetCourseInfo(conn *sql.Conn) error {
+func (c *Course) GetCourseInfo(db *sql.DB) error {
 	// TODO: Replace this with a DB lookup
 	if c.Code == "NA61001" {
 		c.Name = "COASTAL ENGINEERING"

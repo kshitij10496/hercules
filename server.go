@@ -22,26 +22,16 @@ func main() {
 		log.Fatal("No PORT environment variable")
 	}
 
-	// db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
-	// if err != nil {
-	// 	log.Fatal("Error connecting to the DB:", err)
-	// }
-	// defer db.Close()
+	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	if err != nil {
+		log.Fatal("Error connecting to the DB:", err)
+	}
+	defer db.Close()
 
-	// log.Println("service-course creating...")
-	// course.ServiceCourse.DB = db
-	// log.Println("service-course created")
-	// fmt.Println()
-
-	// log.Println("service-department creating...")
-	// department.ServiceDepartment.DB = db
-	// log.Println("service-department created")
-	// fmt.Println()
-
-	// log.Println("service-faculty creating...")
-	// faculty.ServiceFaculty.DB = db
-	// log.Println("service-faculty created")
-	// fmt.Println()
+	log.Println("service-course creating...")
+	course.ServiceCourse.DB = db
+	course.ServiceCourse.Router = common.NewSubRouter(course.Routes)
+	log.Println("service-course created\n")
 
 	mainRouter := mux.NewRouter()
 	servicesRouter := mainRouter.PathPrefix(common.VERSION).Subrouter()
@@ -52,16 +42,7 @@ func main() {
 		faculty.ServiceFaculty,
 	}
 	for _, server := range servers {
-		log.Printf("%s creating...\n", server.GetURL())
-		db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
-		if err != nil {
-			log.Fatal("Error connecting to the DB:", err)
-		}
-		defer db.Close()
-
-		server.SetDB(db)
 		servicesRouter.PathPrefix(server.GetURL()).Handler(server)
-		log.Println("%s created\n", server.GetURL())
 	}
 	// TODO: Handle services page and home page
 

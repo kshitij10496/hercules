@@ -1,7 +1,6 @@
 package department
 
 import (
-	"context"
 	"log"
 	"net/http"
 
@@ -9,15 +8,14 @@ import (
 )
 
 func (sd *serviceDepartment) departmentsHandler(w http.ResponseWriter, r *http.Request) {
-	ctx := context.Background()
+	// ctx := context.Background()
+	// conn, err := sd.GetDBConnection(ctx)
+	// if err != nil {
+	// 	w.WriteHeader(http.StatusInternalServerError)
+	// 	log.Fatal("Error connecting to DB:", err)
+	// }
 
-	conn, err := sd.GetDBConnection(ctx)
-	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
-		log.Fatal("Error connecting to DB:", err)
-	}
-
-	departments, err := GetDepartments(conn)
+	departments, err := GetDepartments(sd.DB)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Fatal(err)

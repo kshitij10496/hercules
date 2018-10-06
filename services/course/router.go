@@ -51,14 +51,7 @@ func (s serviceCourse) SetDB(db *sql.DB) common.Server {
 }
 
 // ServiceCourse represents the course service.
-var ServiceCourse serviceCourse
-
-// Initialise the service with no DB.
-func init() {
-	ServiceCourse = serviceCourse{
-		Name:   "service-course",
-		URL:    "/course",
-		DB:     nil,
-		Router: common.NewSubRouter(Routes),
-	}
+var ServiceCourse = serviceCourse{
+	Name: "service-course",
+	URL:  "/course",
 }

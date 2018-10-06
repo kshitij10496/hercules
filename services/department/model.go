@@ -7,7 +7,7 @@ import (
 )
 
 // GetDepartments returns the list of departments in IITKGP
-func GetDepartments(conn *sql.Conn) (data common.Departments, err error) {
+func GetDepartments(db *sql.DB) (data common.Departments, err error) {
 	// TODO: Fetch data from ERP. Use a JSON as backup.
 	departments := common.Departments{
 		common.Department{

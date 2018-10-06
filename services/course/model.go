@@ -25,12 +25,12 @@ var courses = common.Courses{
 }
 
 // GetCourses returns the list of courses in IITKGP
-func GetCourses(conn *sql.Conn) (data common.Courses, err error) {
+func GetCourses(db *sql.DB) (data common.Courses, err error) {
 	return courses, nil
 }
 
 // GetCourse populates the course with all the relevant information given the course code.
 // If no such course exists, an ErrCourseNotFound error is returned.
-func GetCourse(conn *sql.Conn, course *common.Course) error {
-	return course.GetCourseInfo(conn)
+func GetCourse(db *sql.DB, course *common.Course) error {
+	return course.GetCourseInfo(db)
 }
