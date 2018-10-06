@@ -1,0 +1,30 @@
+{
+	"ImportPath": "github.com/kshitij10496/hercules",
+	"GoVersion": "go1.11",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/davecgh/go-spew/spew",
+			"Comment": "v1.1.1-1-gd8f796a",
+			"Rev": "d8f796af33cc11cb798c1aaeb27a4ebc5099927d"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.2-9-g9e1f595",
+			"Rev": "9e1f5955c0d22b55d9e20d6faa28589f83b2faca"
+		},
+		{
+			"ImportPath": "github.com/pmezard/go-difflib/difflib",
+			"Comment": "v1.0.0",
+			"Rev": "792786c7400a136282c1664665ae0a8db921c6c2"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/assert",
+			"Comment": "v1.2.2",
+			"Rev": "f35b8ab0b5a2cef36673838d662e249dd9c94686"
+		}
+	]
+}
