@@ -1,14 +1,22 @@
 package faculty
 
 import (
+	"context"
 	"log"
 	"net/http"
 
 	"github.com/kshitij10496/hercules/common"
 )
 
-func facultyHandler(w http.ResponseWriter, r *http.Request) {
-	faculty, err := GetFaculty()
+func (sf *serviceFaculty) facultyHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := context.Background()
+	conn, err := sf.GetDBConnection(ctx)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal("Error connecting to DB:", err)
+	}
+
+	faculty, err := GetFaculty(conn)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Println(err)
@@ -16,14 +24,22 @@ func facultyHandler(w http.ResponseWriter, r *http.Request) {
 	common.RespondWithJSON(w, r, http.StatusOK, faculty)
 }
 
-func facultyTimetableHandler(w http.ResponseWriter, r *http.Request) {
+func (sf *serviceFaculty) facultyTimetableHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := context.Background()
+
 	faculty, err := ReadFaculty(r)
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		log.Println(err)
 	}
 
-	timetable, err := GetTimetable(faculty.Name)
+	conn, err := sf.GetDBConnection(ctx)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal("Error connecting to DB:", err)
+	}
+
+	timetable, err := GetTimetable(conn, faculty.Name)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Println(err)

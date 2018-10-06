@@ -1,12 +1,25 @@
 package common
 
 import (
+	"context"
 	"database/sql"
 	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
 )
+
+type Server interface {
+	http.Handler
+	// GetDBConnection creates a connection to the DB given a context.
+	// The context is generated for each request and cleaned up after response.
+	//
+	GetDBConnection(ctx context.Context) (*sql.Conn, error)
+
+	GetURL() string
+
+	SetDB(db *sql.DB) Server
+}
 
 type Service struct {
 	Name   string
@@ -15,12 +28,25 @@ type Service struct {
 	Router *mux.Router
 }
 
-func NewService(name string, url string, routes Routes) *Service {
-	return &Service{
-		Name:   name,
-		URL:    url,
-		Router: NewSubRouter(routes),
-	}
+// GetDBConnection creates a connection to the DB given a context.
+// The context is generated for each request and cleaned up after response.
+//
+func (s *Service) GetDBConnection(ctx context.Context) (*sql.Conn, error) {
+	return s.DB.Conn(ctx)
+}
+
+// GetURL returns the URL of the service.
+//
+func (s *Service) GetURL() string {
+	return s.URL
+}
+
+// SetDB sets the service to use the given DB.
+// Note that this function overwrites the current value.
+//
+func (s *Service) SetDB(db *sql.DB) Server {
+	s.DB = db
+	return s
 }
 
 // This makes the Service a http.Handler which can be directly passed to the central router.

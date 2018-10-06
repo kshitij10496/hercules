@@ -1,6 +1,8 @@
 package course
 
 import (
+	"database/sql"
+
 	"github.com/kshitij10496/hercules/common"
 )
 
@@ -23,12 +25,12 @@ var courses = common.Courses{
 }
 
 // GetCourses returns the list of courses in IITKGP
-func GetCourses() (data common.Courses, err error) {
+func GetCourses(conn *sql.Conn) (data common.Courses, err error) {
 	return courses, nil
 }
 
 // GetCourse populates the course with all the relevant information given the course code.
 // If no such course exists, an ErrCourseNotFound error is returned.
-func GetCourse(course *common.Course) error {
-	return course.GetCourseInfo()
+func GetCourse(conn *sql.Conn, course *common.Course) error {
+	return course.GetCourseInfo(conn)
 }
