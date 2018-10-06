@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 
@@ -14,7 +15,10 @@ import (
 )
 
 func main() {
-	port := 8080
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("No PORT environment variable")
+	}
 
 	log.Println("service-course creating...")
 	serviceCourse := course.ServiceCourse(*common.NewService("service-course", "/course", course.Routes))
@@ -49,9 +53,8 @@ func main() {
 		return nil
 	})
 
-	log.Printf("Go to http://127.0.0.1:%v\n", port)
-
-	err := http.ListenAndServe(fmt.Sprintf(":%v", port), mainRouter)
+	log.Printf("Server starting on %v\n", port)
+	err := http.ListenAndServe(":"+port, mainRouter)
 	if err != nil {
 		log.Printf("Server cannot be started!\n")
 		log.Fatal(err)
