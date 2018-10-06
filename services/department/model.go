@@ -3,9 +3,9 @@ package department
 import "github.com/kshitij10496/hercules/common"
 
 // GetDepartments returns the list of departments in IITKGP
-func GetDepartments() (data []common.Department, err error) {
+func GetDepartments() (data common.Departments, err error) {
 	// TODO: Fetch data from ERP. Use a JSON as backup.
-	departments := []common.Department{
+	departments := common.Departments{
 		common.Department{
 			Name: "Mathematics",
 			Code: "MA",

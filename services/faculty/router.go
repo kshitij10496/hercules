@@ -8,13 +8,15 @@ var Routes = common.Routes{
 		Method:      "GET",
 		Pattern:     "/info",
 		HandlerFunc: facultyHandler,
+		PathPrefix:  "/faculty",
 	},
 	common.Route{
 		Name:        "Faculty Timetable",
 		Method:      "POST",
 		Pattern:     "/timetable",
 		HandlerFunc: facultyTimetableHandler,
+		PathPrefix:  "/faculty",
 	},
 }
 
-var FacultyService = common.NewService("faculty-service", "/faculty", common.NewRouter("/faculty", Routes))
+type ServiceFaculty common.Service

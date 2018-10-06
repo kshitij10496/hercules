@@ -1,7 +1,6 @@
 package department
 
 import (
-	"encoding/json"
 	"log"
 	"net/http"
 
@@ -15,12 +14,5 @@ func departmentsHandler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Fatal(err)
 	}
-
-	response := common.DepartmentsResponse(departments)
-	encoder := json.NewEncoder(w)
-	err = encoder.Encode(response)
-	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
-		log.Fatal(err)
-	}
+	common.RespondWithJSON(w, r, http.StatusOK, departments)
 }

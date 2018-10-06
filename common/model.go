@@ -6,8 +6,8 @@ type Department struct {
 	Code string `json:"code"`
 }
 
-// DepartmentsResponse represents the response returned by the DepartmentsHandler.
-type DepartmentsResponse []Department
+// Departments represents the response returned by the DepartmentsHandler.
+type Departments []Department
 
 // Course denotes the information related to each course.
 type Course struct {
@@ -18,8 +18,20 @@ type Course struct {
 	// TODO: Add prerequisites
 }
 
-// CoursesResponse represents the reponse by the CoursesHandler.
-type CoursesResponse []Course
+// Courses represents the reponse by the CoursesHandler.
+type Courses []Course
+
+// GetCourse returns all the information related to a course given the course code.
+func (c *Course) GetCourseInfo() error {
+	// TODO: Replace this with a DB lookup
+	if c.Code == "NA61001" {
+		c.Name = "COASTAL ENGINEERING"
+		c.Credits = 3
+		return nil
+	}
+
+	return ErrCourseNotFound
+}
 
 // FacultyDesignation represents the designation of a Faculty member.
 type FacultyDesignation string
@@ -33,16 +45,16 @@ const AssociateProfessor = FacultyDesignation("Associate Professor")
 // VisitingFaculty represents the faculty designation of a Visiting Faculty.
 const VisitingFaculty = FacultyDesignation("Visiting Faculty")
 
-// Faculty represents the information related to a faculty member at IIT KGP.
-type Faculty struct {
+// FacultyMember represents the information related to a faculty member at IIT KGP.
+type FacultyMember struct {
 	Name        string             `json:"name"`
 	Department  Department         `json:"department"`
 	Designation FacultyDesignation `json:"designation"`
 	// TODO: [mcmp] Add research interests
 }
 
-// FacultyResponse represents the response returned by the FacultyHandler.
-type FacultyResponse []Faculty
+// Faculty represents the response returned by the FacultyHandler.
+type Faculty []FacultyMember
 
 // SlotTime represents the daily timing slots.
 type SlotTime int

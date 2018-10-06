@@ -7,24 +7,30 @@ import (
 	"github.com/gorilla/mux"
 )
 
+const VERSION = "v1"
+
 type Route struct {
 	Name        string
 	Method      string
 	Pattern     string
 	HandlerFunc http.HandlerFunc
+	PathPrefix  string
 }
 
 type Routes []Route
 
-func NewRouter(serviceURL string, routes Routes) *mux.Router {
+func NewSubRouter(routes Routes) *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
+	// subrouter := server.Router.Subrouter()
 	for _, route := range routes {
-		log.Println(route.Name)
+		path := "/" + VERSION + route.PathPrefix + route.Pattern
 		router.
 			Methods(route.Method).
-			Path(VERSION + serviceURL + route.Pattern).
+			Path(path).
 			Name(route.Name).
 			Handler(route.HandlerFunc)
+
+		log.Println("created route:", route.Method, path)
 	}
 	return router
 }

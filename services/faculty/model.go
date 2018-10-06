@@ -8,10 +8,10 @@ import (
 )
 
 // GetFaculty returns the list of faculty members in IITKGP.
-func GetFaculty() (data []common.Faculty, err error) {
+func GetFaculty() (data common.Faculty, err error) {
 	// TODO: Fetch data from http://www.iitkgp.ac.in/facultylist
-	faculty := []common.Faculty{
-		common.Faculty{
+	faculty := common.Faculty{
+		common.FacultyMember{
 			Name: "Geetanjali Panda",
 			Department: common.Department{
 				Name: "Mathematics",
@@ -19,7 +19,7 @@ func GetFaculty() (data []common.Faculty, err error) {
 			},
 			Designation: common.Professor,
 		},
-		common.Faculty{
+		common.FacultyMember{
 			Name: "Pratima Panigrahi",
 			Department: common.Department{
 				Name: "Mathematics",
@@ -27,7 +27,7 @@ func GetFaculty() (data []common.Faculty, err error) {
 			},
 			Designation: common.Professor,
 		},
-		common.Faculty{
+		common.FacultyMember{
 			Name: "Somesh Kumar",
 			Department: common.Department{
 				Name: "Mathematics",
@@ -39,10 +39,10 @@ func GetFaculty() (data []common.Faculty, err error) {
 	return faculty, nil
 }
 
-func ReadFaculty(r *http.Request) (faculty common.Faculty, err error) {
+func ReadFaculty(r *http.Request) (facultyMember common.FacultyMember, err error) {
 	decoder := json.NewDecoder(r.Body)
-	err = decoder.Decode(&faculty)
-	return faculty, err
+	err = decoder.Decode(&facultyMember)
+	return facultyMember, err
 }
 
 func GetTimetable(name string) (data *common.Timetable, err error) {
