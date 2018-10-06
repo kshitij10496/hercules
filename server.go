@@ -16,39 +16,30 @@ import (
 func main() {
 	port := 8080
 
-	mainRouter := mux.NewRouter()
-
 	log.Println("service-course creating...")
 	serviceCourse := course.ServiceCourse(*common.NewService("service-course", "/course", course.Routes))
 	log.Println("service-course created")
-	log.Println(serviceCourse.Name, serviceCourse.URL)
-	log.Println()
+	fmt.Println()
 
 	log.Println("service-department creating...")
 	serviceDepartment := department.ServiceDepartment(*common.NewService("service-department", "/department", department.Routes))
 	log.Println("service-department created")
-	log.Println(serviceDepartment.Name, serviceDepartment.URL)
-	log.Println()
+	fmt.Println()
 
 	log.Println("service-faculty creating...")
 	serviceFaculty := faculty.ServiceFaculty(*common.NewService("service-faculty", "/faculty", faculty.Routes))
 	log.Println("service-faculty created")
-	log.Println(serviceFaculty.Name, serviceFaculty.URL)
-	log.Println()
-	mainRouter.Walk(func(route *mux.Route, router *mux.Router, ancestors []*mux.Route) error {
-		t, err := route.GetPathTemplate()
-		if err != nil {
-			return err
-		}
-		fmt.Println(t)
-		return nil
-	})
+	fmt.Println()
 
-	mainRouter.Handle("/", serviceCourse.Router)
-	mainRouter.Handle("/", serviceDepartment.Router)
-	mainRouter.Handle("/", serviceFaculty.Router)
-
+	mainRouter := mux.NewRouter()
+	servicesRouter := mainRouter.PathPrefix(common.VERSION).Subrouter()
 	log.Println("After adding subrouters")
+	services := []common.Service{serviceCourse, serviceDepartment, serviceFaculty}
+	for _, service := range services {
+		servicesRouter.PathPrefix(service.URL).Handler(service)
+	}
+	// TODO: Handle services page and home page
+
 	mainRouter.Walk(func(route *mux.Route, router *mux.Router, ancestors []*mux.Route) error {
 		t, err := route.GetPathTemplate()
 		if err != nil {
@@ -59,8 +50,6 @@ func main() {
 	})
 
 	log.Printf("Go to http://127.0.0.1:%v\n", port)
-
-	http.Handle("/", mainRouter)
 
 	err := http.ListenAndServe(fmt.Sprintf(":%v", port), mainRouter)
 	if err != nil {

@@ -8,8 +8,8 @@ var Routes = common.Routes{
 		Method:      "GET",
 		Pattern:     "/info",
 		HandlerFunc: departmentsHandler,
-		PathPrefix:  "/department",
+		PathPrefix:  common.VERSION + "/department",
 	},
 }
 
-type ServiceDepartment common.Service
+type ServiceDepartment = common.Service

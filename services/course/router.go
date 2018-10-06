@@ -10,21 +10,15 @@ var Routes = common.Routes{
 		Method:      "GET",
 		Pattern:     "/info/all",
 		HandlerFunc: handlerCourseInfoAll,
-		PathPrefix:  "/course",
+		PathPrefix:  common.VERSION + "/course",
 	},
 	common.Route{
 		Name:        "Course Info",
 		Method:      "POST",
 		Pattern:     "/info",
 		HandlerFunc: handlerCourseInfo,
-		PathPrefix:  "/course",
+		PathPrefix:  common.VERSION + "/course",
 	},
 }
 
-type ServiceCourse common.Service
-
-// func init() {
-// 	sc := ServiceCourse(*common.NewService("service-course", "/course", Routes))
-// 	log.Println("service-course created")
-// 	log.Println(sc.Name, sc.URL)
-// }
+type ServiceCourse = common.Service
