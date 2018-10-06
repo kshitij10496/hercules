@@ -30,35 +30,43 @@ var Routes = common.Routes{
 //
 type serviceFaculty common.Service
 
-func (s serviceFaculty) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (s *serviceFaculty) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// TODO: What should go in here?
 	log.Printf("[request initiate] %s - %v\n", s.Name, r.URL)
 	s.Router.ServeHTTP(w, r)
 	log.Printf("[request end] %s - %v\n", s.Name, r.URL)
 }
 
-func (s serviceFaculty) GetDBConnection(ctx context.Context) (*sql.Conn, error) {
+func (s *serviceFaculty) GetDBConnection(ctx context.Context) (*sql.Conn, error) {
 	return s.DB.Conn(ctx)
 }
 
-func (s serviceFaculty) GetURL() string {
+func (s *serviceFaculty) GetName() string {
+	return s.Name
+}
+
+func (s *serviceFaculty) GetURL() string {
 	return s.URL
 }
 
-func (s serviceFaculty) SetDB(db *sql.DB) common.Server {
-	s.DB = db
-	return s
+// SetDB sets the service to use the given DB.
+// Note that this function overwrites the current value.
+//
+func (s *serviceFaculty) ConnectDB(url string) error {
+	db, err := sql.Open("postgres", url)
+	if err == nil {
+		s.DB = db
+	}
+	return err
 }
 
 // ServiceFaculty represents the course service.
 var ServiceFaculty serviceFaculty
 
-// Initialise the service with no DB.
 func init() {
 	ServiceFaculty = serviceFaculty{
-		Name:   "service-course",
-		URL:    "/course",
-		DB:     nil,
+		Name:   "service-faculty",
+		URL:    "/faculty",
 		Router: common.NewSubRouter(Routes),
 	}
 }

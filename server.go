@@ -1,7 +1,6 @@
 package main
 
 import (
-	"database/sql"
 	"fmt"
 	"log"
 	"net/http"
@@ -22,27 +21,43 @@ func main() {
 		log.Fatal("No PORT environment variable")
 	}
 
-	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
-	if err != nil {
-		log.Fatal("Error connecting to the DB:", err)
-	}
-	defer db.Close()
+	databaseURL := os.Getenv("DATABASE_URL")
+	// db, err := sql.Open("postgres", )
+	// if err != nil {
+	// 	log.Fatal("Error connecting to the DB:", err)
+	// }
+	// defer db.Close()
 
-	log.Println("service-course creating...")
-	course.ServiceCourse.DB = db
-	course.ServiceCourse.Router = common.NewSubRouter(course.Routes)
-	log.Println("service-course created\n")
+	// log.Println("service-course creating...")
+	// course.ServiceCourse.DB = db
+	// course.ServiceCourse.Router = common.NewSubRouter(course.Routes)
+	// log.Println("service-course created")
+
+	// log.Println("service-department creating...")
+	// department.ServiceDepartment.DB = db
+
+	// log.Println("service-department created")
+
+	// log.Println("service-faculty creating...")
+	// faculty.ServiceFaculty.DB = db
+	// faculty.ServiceFaculty.Router = common.NewSubRouter(faculty.Routes)
 
 	mainRouter := mux.NewRouter()
 	servicesRouter := mainRouter.PathPrefix(common.VERSION).Subrouter()
 	log.Println("After adding subrouters")
 	servers := []common.Server{
-		course.ServiceCourse,
-		department.ServiceDepartment,
-		faculty.ServiceFaculty,
+		&course.ServiceCourse,
+		&department.ServiceDepartment,
+		&faculty.ServiceFaculty,
 	}
 	for _, server := range servers {
+		log.Printf("%s creating...\n", server.GetURL())
+		err := server.ConnectDB(databaseURL)
+		if err != nil {
+			log.Fatal("Error connecting with DB for %s:", server.GetName(), err)
+		}
 		servicesRouter.PathPrefix(server.GetURL()).Handler(server)
+		log.Printf("%s created!\n", server.GetURL())
 	}
 	// TODO: Handle services page and home page
 
