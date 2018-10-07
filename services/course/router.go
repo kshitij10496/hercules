@@ -60,6 +60,10 @@ func (s *serviceCourse) ConnectDB(url string) error {
 	return err
 }
 
+func (s *serviceCourse) CloseDB() error {
+	return s.DB.Close()
+}
+
 // ServiceCourse represents the course service.
 var ServiceCourse serviceCourse
 

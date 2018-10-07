@@ -23,14 +23,14 @@ var Routes = common.Routes{
 //
 type serviceDepartment common.Service
 
-func (s serviceDepartment) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (s *serviceDepartment) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// TODO: What should go in here?
 	log.Printf("[request initiate] %s - %v\n", s.Name, r.URL)
 	s.Router.ServeHTTP(w, r)
 	log.Printf("[request end] %s - %v\n", s.Name, r.URL)
 }
 
-func (s serviceDepartment) GetDBConnection(ctx context.Context) (*sql.Conn, error) {
+func (s *serviceDepartment) GetDBConnection(ctx context.Context) (*sql.Conn, error) {
 	return s.DB.Conn(ctx)
 }
 
@@ -51,6 +51,10 @@ func (s *serviceDepartment) ConnectDB(url string) error {
 		s.DB = db
 	}
 	return err
+}
+
+func (s *serviceDepartment) CloseDB() error {
+	return s.DB.Close()
 }
 
 // ServiceDepartment represents the course service.

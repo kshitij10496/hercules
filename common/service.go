@@ -20,6 +20,7 @@ type Server interface {
 
 	ConnectDB(databaseURL string) error
 
+	CloseDB() error
 	// GetDBConnection creates a connection to the DB given a context.
 	// The context is generated for each request and cleaned up after response.
 	//
@@ -46,17 +47,17 @@ type Service struct {
 // 	s.Router.ServeHTTP(w, r)
 // 	log.Printf("[request end] %s - %v\n", s.Name, r.URL)
 // }
-
+//
 // func (s *Service) GetName() string {
 // 	return s.Name
 // }
-
+//
 // // GetURL returns the URL of the service.
 // //
 // func (s *Service) GetURL() string {
 // 	return s.URL
 // }
-
+//
 // // SetDB sets the service to use the given DB.
 // // Note that this function overwrites the current value.
 // //
@@ -67,7 +68,11 @@ type Service struct {
 // 	}
 // 	return err
 // }
-
+//
+// func (s *Service) CloseDB() error {
+// 	return s.DB.Close()
+// }
+//
 // // GetDBConnection creates a connection to the DB given a context.
 // // The context is generated for each request and cleaned up after response.
 // //

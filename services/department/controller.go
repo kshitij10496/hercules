@@ -14,7 +14,6 @@ func (sd *serviceDepartment) departmentsHandler(w http.ResponseWriter, r *http.R
 	// 	w.WriteHeader(http.StatusInternalServerError)
 	// 	log.Fatal("Error connecting to DB:", err)
 	// }
-
 	departments, err := GetDepartments(sd.DB)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)

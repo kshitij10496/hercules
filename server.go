@@ -57,6 +57,16 @@ func main() {
 
 	log.Printf("Server starting on %v\n", port)
 	if err := http.ListenAndServe(":"+port, mainRouter); err != nil {
+		for name, server := range servers {
+			log.Printf("%s closing...\n", name)
+
+			err := server.CloseDB()
+			if err != nil {
+				log.Fatalf("Error closing DB for %s: %v\n", name, err)
+			}
+
+			log.Printf("%s closed!\n", name)
+		}
 		log.Printf("Server cannot be started!\n")
 		log.Fatal(err)
 	}
