@@ -11,32 +11,37 @@ import (
 // GetFaculty returns the list of faculty members in IITKGP.
 func GetFaculty(db *sql.DB) (data common.Faculty, err error) {
 	// TODO: Fetch data from http://www.iitkgp.ac.in/facultylist
-	faculty := common.Faculty{
-		common.FacultyMember{
-			Name: "Geetanjali Panda",
-			Department: common.Department{
-				Name: "Mathematics",
-				Code: "MA",
-			},
-			Designation: common.Professor,
-		},
-		common.FacultyMember{
-			Name: "Pratima Panigrahi",
-			Department: common.Department{
-				Name: "Mathematics",
-				Code: "MA",
-			},
-			Designation: common.Professor,
-		},
-		common.FacultyMember{
-			Name: "Somesh Kumar",
-			Department: common.Department{
-				Name: "Mathematics",
-				Code: "MA",
-			},
-			Designation: common.Professor,
-		},
+	query := "SELECT f.name, fd.designation, d.code, d.name FROM departments d, faculty_designations fd, faculty f WHERE f.designation=fd.id AND f.department=d.id;"
+	rows, err := db.Query(query)
+	if err != nil {
+		return nil, err
 	}
+	defer rows.Close()
+
+	var faculty common.Faculty
+	for rows.Next() {
+		var name string
+		var department common.Department
+		var designation common.FacultyDesignation
+
+		err := rows.Scan(&name, &designation.Designation, &department.Code, &department.Name)
+		if err != nil {
+			return nil, err
+		}
+
+		newFacultyMember := common.FacultyMember{
+			Name:        name,
+			Designation: designation,
+			Department:  department,
+		}
+
+		faculty = append(faculty, newFacultyMember)
+	}
+
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+
 	return faculty, nil
 }
 

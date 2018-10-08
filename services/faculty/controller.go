@@ -14,7 +14,6 @@ func (sf *serviceFaculty) facultyHandler(w http.ResponseWriter, r *http.Request)
 	// 	w.WriteHeader(http.StatusInternalServerError)
 	// 	log.Fatal("Error connecting to DB:", err)
 	// }
-
 	faculty, err := GetFaculty(sf.DB)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
