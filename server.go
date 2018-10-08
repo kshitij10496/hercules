@@ -12,6 +12,7 @@ import (
 	"github.com/kshitij10496/hercules/services/course"
 	"github.com/kshitij10496/hercules/services/department"
 	"github.com/kshitij10496/hercules/services/faculty"
+	"github.com/kshitij10496/hercules/services/migration"
 )
 
 func main() {
@@ -38,6 +39,7 @@ func main() {
 		"service-course":     &course.ServiceCourse,
 		"service-department": &department.ServiceDepartment,
 		"service-faculty":    &faculty.ServiceFaculty,
+		"service-migration":  &migration.ServiceMigration,
 	}
 
 	// Connect each service with the DB and add them to the subrouters
