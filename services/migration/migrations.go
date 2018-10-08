@@ -99,7 +99,7 @@ func readFromJSONFacultyDesignations(db *sql.DB, filename string) error {
 	designationsSet := createSetDesignations(designations)
 	log.Println("DESIGNATION SET:", designationsSet)
 	for _, designation := range designationsSet {
-		_, err := db.Exec(common.TableInsertionDesignation, designation.Designation)
+		_, err := db.Exec(common.TableInsertionDesignation, designation)
 		if err != nil {
 			log.Println("[insertion] faculty_designations:", designation, err)
 		}

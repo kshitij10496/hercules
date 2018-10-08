@@ -24,7 +24,7 @@ func GetFaculty(db *sql.DB) (data common.Faculty, err error) {
 		var department common.Department
 		var designation common.FacultyDesignation
 
-		err := rows.Scan(&name, &designation.Designation, &department.Code, &department.Name)
+		err := rows.Scan(&name, &designation, &department.Code, &department.Name)
 		if err != nil {
 			return nil, err
 		}
