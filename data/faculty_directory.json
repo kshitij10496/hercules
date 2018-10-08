@@ -1,0 +1,4720 @@
+[
+    {
+      "faculty": "Akshay Prakash",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-ap",
+      "code": "AE"
+    },
+    {
+      "faculty": "Amardip Ghosh",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ae-amardip.ghosh",
+      "code": "AE"
+    },
+    {
+      "faculty": "Anup Ghosh",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-anup",
+      "code": "AE"
+    },
+    {
+      "faculty": "Arnab Roy",
+      "department": "Aerospace Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ae-arnab",
+      "code": "AE"
+    },
+    {
+      "faculty": "Bhrigu Nath Singh",
+      "department": "Aerospace Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ae-bnsingh",
+      "code": "AE"
+    },
+    {
+      "faculty": "Chetankumar Sureshbhai Mistry",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-csmistry",
+      "code": "AE"
+    },
+    {
+      "faculty": "Dipak Kumar Maiti",
+      "department": "Aerospace Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ae-dkmaiti",
+      "code": "AE"
+    },
+    {
+      "faculty": "Kalyan Prasad Sinhamahapatra",
+      "department": "Aerospace Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ae-kalyanps",
+      "code": "AE"
+    },
+    {
+      "faculty": "Manas Kumar Laha",
+      "department": "Aerospace Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ae-mlaha",
+      "code": "AE"
+    },
+    {
+      "faculty": "Manoranjan Sinha",
+      "department": "Aerospace Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ae-masinha",
+      "code": "AE"
+    },
+    {
+      "faculty": "Mira Mitra",
+      "department": "Aerospace Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ae-mira",
+      "code": "AE"
+    },
+    {
+      "faculty": "Mohammed Rabius Sunny",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-sunny",
+      "code": "AE"
+    },
+    {
+      "faculty": "Mrinal Kaushik",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-mkaushik",
+      "code": "AE"
+    },
+    {
+      "faculty": "Naba Kumar Peyada",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-nkpeyada",
+      "code": "AE"
+    },
+    {
+      "faculty": "Prasun Jana",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ae-prasun",
+      "code": "AE"
+    },
+    {
+      "faculty": "Ratan Joarder",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-jratan",
+      "code": "AE"
+    },
+    {
+      "faculty": "Sandeep Saha",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-ssaha",
+      "code": "AE"
+    },
+    {
+      "faculty": "Sikha Hota",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-sikhahota",
+      "code": "AE"
+    },
+    {
+      "faculty": "Somnath Ghosh",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-sghosh",
+      "code": "AE"
+    },
+    {
+      "faculty": "Srinibas Karmakar",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-skarmakar",
+      "code": "AE"
+    },
+    {
+      "faculty": "Sunil Manohar Dash",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ae-smdash",
+      "code": "AE"
+    },
+    {
+      "faculty": "Suresh Chandra Pradhan",
+      "department": "Aerospace Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ae-scp",
+      "code": "AE"
+    },
+    {
+      "faculty": "Susmita Bhattacharyya",
+      "department": "Aerospace Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ae-susmita",
+      "code": "AE"
+    },
+    {
+      "faculty": "Adinpunya Mitra",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-adin",
+      "code": "AG"
+    },
+    {
+      "faculty": "Amey Pathak",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Assistant Professor Grade-II",
+      "encrypt_key": "ag-amey",
+      "code": "AG"
+    },
+    {
+      "faculty": "Ashis Kumar Datta",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-akd",
+      "code": "AG"
+    },
+    {
+      "faculty": "Ashok Mishra",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-amishra",
+      "code": "AG"
+    },
+    {
+      "faculty": "Bhabani Sankar Das",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-bsdas",
+      "code": "AG"
+    },
+    {
+      "faculty": "Chandranath Chatterjee",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-cchatterjee",
+      "code": "AG"
+    },
+    {
+      "faculty": "Damodhara Rao Mailapalli",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ag-mailapalli",
+      "code": "AG"
+    },
+    {
+      "faculty": "Dillip Kumar Swain",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-swain",
+      "code": "AG"
+    },
+    {
+      "faculty": "Hari Niwas Mishra",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-hnm",
+      "code": "AG"
+    },
+    {
+      "faculty": "Hifjur Raheman",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-hifjur",
+      "code": "AG"
+    },
+    {
+      "faculty": "Jayeeta Mitra",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ag-jayeeta.mitra",
+      "code": "AG"
+    },
+    {
+      "faculty": "Joydeep Banerjee",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ag-joydeep",
+      "code": "AG"
+    },
+    {
+      "faculty": "Kamlesh Narayan Tiwari",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-kamlesh",
+      "code": "AG"
+    },
+    {
+      "faculty": "Kanishka Bhunia",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Assistant Professor Grade-II",
+      "encrypt_key": "ag-6223e50a16b6528f0966251a7f23eb98",
+      "code": "AG"
+    },
+    {
+      "faculty": "Madan Kumar Jha",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-madan",
+      "code": "AG"
+    },
+    {
+      "faculty": "Narendra Singh Raghuwanshi",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-nsr",
+      "code": "AG"
+    },
+    {
+      "faculty": "Nirupama Mallick",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-nm",
+      "code": "AG"
+    },
+    {
+      "faculty": "P. B. Singh Bhadoria",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Visiting Professor",
+      "encrypt_key": "ag-pbsb",
+      "code": "AG"
+    },
+    {
+      "faculty": "Peeyush Soni",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ag-soni",
+      "code": "AG"
+    },
+    {
+      "faculty": "Poulomi Ganguli",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ag-756a2394d3f7efdf3bfa8c273ab24f03",
+      "code": "AG"
+    },
+    {
+      "faculty": "Prem Prakash Srivastav",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ag-pps",
+      "code": "AG"
+    },
+    {
+      "faculty": "Proshanta Guha",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ag-pguha",
+      "code": "AG"
+    },
+    {
+      "faculty": "P Srinivasa Rao",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-psrao",
+      "code": "AG"
+    },
+    {
+      "faculty": "Punyadarshini Punam Tripathy",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ag-punam",
+      "code": "AG"
+    },
+    {
+      "faculty": "Rabindra Kumar Panda",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-rkpanda",
+      "code": "AG"
+    },
+    {
+      "faculty": "Rajendra Machavaram",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ag-870271b323edc885b0478b67113fdbb1",
+      "code": "AG"
+    },
+    {
+      "faculty": "Rajendra Singh",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-rsingh",
+      "code": "AG"
+    },
+    {
+      "faculty": "Rintu Banerjee",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-rb",
+      "code": "AG"
+    },
+    {
+      "faculty": "Shanker Lal Shrivastava",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ag-sls",
+      "code": "AG"
+    },
+    {
+      "faculty": "Snehasish Dutta Gupta",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-sdg",
+      "code": "AG"
+    },
+    {
+      "faculty": "Somsubhra Chakraborty",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ag-somsubhra",
+      "code": "AG"
+    },
+    {
+      "faculty": "Sudhindra Nath Panda",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-snp",
+      "code": "AG"
+    },
+    {
+      "faculty": "Thomas E V",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-vareed",
+      "code": "AG"
+    },
+    {
+      "faculty": "Tridib Kumar Goswami",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-tkg",
+      "code": "AG"
+    },
+    {
+      "faculty": "Virendra Kumar Tewari",
+      "department": "Agricultural and Food Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ag-vktfeb",
+      "code": "AG"
+    },
+    {
+      "faculty": "Abraham George",
+      "department": "Architecture and Regional Planning",
+      "designation": "Associate Professor",
+      "encrypt_key": "ar-abraham",
+      "code": "AR"
+    },
+    {
+      "faculty": "Amita Sinha",
+      "department": "Architecture and Regional Planning",
+      "designation": "Visiting Professor",
+      "encrypt_key": "ar-083f870d80f2eee56322ed9f0ed3af48",
+      "code": "AR"
+    },
+    {
+      "faculty": "Arjun Mukerji",
+      "department": "Architecture and Regional Planning",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ar-arjun",
+      "code": "AR"
+    },
+    {
+      "faculty": "Arup Das",
+      "department": "Architecture and Regional Planning",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ar-arup.das",
+      "code": "AR"
+    },
+    {
+      "faculty": "Debapratim Pandit",
+      "department": "Architecture and Regional Planning",
+      "designation": "Associate Professor",
+      "encrypt_key": "ar-debapratim",
+      "code": "AR"
+    },
+    {
+      "faculty": "Haimanti Banerji",
+      "department": "Architecture and Regional Planning",
+      "designation": "Associate Professor",
+      "encrypt_key": "ar-haimanti",
+      "code": "AR"
+    },
+    {
+      "faculty": "Jaydip Barman",
+      "department": "Architecture and Regional Planning",
+      "designation": "Professor",
+      "encrypt_key": "ar-jbarman",
+      "code": "AR"
+    },
+    {
+      "faculty": "Joy Sen",
+      "department": "Architecture and Regional Planning",
+      "designation": "Professor",
+      "encrypt_key": "ar-joysen",
+      "code": "AR"
+    },
+    {
+      "faculty": "Saikat Kumar Paul",
+      "department": "Architecture and Regional Planning",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ar-skpaul",
+      "code": "AR"
+    },
+    {
+      "faculty": "Sanghamitra Basu",
+      "department": "Architecture and Regional Planning",
+      "designation": "Professor (on Re-Employment)",
+      "encrypt_key": "ar-sbasu",
+      "code": "AR"
+    },
+    {
+      "faculty": "Shankha Pratim Bhattacharya",
+      "department": "Architecture and Regional Planning",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ar-spb",
+      "code": "AR"
+    },
+    {
+      "faculty": "Somnath Sen",
+      "department": "Architecture and Regional Planning",
+      "designation": "Associate Professor",
+      "encrypt_key": "ar-snsen",
+      "code": "AR"
+    },
+    {
+      "faculty": "Subrata Chattopadhyay",
+      "department": "Architecture and Regional Planning",
+      "designation": "Professor",
+      "encrypt_key": "ar-schat",
+      "code": "AR"
+    },
+    {
+      "faculty": "Sumana Gupta",
+      "department": "Architecture and Regional Planning",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ar-sumana",
+      "code": "AR"
+    },
+    {
+      "faculty": "Sutapa Das",
+      "department": "Architecture and Regional Planning",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ar-sutapa",
+      "code": "AR"
+    },
+    {
+      "faculty": "Tapan Kumar Majumdar",
+      "department": "Architecture and Regional Planning",
+      "designation": "Asst. Prof. on Re-Employment",
+      "encrypt_key": "ar-tkm",
+      "code": "AR"
+    },
+    {
+      "faculty": "Tarak Nath Mazumder",
+      "department": "Architecture and Regional Planning",
+      "designation": "Associate Professor",
+      "encrypt_key": "ar-taraknm",
+      "code": "AR"
+    },
+    {
+      "faculty": "Uttam Kumar Banerjee",
+      "department": "Architecture and Regional Planning",
+      "designation": "Professor",
+      "encrypt_key": "ar-ukb",
+      "code": "AR"
+    },
+    {
+      "faculty": "Ayantika Chatterjee",
+      "department": "Advanced Technology Development Centre",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "at-c3d19da395f25e25fb4fbf1545fddce0",
+      "code": "AT"
+    },
+    {
+      "faculty": "Jatindra Nath Roy",
+      "department": "Advanced Technology Development Centre",
+      "designation": "Visiting Professor",
+      "encrypt_key": "at-jnroy",
+      "code": "AT"
+    },
+    {
+      "faculty": "Somnath Sengupta",
+      "department": "Advanced Technology Development Centre",
+      "designation": "Assistant Professor",
+      "encrypt_key": "at-sengupta.s",
+      "code": "AT"
+    },
+    {
+      "faculty": "Abhijeet Chandra",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bm-abhijeet",
+      "code": "BM"
+    },
+    {
+      "faculty": "Ajay Kumar Mishra",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "bm-akmishra",
+      "code": "BM"
+    },
+    {
+      "faculty": "Aradhna Malik",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bm-amalik",
+      "code": "BM"
+    },
+    {
+      "faculty": "Arun Kumar Misra",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Associate Professor",
+      "encrypt_key": "bm-arunmisra",
+      "code": "BM"
+    },
+    {
+      "faculty": "Barnali Nag",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bm-barnali.nag",
+      "code": "BM"
+    },
+    {
+      "faculty": "Biplab Datta",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Associate Professor",
+      "encrypt_key": "bm-bd",
+      "code": "BM"
+    },
+    {
+      "faculty": "Chandra Sekhar Mishra",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Associate Professor",
+      "encrypt_key": "bm-csmishra",
+      "code": "BM"
+    },
+    {
+      "faculty": "Gautam Sinha",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Professor",
+      "encrypt_key": "bm-gautam",
+      "code": "BM"
+    },
+    {
+      "faculty": "Kunal Kanti Ghosh",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Visiting Faculty",
+      "encrypt_key": "bm-kunal",
+      "code": "BM"
+    },
+    {
+      "faculty": "Parama Barai",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Associate Professor",
+      "encrypt_key": "bm-parama",
+      "code": "BM"
+    },
+    {
+      "faculty": "Prabina Rajib",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Professor",
+      "encrypt_key": "bm-prabina",
+      "code": "BM"
+    },
+    {
+      "faculty": "Ranjan Chaudhuri",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Associate Professor",
+      "encrypt_key": "bm-ranjan",
+      "code": "BM"
+    },
+    {
+      "faculty": "Rudra Prakash Pradhan",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Associate Professor",
+      "encrypt_key": "bm-rudrap",
+      "code": "BM"
+    },
+    {
+      "faculty": "Saini Das",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bm-saini",
+      "code": "BM"
+    },
+    {
+      "faculty": "Sangeeta Sahney",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Professor",
+      "encrypt_key": "bm-sahney",
+      "code": "BM"
+    },
+    {
+      "faculty": "Sanjib Chowdhury",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Visiting Faculty",
+      "encrypt_key": "bm-64892d3a2a7af4393241af3e2a79e70b",
+      "code": "BM"
+    },
+    {
+      "faculty": "Srabanti Mukherjee",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bm-srabanti",
+      "code": "BM"
+    },
+    {
+      "faculty": "Sujoy Bhattacharya",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Associate Professor",
+      "encrypt_key": "bm-sujoybtc",
+      "code": "BM"
+    },
+    {
+      "faculty": "Susmita Mukhopadhyay",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Associate Professor",
+      "encrypt_key": "bm-susmita",
+      "code": "BM"
+    },
+    {
+      "faculty": "Swagato Chatterjee",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "bm-swagato",
+      "code": "BM"
+    },
+    {
+      "faculty": "Tuheena Mukherjee",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bm-tuheena",
+      "code": "BM"
+    },
+    {
+      "faculty": "Tutan Ahmed",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Visiting Faculty",
+      "encrypt_key": "bm-3d9dfc84211a5e72cd193fb0bbeb7d12",
+      "code": "BM"
+    },
+    {
+      "faculty": "Vivek Kumar Dubey",
+      "department": "Vinod Gupta School of Management",
+      "designation": "Visiting Faculty",
+      "encrypt_key": "bm-5b635a5416db2699215da82567a76c92",
+      "code": "BM"
+    },
+    {
+      "faculty": "Abhijit Das",
+      "department": "Bio Science",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bs-abhijit.das",
+      "code": "BS"
+    },
+    {
+      "faculty": "Arindam Mondal",
+      "department": "Bio Science",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bs-arindam.mondal",
+      "code": "BS"
+    },
+    {
+      "faculty": "Dibyendu Samanta",
+      "department": "Bio Science",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bs-dibyendu.samanta",
+      "code": "BS"
+    },
+    {
+      "faculty": "Nihar Ranjan Jana",
+      "department": "Bio Science",
+      "designation": "Professor",
+      "encrypt_key": "bs-nihar",
+      "code": "BS"
+    },
+    {
+      "faculty": "Ritobrata Goswami",
+      "department": "Bio Science",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bs-ritobrata.goswami",
+      "code": "BS"
+    },
+    {
+      "faculty": "Soumya De",
+      "department": "Bio Science",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bs-somde",
+      "code": "BS"
+    },
+    {
+      "faculty": "Agneyo Ganguly",
+      "department": "Biotechnology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bt-agneyo",
+      "code": "BT"
+    },
+    {
+      "faculty": "Amit Kumar Das",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-amitk",
+      "code": "BT"
+    },
+    {
+      "faculty": "Ananta Kumar Ghosh",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-aghosh",
+      "code": "BT"
+    },
+    {
+      "faculty": "Anindya Sundar Ghosh",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-asghosh",
+      "code": "BT"
+    },
+    {
+      "faculty": "Debabrata Das",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-ddas",
+      "code": "BT"
+    },
+    {
+      "faculty": "Mrinal Kumar Maiti",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-maitimk",
+      "code": "BT"
+    },
+    {
+      "faculty": "Pinaki Sar",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-psar",
+      "code": "BT"
+    },
+    {
+      "faculty": "Ramkrishna Sen",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-rksen",
+      "code": "BT"
+    },
+    {
+      "faculty": "Ranjit Prasad Bahadur",
+      "department": "Biotechnology",
+      "designation": "Associate Professor",
+      "encrypt_key": "bt-r.bahadur",
+      "code": "BT"
+    },
+    {
+      "faculty": "Riddhiman Dhar",
+      "department": "Biotechnology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bt-riddhiman.dhar",
+      "code": "BT"
+    },
+    {
+      "faculty": "Satyahari Dey",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-sdey",
+      "code": "BT"
+    },
+    {
+      "faculty": "Somdeb Bose Dasgupta",
+      "department": "Biotechnology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "bt-somdeb",
+      "code": "BT"
+    },
+    {
+      "faculty": "Sudip Kumar Ghosh",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-sudip",
+      "code": "BT"
+    },
+    {
+      "faculty": "Tapas Kumar Maiti",
+      "department": "Biotechnology",
+      "designation": "Professor",
+      "encrypt_key": "bt-tkmaiti",
+      "code": "BT"
+    },
+    {
+      "faculty": "Divya Nayar",
+      "department": "Centre for Computational and Data Sciences",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "cd-divya.nayar",
+      "code": "CD"
+    },
+    {
+      "faculty": "Sandeep Kumar Reddy",
+      "department": "Centre for Computational and Data Sciences",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "cd-skreddy",
+      "code": "CD"
+    },
+    {
+      "faculty": "Amit Shaw",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-abshaw",
+      "code": "CE"
+    },
+    {
+      "faculty": "Anirban Dhar",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-anirban",
+      "code": "CE"
+    },
+    {
+      "faculty": "Aniruddha Sengupta",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-sengupta",
+      "code": "CE"
+    },
+    {
+      "faculty": "Anjali Pal",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-anjalipal",
+      "code": "CE"
+    },
+    {
+      "faculty": "Arghya Deb",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-arghya",
+      "code": "CE"
+    },
+    {
+      "faculty": "Ashok Kumar Gupta",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-agupta",
+      "code": "CE"
+    },
+    {
+      "faculty": "Baidurya Bhattacharya",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-baidurya",
+      "code": "CE"
+    },
+    {
+      "faculty": "Bhargab Maitra",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-bhargab",
+      "code": "CE"
+    },
+    {
+      "faculty": "Biswanath Banerjee",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ce-biswanath",
+      "code": "CE"
+    },
+    {
+      "faculty": "Brajesh Kumar Dubey",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-bkdubey",
+      "code": "CE"
+    },
+    {
+      "faculty": "Damodar Maity",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-dmaity",
+      "code": "CE"
+    },
+    {
+      "faculty": "Debarghya Chakraborty",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ce-debarghya",
+      "code": "CE"
+    },
+    {
+      "faculty": "Debasis Roy",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-debasis",
+      "code": "CE"
+    },
+    {
+      "faculty": "Dhrubajyoti Sen",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-djsen",
+      "code": "CE"
+    },
+    {
+      "faculty": "Dilip Kumar Baidya",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-baidya",
+      "code": "CE"
+    },
+    {
+      "faculty": "Kousik Deb",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-kousik",
+      "code": "CE"
+    },
+    {
+      "faculty": "Kranthi Kumar Kuna",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ce-kranthi",
+      "code": "CE"
+    },
+    {
+      "faculty": "Kusam Sudhakar Reddy",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-ksreddy",
+      "code": "CE"
+    },
+    {
+      "faculty": "Lingadahally S Ramachandra",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-lsr",
+      "code": "CE"
+    },
+    {
+      "faculty": "Makarand Madhao Ghangrekar",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-ghangrekar",
+      "code": "CE"
+    },
+    {
+      "faculty": "M Amarnatha Reddy",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-manreddy",
+      "code": "CE"
+    },
+    {
+      "faculty": "Mohammad Saud Afzal",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ce-saud",
+      "code": "CE"
+    },
+    {
+      "faculty": "Nilanjan Mitra",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-nilanjan",
+      "code": "CE"
+    },
+    {
+      "faculty": "Nirjhar Dhang",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-nirjhar",
+      "code": "CE"
+    },
+    {
+      "faculty": "Paramita Bhattacharya",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ce-paramita",
+      "code": "CE"
+    },
+    {
+      "faculty": "Prashanth Reddy Hanmaiahgari",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ce-hpr",
+      "code": "CE"
+    },
+    {
+      "faculty": "Puneet Kumar Patra",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ce-puneet.patra",
+      "code": "CE"
+    },
+    {
+      "faculty": "Rajib Maity",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-rajib",
+      "code": "CE"
+    },
+    {
+      "faculty": "Shaikh Jahangir Hossain",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ce-sjh",
+      "code": "CE"
+    },
+    {
+      "faculty": "Shubha Verma",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-shubha",
+      "code": "CE"
+    },
+    {
+      "faculty": "Sriman Kumar Bhattacharyya",
+      "department": "Civil Engineering",
+      "designation": "Deputy Director and Professor",
+      "encrypt_key": "ce-bsri",
+      "code": "CE"
+    },
+    {
+      "faculty": "Subhasish Dey",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-sdey",
+      "code": "CE"
+    },
+    {
+      "faculty": "Sudeshna Mitra",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-sudeshna",
+      "code": "CE"
+    },
+    {
+      "faculty": "Sudha Goel",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-sudhagoel",
+      "code": "CE"
+    },
+    {
+      "faculty": "Sudhir Kumar Barai",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-skbarai",
+      "code": "CE"
+    },
+    {
+      "faculty": "Sujit Kumar Dash",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-sujit",
+      "code": "CE"
+    },
+    {
+      "faculty": "Sushanta Chakraborty",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ce-sushanta",
+      "code": "CE"
+    },
+    {
+      "faculty": "Venkappayya R Desai",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ce-venkapd",
+      "code": "CE"
+    },
+    {
+      "faculty": "Amar Nath Samanta",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-amar",
+      "code": "CH"
+    },
+    {
+      "faculty": "Amiya Kumar Jana",
+      "department": "Chemical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ch-akjana",
+      "code": "CH"
+    },
+    {
+      "faculty": "Arnab Atta",
+      "department": "Chemical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ch-arnab",
+      "code": "CH"
+    },
+    {
+      "faculty": "Bhim Charan Meikap",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-bcmeikap",
+      "code": "CH"
+    },
+    {
+      "faculty": "Debasis Sarkar",
+      "department": "Chemical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ch-dsarkar",
+      "code": "CH"
+    },
+    {
+      "faculty": "Gargi Das",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-gargi",
+      "code": "CH"
+    },
+    {
+      "faculty": "Gautam Kundu",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-gk",
+      "code": "CH"
+    },
+    {
+      "faculty": "Harikrishnan G",
+      "department": "Chemical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ch-hari",
+      "code": "CH"
+    },
+    {
+      "faculty": "Jayanta Chakraborty",
+      "department": "Chemical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ch-jayanta",
+      "code": "CH"
+    },
+    {
+      "faculty": "Jayanta Kumar Basu",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-jkb",
+      "code": "CH"
+    },
+    {
+      "faculty": "Manish Kaushal",
+      "department": "Chemical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ch-mkaushal",
+      "code": "CH"
+    },
+    {
+      "faculty": "Narayan Chandra Pradhan",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-ncp",
+      "code": "CH"
+    },
+    {
+      "faculty": "Parag Arvind Deshpande",
+      "department": "Chemical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ch-parag",
+      "code": "CH"
+    },
+    {
+      "faculty": "Rabibrata Mukherjee",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-rabibrata",
+      "code": "CH"
+    },
+    {
+      "faculty": "Saikat Chakraborty",
+      "department": "Chemical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ch-saikat",
+      "code": "CH"
+    },
+    {
+      "faculty": "Sirshendu De",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-sde",
+      "code": "CH"
+    },
+    {
+      "faculty": "Somenath Ganguly",
+      "department": "Chemical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ch-snganguly",
+      "code": "CH"
+    },
+    {
+      "faculty": "Sonali Sengupta",
+      "department": "Chemical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ch-sonalis",
+      "code": "CH"
+    },
+    {
+      "faculty": "Sourav Mondal",
+      "department": "Chemical Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ch-smondal",
+      "code": "CH"
+    },
+    {
+      "faculty": "Subhabrata Ray",
+      "department": "Chemical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ch-sray",
+      "code": "CH"
+    },
+    {
+      "faculty": "Sudarsan Neogi",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-sneogi",
+      "code": "CH"
+    },
+    {
+      "faculty": "Sudipto Chakraborty",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-sc",
+      "code": "CH"
+    },
+    {
+      "faculty": "Sunando Dasgupta",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-sunando",
+      "code": "CH"
+    },
+    {
+      "faculty": "Swati Neogi",
+      "department": "Chemical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ch-swati",
+      "code": "CH"
+    },
+    {
+      "faculty": "Abhishek Kumar Rai",
+      "department": "Centre For Oceans,Rivers,Atmosphere and Land Science",
+      "designation": "Visiting Faculty",
+      "encrypt_key": "cl-b8c12f72f1f3801c786cc5c949309bf6",
+      "code": "CL"
+    },
+    {
+      "faculty": "Achanta Naga Venkata Satyanarayana",
+      "department": "Centre For Oceans,Rivers,Atmosphere and Land Science",
+      "designation": "Associate Professor",
+      "encrypt_key": "cl-anvsatya",
+      "code": "CL"
+    },
+    {
+      "faculty": "Arun Chakraborty",
+      "department": "Centre For Oceans,Rivers,Atmosphere and Land Science",
+      "designation": "Professor",
+      "encrypt_key": "cl-arunc",
+      "code": "CL"
+    },
+    {
+      "faculty": "C Shaji",
+      "department": "Centre For Oceans,Rivers,Atmosphere and Land Science",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cl-cshaji",
+      "code": "CL"
+    },
+    {
+      "faculty": "Jayanarayanan Kuttippurath",
+      "department": "Centre For Oceans,Rivers,Atmosphere and Land Science",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cl-jayan",
+      "code": "CL"
+    },
+    {
+      "faculty": "Mihir Kumar Dash",
+      "department": "Centre For Oceans,Rivers,Atmosphere and Land Science",
+      "designation": "Associate Professor",
+      "encrypt_key": "cl-mihir",
+      "code": "CL"
+    },
+    {
+      "faculty": "Mukunda Dev Behera",
+      "department": "Centre For Oceans,Rivers,Atmosphere and Land Science",
+      "designation": "Associate Professor",
+      "encrypt_key": "cl-mdbehera",
+      "code": "CL"
+    },
+    {
+      "faculty": "Prem Chand Pandey",
+      "department": "Centre For Oceans,Rivers,Atmosphere and Land Science",
+      "designation": "Visiting Professor",
+      "encrypt_key": "cl-e5dc5e3e8d7a1b34596ce25d1426e0e2",
+      "code": "CL"
+    },
+    {
+      "faculty": "V Chandrasekar",
+      "department": "Centre For Oceans,Rivers,Atmosphere and Land Science",
+      "designation": "Samudragupta Moes Chair Prof",
+      "encrypt_key": "cl-cf650be29bade37bbbbabd83c961c9c6",
+      "code": "CL"
+    },
+    {
+      "faculty": "Abhay Singh Gour",
+      "department": "Cryogenic  Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "cr-94133569fa68cdac680ed55b978ddb39",
+      "code": "CR"
+    },
+    {
+      "faculty": "Indranil Ghosh",
+      "department": "Cryogenic  Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "cr-indranil",
+      "code": "CR"
+    },
+    {
+      "faculty": "Kanchan Chowdhury",
+      "department": "Cryogenic  Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cr-kanchan",
+      "code": "CR"
+    },
+    {
+      "faculty": "Parthasarathi Ghosh",
+      "department": "Cryogenic  Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "cr-psghosh",
+      "code": "CR"
+    },
+    {
+      "faculty": "Pavitra Sandilya",
+      "department": "Cryogenic  Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cr-pavit",
+      "code": "CR"
+    },
+    {
+      "faculty": "Tapas Kumar Nandi",
+      "department": "Cryogenic  Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "cr-tkn_cryo",
+      "code": "CR"
+    },
+    {
+      "faculty": "Venimadhav Adyam",
+      "department": "Cryogenic  Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "cr-venimadhav",
+      "code": "CR"
+    },
+    {
+      "faculty": "Vutukuru Vasudeva Rao",
+      "department": "Cryogenic  Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cr-vvrao",
+      "code": "CR"
+    },
+    {
+      "faculty": "Abhijit Das",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-abhij",
+      "code": "CS"
+    },
+    {
+      "faculty": "Animesh Mukherjee",
+      "department": "Computer Science and Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "cs-animeshm",
+      "code": "CS"
+    },
+    {
+      "faculty": "Anupam Basu",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-anupam",
+      "code": "CS"
+    },
+    {
+      "faculty": "Aritra Hazra",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "cs-aritrah",
+      "code": "CS"
+    },
+    {
+      "faculty": "Arobinda Gupta",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-agupta",
+      "code": "CS"
+    },
+    {
+      "faculty": "Bivas Mitra",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cs-bivas",
+      "code": "CS"
+    },
+    {
+      "faculty": "Chittaranjan Mandal",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-chitta",
+      "code": "CS"
+    },
+    {
+      "faculty": "Debasis Samanta",
+      "department": "Computer Science and Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "cs-dsamanta",
+      "code": "CS"
+    },
+    {
+      "faculty": "Debdeep Mukhopadhyay",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-debdeep",
+      "code": "CS"
+    },
+    {
+      "faculty": "Dipanwita Roy Chowdhury",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-drc",
+      "code": "CS"
+    },
+    {
+      "faculty": "Indranil Sengupta",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-isg",
+      "code": "CS"
+    },
+    {
+      "faculty": "Jayanta Mukhopadhyay",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-jay",
+      "code": "CS"
+    },
+    {
+      "faculty": "Krothapalli Sreenivasa Rao",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-ksrao",
+      "code": "CS"
+    },
+    {
+      "faculty": "Niloy Ganguly",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-niloy",
+      "code": "CS"
+    },
+    {
+      "faculty": "Pabitra Mitra",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-pabitra",
+      "code": "CS"
+    },
+    {
+      "faculty": "Palash Dey",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor Grade-II",
+      "encrypt_key": "cs-85cd4b8f40a1a9be11793ba7665c6c75",
+      "code": "CS"
+    },
+    {
+      "faculty": "Pallab Dasgupta",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-pallab",
+      "code": "CS"
+    },
+    {
+      "faculty": "Partha Bhowmick",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-pb",
+      "code": "CS"
+    },
+    {
+      "faculty": "Partha Pratim Chakrabarti",
+      "department": "Computer Science and Engineering",
+      "designation": "Director and Professor",
+      "encrypt_key": "cs-director",
+      "code": "CS"
+    },
+    {
+      "faculty": "Partha Pratim Das",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-ppd",
+      "code": "CS"
+    },
+    {
+      "faculty": "Partha Sarathi Dey",
+      "department": "Computer Science and Engineering",
+      "designation": "Lecturer",
+      "encrypt_key": "cs-psd",
+      "code": "CS"
+    },
+    {
+      "faculty": "Pawan Goyal",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cs-pawang",
+      "code": "CS"
+    },
+    {
+      "faculty": "Pralay Mitra",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cs-pralay",
+      "code": "CS"
+    },
+    {
+      "faculty": "Rajat Subhra Chakraborty",
+      "department": "Computer Science and Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "cs-rschakraborty",
+      "code": "CS"
+    },
+    {
+      "faculty": "Rajib Mall",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-rajib",
+      "code": "CS"
+    },
+    {
+      "faculty": "Rogers Mathew",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cs-rogers",
+      "code": "CS"
+    },
+    {
+      "faculty": "Sandip Chakraborty",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cs-sandipc",
+      "code": "CS"
+    },
+    {
+      "faculty": "Saptarshi Ghosh",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cs-saptarshi",
+      "code": "CS"
+    },
+    {
+      "faculty": "Shamik Sural",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-shamik",
+      "code": "CS"
+    },
+    {
+      "faculty": "Somindu Chaya Ramanna",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor (T Track)",
+      "encrypt_key": "cs-somindu",
+      "code": "CS"
+    },
+    {
+      "faculty": "Soumyajit Dey",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cs-soumya",
+      "code": "CS"
+    },
+    {
+      "faculty": "Soumya Kanti Ghosh",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-skg",
+      "code": "CS"
+    },
+    {
+      "faculty": "Sourangshu Bhattacharya",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cs-sourangshu",
+      "code": "CS"
+    },
+    {
+      "faculty": "Sudebkumar Prasant Pal",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-spp",
+      "code": "CS"
+    },
+    {
+      "faculty": "Sudeshna Sarkar",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-sudeshna",
+      "code": "CS"
+    },
+    {
+      "faculty": "Sudip Misra",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-smisra",
+      "code": "CS"
+    },
+    {
+      "faculty": "Sujoy Ghose",
+      "department": "Computer Science and Engineering",
+      "designation": "Professor",
+      "encrypt_key": "cs-sujoy",
+      "code": "CS"
+    },
+    {
+      "faculty": "Swagato Sanyal",
+      "department": "Computer Science and Engineering",
+      "designation": "Assistant Professor Grade-II",
+      "encrypt_key": "cs-7a4978b6cad58cf7afe9351596787f0c",
+      "code": "CS"
+    },
+    {
+      "faculty": "Ahindra Nag",
+      "department": "Chemistry",
+      "designation": "Associate Professor",
+      "encrypt_key": "cy-ahinnag",
+      "code": "CY"
+    },
+    {
+      "faculty": "Amita (Pathak) Mahanty",
+      "department": "Chemistry",
+      "designation": "Associate Professor",
+      "encrypt_key": "cy-ami",
+      "code": "CY"
+    },
+    {
+      "faculty": "Amit Basak",
+      "department": "Chemistry",
+      "designation": "Visiting Professor",
+      "encrypt_key": "cy-absk",
+      "code": "CY"
+    },
+    {
+      "faculty": "Anoop Ayyappan",
+      "department": "Chemistry",
+      "designation": "Associate Professor",
+      "encrypt_key": "cy-anoop",
+      "code": "CY"
+    },
+    {
+      "faculty": "C Retna Raj",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-crraj",
+      "code": "CY"
+    },
+    {
+      "faculty": "Debabrata Mukherjee",
+      "department": "Chemistry",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cy-d.mukherjee",
+      "code": "CY"
+    },
+    {
+      "faculty": "Debashis Ray",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-dray",
+      "code": "CY"
+    },
+    {
+      "faculty": "Dibakar Dhara",
+      "department": "Chemistry",
+      "designation": "Associate Professor",
+      "encrypt_key": "cy-dibakar",
+      "code": "CY"
+    },
+    {
+      "faculty": "Ganesan Mani",
+      "department": "Chemistry",
+      "designation": "Associate Professor",
+      "encrypt_key": "cy-gmani",
+      "code": "CY"
+    },
+    {
+      "faculty": "Ganesh Venkataraman",
+      "department": "Chemistry",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "cy-ganesh.v",
+      "code": "CY"
+    },
+    {
+      "faculty": "Joykrishna Dey",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-joydey",
+      "code": "CY"
+    },
+    {
+      "faculty": "Kumar Biradha",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-kbiradha",
+      "code": "CY"
+    },
+    {
+      "faculty": "Madhab Chandra Das",
+      "department": "Chemistry",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cy-mcdas",
+      "code": "CY"
+    },
+    {
+      "faculty": "Manish Bhattacharjee",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-mxb",
+      "code": "CY"
+    },
+    {
+      "faculty": "Mintu Halder",
+      "department": "Chemistry",
+      "designation": "Associate Professor",
+      "encrypt_key": "cy-mintu",
+      "code": "CY"
+    },
+    {
+      "faculty": "Modhu Sudan Maji",
+      "department": "Chemistry",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cy-msm",
+      "code": "CY"
+    },
+    {
+      "faculty": "Narayan Dhuleep Pradeep Singh",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-ndpradeep",
+      "code": "CY"
+    },
+    {
+      "faculty": "Nilmoni Sarkar",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-nilmoni",
+      "code": "CY"
+    },
+    {
+      "faculty": "Partha Pratim Jana",
+      "department": "Chemistry",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cy-ppj",
+      "code": "CY"
+    },
+    {
+      "faculty": "Pradip Kumar Chakraborty",
+      "department": "Chemistry",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "cy-pradipc",
+      "code": "CY"
+    },
+    {
+      "faculty": "Pratim Kumar Chattaraj",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-pkc",
+      "code": "CY"
+    },
+    {
+      "faculty": "Rajakumar Ananthakrishnan",
+      "department": "Chemistry",
+      "designation": "Associate Professor",
+      "encrypt_key": "cy-raja",
+      "code": "CY"
+    },
+    {
+      "faculty": "Rajarshi Samanta",
+      "department": "Chemistry",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cy-rsamanta",
+      "code": "CY"
+    },
+    {
+      "faculty": "Sabyashachi Mishra",
+      "department": "Chemistry",
+      "designation": "Associate Professor",
+      "encrypt_key": "cy-mishra",
+      "code": "CY"
+    },
+    {
+      "faculty": "Samik Nanda",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-snanda",
+      "code": "CY"
+    },
+    {
+      "faculty": "Sanjib Kumar Patra",
+      "department": "Chemistry",
+      "designation": "Associate Professor",
+      "encrypt_key": "cy-skpatra",
+      "code": "CY"
+    },
+    {
+      "faculty": "Sanjoy Bandyopadhyay",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-sanjoy",
+      "code": "CY"
+    },
+    {
+      "faculty": "Santanu Panda",
+      "department": "Chemistry",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "cy-1fcd3375fa870e5dd99c71f5d52b4825",
+      "code": "CY"
+    },
+    {
+      "faculty": "Srabani Taraphder",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-srabani",
+      "code": "CY"
+    },
+    {
+      "faculty": "Sukanta Mandal",
+      "department": "Chemistry",
+      "designation": "Assistant Professor",
+      "encrypt_key": "cy-sukanta.mandal",
+      "code": "CY"
+    },
+    {
+      "faculty": "Suman Kalyan Samanta",
+      "department": "Chemistry",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "cy-sksamanta",
+      "code": "CY"
+    },
+    {
+      "faculty": "Suneel Kumar Srivastava",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-sunit",
+      "code": "CY"
+    },
+    {
+      "faculty": "Swagata Dasgupta",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-swagata",
+      "code": "CY"
+    },
+    {
+      "faculty": "Tanmaya Pathak",
+      "department": "Chemistry",
+      "designation": "Professor",
+      "encrypt_key": "cy-tpathak",
+      "code": "CY"
+    },
+    {
+      "faculty": "Aditya Vyas",
+      "department": "Deysarkar Centre of Excellence in Petroleum Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "de-7e21ec944d904ced4ee44c4b9104e8e4",
+      "code": "DE"
+    },
+    {
+      "faculty": "Ankur Roy",
+      "department": "Deysarkar Centre of Excellence in Petroleum Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "de-ankur",
+      "code": "DE"
+    },
+    {
+      "faculty": "Sandeep D Kulkarni",
+      "department": "Deysarkar Centre of Excellence in Petroleum Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "de-78b8d6620afcd434a4b7fb41b22e595b",
+      "code": "DE"
+    },
+    {
+      "faculty": "Ajoy Kumar Ray",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-akray",
+      "code": "EC"
+    },
+    {
+      "faculty": "Akhilesh Mohan",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Associate Professor",
+      "encrypt_key": "ec-am",
+      "code": "EC"
+    },
+    {
+      "faculty": "Amitabha Bhattacharya",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-amitabha",
+      "code": "EC"
+    },
+    {
+      "faculty": "Aniket Singha",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor Grade-II",
+      "encrypt_key": "ec-aniket",
+      "code": "EC"
+    },
+    {
+      "faculty": "Anindya Sundar Dhar",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-asd",
+      "code": "EC"
+    },
+    {
+      "faculty": "Arijit De",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Associate Professor",
+      "encrypt_key": "ec-arijit",
+      "code": "EC"
+    },
+    {
+      "faculty": "Basudev Lahiri",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ec-blahiri",
+      "code": "EC"
+    },
+    {
+      "faculty": "Bibhudatta Sahoo",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Associate Professor",
+      "encrypt_key": "ec-bsahoo",
+      "code": "EC"
+    },
+    {
+      "faculty": "Bratin Ghosh",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-bghosh",
+      "code": "EC"
+    },
+    {
+      "faculty": "Chetna Singhal",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ec-chetna",
+      "code": "EC"
+    },
+    {
+      "faculty": "Debashis Sen",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ec-dsen",
+      "code": "EC"
+    },
+    {
+      "faculty": "Dhrubes Biswas",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-dbiswas",
+      "code": "EC"
+    },
+    {
+      "faculty": "Gourab Dutta",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor (T Track)",
+      "encrypt_key": "ec-gdutta",
+      "code": "EC"
+    },
+    {
+      "faculty": "Goutam Saha",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-gsaha",
+      "code": "EC"
+    },
+    {
+      "faculty": "Indrajit Chakrabarti",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-indrajit",
+      "code": "EC"
+    },
+    {
+      "faculty": "Kapil Debnath",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ec-061302bf5f62eaa1ff5b3ff03c19b13b",
+      "code": "EC"
+    },
+    {
+      "faculty": "Mrigank Sharad",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor (T Track)",
+      "encrypt_key": "ec-775863552d2459d64c0f5c28b05b0aea",
+      "code": "EC"
+    },
+    {
+      "faculty": "Mrinal Kanti Mandal",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Associate Professor",
+      "encrypt_key": "ec-mkmandal",
+      "code": "EC"
+    },
+    {
+      "faculty": "Mrityunjoy Chakraborty",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-mrityun",
+      "code": "EC"
+    },
+    {
+      "faculty": "Prabir Kumar Biswas",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-pkb",
+      "code": "EC"
+    },
+    {
+      "faculty": "Pradip Mandal",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-pradip",
+      "code": "EC"
+    },
+    {
+      "faculty": "Prasanta Kumar Guha",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Associate Professor",
+      "encrypt_key": "ec-pkguha",
+      "code": "EC"
+    },
+    {
+      "faculty": "Raja Datta",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-rajadatta",
+      "code": "EC"
+    },
+    {
+      "faculty": "Rajarshi Roy",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Associate Professor",
+      "encrypt_key": "ec-royr",
+      "code": "EC"
+    },
+    {
+      "faculty": "Rajat Roy",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Associate Professor",
+      "encrypt_key": "ec-rajatroy",
+      "code": "EC"
+    },
+    {
+      "faculty": "Ratnam Varada Raja Kumar",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-rkumar",
+      "code": "EC"
+    },
+    {
+      "faculty": "Ritwik Kumar Layek",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ec-ritwik",
+      "code": "EC"
+    },
+    {
+      "faculty": "Santanu Chattopadhyay",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-santanu",
+      "code": "EC"
+    },
+    {
+      "faculty": "Sant Sharan Pathak",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-ssp",
+      "code": "EC"
+    },
+    {
+      "faculty": "Sarang Pendharker",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ec-sarang",
+      "code": "EC"
+    },
+    {
+      "faculty": "Shailendra Kumar Varshney",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Associate Professor",
+      "encrypt_key": "ec-skvarshney",
+      "code": "EC"
+    },
+    {
+      "faculty": "Sharba Bandyopadhyay",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ec-sharba",
+      "code": "EC"
+    },
+    {
+      "faculty": "Sudip Nag",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ec-sudipnag1",
+      "code": "EC"
+    },
+    {
+      "faculty": "Sudipta Mahapatra",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Associate Professor",
+      "encrypt_key": "ec-sudipta",
+      "code": "EC"
+    },
+    {
+      "faculty": "Sudipta Mukhopadhyay",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-smukho",
+      "code": "EC"
+    },
+    {
+      "faculty": "Tarun Kanti Bhattacharyya",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Professor",
+      "encrypt_key": "ec-tkb",
+      "code": "EC"
+    },
+    {
+      "faculty": "Vivek Dixit",
+      "department": "Electronics and Electrical Communication Engg.",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ec-vdixit",
+      "code": "EC"
+    },
+    {
+      "faculty": "Alok Kanti Deb",
+      "department": "Electrical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ee-alokkanti",
+      "code": "EE"
+    },
+    {
+      "faculty": "Amit Patra",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-amit",
+      "code": "EE"
+    },
+    {
+      "faculty": "Anirban Mukherjee",
+      "department": "Electrical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ee-anirban",
+      "code": "EE"
+    },
+    {
+      "faculty": "Arun Ghosh",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-arun",
+      "code": "EE"
+    },
+    {
+      "faculty": "Ashis Maity",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-ashis",
+      "code": "EE"
+    },
+    {
+      "faculty": "Ashok Kumar Pradhan",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-akpradhan",
+      "code": "EE"
+    },
+    {
+      "faculty": "Aurobinda Routray",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-aroutray",
+      "code": "EE"
+    },
+    {
+      "faculty": "Avishek Chatterjee",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor (T Track)",
+      "encrypt_key": "ee-16e36dd9b031a8608fd19882cbb32f5a",
+      "code": "EE"
+    },
+    {
+      "faculty": "Chandan Chakraborty",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-cc",
+      "code": "EE"
+    },
+    {
+      "faculty": "Debaprasad Kastha",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-kastha",
+      "code": "EE"
+    },
+    {
+      "faculty": "Debapriya Das",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-ddas",
+      "code": "EE"
+    },
+    {
+      "faculty": "Debdoot Sheet",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-debdoot",
+      "code": "EE"
+    },
+    {
+      "faculty": "Dheeman Chatterjee",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-dheemanc",
+      "code": "EE"
+    },
+    {
+      "faculty": "Dipankar Debnath",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor (T Track)",
+      "encrypt_key": "ee-ddebnath",
+      "code": "EE"
+    },
+    {
+      "faculty": "Gautam Poddar",
+      "department": "Electrical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ee-gpoddar",
+      "code": "EE"
+    },
+    {
+      "faculty": "Karabi Biswas",
+      "department": "Electrical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ee-karabi",
+      "code": "EE"
+    },
+    {
+      "faculty": "Murali Mohan Bosukonda",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-mohan",
+      "code": "EE"
+    },
+    {
+      "faculty": "Nirmalya Ghosh",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-nirmalya",
+      "code": "EE"
+    },
+    {
+      "faculty": "N K Kishore",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-kishor",
+      "code": "EE"
+    },
+    {
+      "faculty": "Prabodh Bajpai",
+      "department": "Electrical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ee-pbajpai",
+      "code": "EE"
+    },
+    {
+      "faculty": "Pranab Kumar Dutta",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-pkd",
+      "code": "EE"
+    },
+    {
+      "faculty": "Rajiv Ranjan Sahay",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-rajiv",
+      "code": "EE"
+    },
+    {
+      "faculty": "Sanand Dilip Amita Athalye",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ee-sanand",
+      "code": "EE"
+    },
+    {
+      "faculty": "Santanu Kapat",
+      "department": "Electrical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "ee-skapat",
+      "code": "EE"
+    },
+    {
+      "faculty": "Sarit Kumar Das",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-skdas",
+      "code": "EE"
+    },
+    {
+      "faculty": "Saurav Pramanik",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-saurav.pramanik",
+      "code": "EE"
+    },
+    {
+      "faculty": "Siddhartha Mukhopadhyay",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-smukh",
+      "code": "EE"
+    },
+    {
+      "faculty": "Siddhartha Sen",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-ssen",
+      "code": "EE"
+    },
+    {
+      "faculty": "Sourav Patra",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-sourav",
+      "code": "EE"
+    },
+    {
+      "faculty": "Souvik Chattopadhyay",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-souvik",
+      "code": "EE"
+    },
+    {
+      "faculty": "Suman Maiti",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-suman.maiti",
+      "code": "EE"
+    },
+    {
+      "faculty": "Tanmoy Bhattacharya",
+      "department": "Electrical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ee-btanmoy",
+      "code": "EE"
+    },
+    {
+      "faculty": "Tapas Kumar Bhattacharyya",
+      "department": "Electrical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "ee-tapas",
+      "code": "EE"
+    },
+    {
+      "faculty": "Binay Kanti Dutta",
+      "department": "Environmental Science and Engineering",
+      "designation": "Visiting Faculty",
+      "encrypt_key": "ef-bkdutta",
+      "code": "EF"
+    },
+    {
+      "faculty": "Amit Ghosh",
+      "department": "Energy Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "es-amitghosh",
+      "code": "ES"
+    },
+    {
+      "faculty": "Chirodeep Bakli",
+      "department": "Energy Science and Engineering",
+      "designation": "Assistant Professor Grade-II",
+      "encrypt_key": "es-chirodeep",
+      "code": "ES"
+    },
+    {
+      "faculty": "Sreeraj Puravankara",
+      "department": "Energy Science and Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "es-sreeraj",
+      "code": "ES"
+    },
+    {
+      "faculty": "Trilok Singh",
+      "department": "Energy Science and Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "es-trilok",
+      "code": "ES"
+    },
+    {
+      "faculty": "Vanteru Mahendra Reddy",
+      "department": "Energy Science and Engineering",
+      "designation": "Visiting Faculty",
+      "encrypt_key": "es-mahendra",
+      "code": "ES"
+    },
+    {
+      "faculty": "Atasi Mohanty",
+      "department": "Centre For Educational Technology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "et-atasim",
+      "code": "ET"
+    },
+    {
+      "faculty": "Bani Bhattacharya",
+      "department": "Centre For Educational Technology",
+      "designation": "Associate Professor",
+      "encrypt_key": "et-banib",
+      "code": "ET"
+    },
+    {
+      "faculty": "Jiaul Hoque Paik",
+      "department": "Centre For Educational Technology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "et-jiaul",
+      "code": "ET"
+    },
+    {
+      "faculty": "Kaushal Kumar Bhagat",
+      "department": "Centre For Educational Technology",
+      "designation": "Assistant Professor Grade-II",
+      "encrypt_key": "et-kkntnu",
+      "code": "ET"
+    },
+    {
+      "faculty": "Plaban Kumar Bhowmick",
+      "department": "Centre For Educational Technology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "et-plaban",
+      "code": "ET"
+    },
+    {
+      "faculty": "Rajlakshmi Guha",
+      "department": "Centre For Educational Technology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "et-rajg",
+      "code": "ET"
+    },
+    {
+      "faculty": "Shyamal Kumar Das Mandal",
+      "department": "Centre For Educational Technology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "et-sdasmandal",
+      "code": "ET"
+    },
+    {
+      "faculty": "Abhijit Bhattacharya",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-abba",
+      "code": "GG"
+    },
+    {
+      "faculty": "Abhijit Mukherjee",
+      "department": "Geology and Geophysics",
+      "designation": "Associate Professor",
+      "encrypt_key": "gg-abhijit",
+      "code": "GG"
+    },
+    {
+      "faculty": "Anil Kumar Gupta",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-anilg",
+      "code": "GG"
+    },
+    {
+      "faculty": "Anindya Sarkar",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-anindya",
+      "code": "GG"
+    },
+    {
+      "faculty": "Arindam Basu",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-abasu",
+      "code": "GG"
+    },
+    {
+      "faculty": "Arun Singh",
+      "department": "Geology and Geophysics",
+      "designation": "Associate Professor",
+      "encrypt_key": "gg-arun",
+      "code": "GG"
+    },
+    {
+      "faculty": "Biswajit Mishra",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-bmgg",
+      "code": "GG"
+    },
+    {
+      "faculty": "Chandrani Singh",
+      "department": "Geology and Geophysics",
+      "designation": "Associate Professor",
+      "encrypt_key": "gg-chandrani",
+      "code": "GG"
+    },
+    {
+      "faculty": "Debashish Sengupta",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-dsgg",
+      "code": "GG"
+    },
+    {
+      "faculty": "Dewashish Upadhyay",
+      "department": "Geology and Geophysics",
+      "designation": "Associate Professor",
+      "encrypt_key": "gg-dewashish",
+      "code": "GG"
+    },
+    {
+      "faculty": "Kamal Lochan Pruseth",
+      "department": "Geology and Geophysics",
+      "designation": "Associate Professor",
+      "encrypt_key": "gg-pruseth",
+      "code": "GG"
+    },
+    {
+      "faculty": "Manish A Mamtani",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-mamtani",
+      "code": "GG"
+    },
+    {
+      "faculty": "Melinda Kumar Bera",
+      "department": "Geology and Geophysics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "gg-melinda",
+      "code": "GG"
+    },
+    {
+      "faculty": "Mruganka Kumar Panigrahi",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-mkp",
+      "code": "GG"
+    },
+    {
+      "faculty": "Paresh Nath Singha Roy",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-pareshsr",
+      "code": "GG"
+    },
+    {
+      "faculty": "Probal Sengupta",
+      "department": "Geology and Geophysics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "gg-probal",
+      "code": "GG"
+    },
+    {
+      "faculty": "Ravikant Vadlamani",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-vravikant",
+      "code": "GG"
+    },
+    {
+      "faculty": "Sabyasachi Maiti",
+      "department": "Geology and Geophysics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "gg-maiti",
+      "code": "GG"
+    },
+    {
+      "faculty": "Saibal Gupta",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-saibl",
+      "code": "GG"
+    },
+    {
+      "faculty": "Sanghamitra Ray",
+      "department": "Geology and Geophysics",
+      "designation": "Associate Professor",
+      "encrypt_key": "gg-sray",
+      "code": "GG"
+    },
+    {
+      "faculty": "Sankar Kumar Nath",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-nath",
+      "code": "GG"
+    },
+    {
+      "faculty": "Santanu Kumar Bhowmik",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-santanu",
+      "code": "GG"
+    },
+    {
+      "faculty": "Shashi Prakash Sharma",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-spsharma",
+      "code": "GG"
+    },
+    {
+      "faculty": "Shubhabrata Paul",
+      "department": "Geology and Geophysics",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "gg-spaul",
+      "code": "GG"
+    },
+    {
+      "faculty": "Subhasish Das",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-sdas",
+      "code": "GG"
+    },
+    {
+      "faculty": "Subhasish Tripathy",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-stripathy",
+      "code": "GG"
+    },
+    {
+      "faculty": "Sudha Agrahari",
+      "department": "Geology and Geophysics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "gg-158388770a41292b277c199ca8d95ccf",
+      "code": "GG"
+    },
+    {
+      "faculty": "Sujoy Kanti Ghosh",
+      "department": "Geology and Geophysics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "gg-sujoy.ghosh",
+      "code": "GG"
+    },
+    {
+      "faculty": "William Kumar Mohanty",
+      "department": "Geology and Geophysics",
+      "designation": "Professor",
+      "encrypt_key": "gg-wkmohanty",
+      "code": "GG"
+    },
+    {
+      "faculty": "Amit Kumar Dutta",
+      "department": "G.S Sanyal School of Telecommunication",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "gs-4d8d751988a68fec6e98d0a65284f530",
+      "code": "GS"
+    },
+    {
+      "faculty": "Aneek Adhya",
+      "department": "G.S Sanyal School of Telecommunication",
+      "designation": "Assistant Professor",
+      "encrypt_key": "gs-aneek",
+      "code": "GS"
+    },
+    {
+      "faculty": "Debarati Sen",
+      "department": "G.S Sanyal School of Telecommunication",
+      "designation": "Assistant Professor",
+      "encrypt_key": "gs-debarati",
+      "code": "GS"
+    },
+    {
+      "faculty": "Goutam Das",
+      "department": "G.S Sanyal School of Telecommunication",
+      "designation": "Associate Professor",
+      "encrypt_key": "gs-777faedf322f9cda62e87a9a1db76d24",
+      "code": "GS"
+    },
+    {
+      "faculty": "Saswat Chakrabarti",
+      "department": "G.S Sanyal School of Telecommunication",
+      "designation": "Professor",
+      "encrypt_key": "gs-saswat",
+      "code": "GS"
+    },
+    {
+      "faculty": "Suvra Sekhar Das",
+      "department": "G.S Sanyal School of Telecommunication",
+      "designation": "Associate Professor",
+      "encrypt_key": "gs-suvra",
+      "code": "GS"
+    },
+    {
+      "faculty": "Anjali Roy",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-anjali",
+      "code": "HS"
+    },
+    {
+      "faculty": "Anuradha Choudry",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor",
+      "encrypt_key": "hs-anuradha.sanskrit",
+      "code": "HS"
+    },
+    {
+      "faculty": "Anwesha Aditya",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor",
+      "encrypt_key": "hs-anwesha",
+      "code": "HS"
+    },
+    {
+      "faculty": "Archana Patnaik",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "hs-51331fcd89d45304a118755678da4a8b",
+      "code": "HS"
+    },
+    {
+      "faculty": "Bhagirath Behera",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-bhagirath",
+      "code": "HS"
+    },
+    {
+      "faculty": "Bimal Kishore Sahoo",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor",
+      "encrypt_key": "hs-bks",
+      "code": "HS"
+    },
+    {
+      "faculty": "Chhanda Chakraborti",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-chhanda",
+      "code": "HS"
+    },
+    {
+      "faculty": "Damodar Suar",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-ds",
+      "code": "HS"
+    },
+    {
+      "faculty": "Dripta Piplai (Mondal)",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "hs-8a42fb391ac55add6aac8811ffaea5f5",
+      "code": "HS"
+    },
+    {
+      "faculty": "Gourishankar S Hiremath",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor",
+      "encrypt_key": "hs-gshiremath",
+      "code": "HS"
+    },
+    {
+      "faculty": "H S Komalesha",
+      "department": "Humanities and Social Sciences",
+      "designation": "Associate Professor",
+      "encrypt_key": "hs-komalesha",
+      "code": "HS"
+    },
+    {
+      "faculty": "Inder Sekhar Yadav",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor",
+      "encrypt_key": "hs-yadavis",
+      "code": "HS"
+    },
+    {
+      "faculty": "Jayashree Chakraborty",
+      "department": "Humanities and Social Sciences",
+      "designation": "Associate Professor",
+      "encrypt_key": "hs-shree",
+      "code": "HS"
+    },
+    {
+      "faculty": "Jenia Mukherjee",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor",
+      "encrypt_key": "hs-jenia",
+      "code": "HS"
+    },
+    {
+      "faculty": "Jitendra Mahakud",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-jmahakud",
+      "code": "HS"
+    },
+    {
+      "faculty": "Kailash Bihari Lal Srivastava",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-kbls",
+      "code": "HS"
+    },
+    {
+      "faculty": "Kishor Goswami",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-kishor",
+      "code": "HS"
+    },
+    {
+      "faculty": "Manas Kumar Mandal",
+      "department": "Humanities and Social Sciences",
+      "designation": "Distinguished Visiting Professor",
+      "encrypt_key": "hs-87a051c5cff9cd51f9afb048405f71f1",
+      "code": "HS"
+    },
+    {
+      "faculty": "Mantu Kumar Mahalik",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "hs-mkm",
+      "code": "HS"
+    },
+    {
+      "faculty": "Narayan Chandra Nayak",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-ncnayak",
+      "code": "HS"
+    },
+    {
+      "faculty": "Priyadarshi Patnaik",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-bapi",
+      "code": "HS"
+    },
+    {
+      "faculty": "Pulak Mishra",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-pmishra",
+      "code": "HS"
+    },
+    {
+      "faculty": "Rabindra Kumar Pradhan",
+      "department": "Humanities and Social Sciences",
+      "designation": "Associate Professor",
+      "encrypt_key": "hs-rkpradhan",
+      "code": "HS"
+    },
+    {
+      "faculty": "Rishabh Rai",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "hs-rishabh",
+      "code": "HS"
+    },
+    {
+      "faculty": "Saswat Samay Das",
+      "department": "Humanities and Social Sciences",
+      "designation": "Associate Professor",
+      "encrypt_key": "hs-ssd",
+      "code": "HS"
+    },
+    {
+      "faculty": "Seema Singh",
+      "department": "Humanities and Social Sciences",
+      "designation": "Associate Professor",
+      "encrypt_key": "hs-seema",
+      "code": "HS"
+    },
+    {
+      "faculty": "Siddhartha Chattopadhyay",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor",
+      "encrypt_key": "hs-siddhartha",
+      "code": "HS"
+    },
+    {
+      "faculty": "Somdatta Bhattacharya",
+      "department": "Humanities and Social Sciences",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "hs-cda79cef5b3d69e47bf881153de40ae2",
+      "code": "HS"
+    },
+    {
+      "faculty": "Suhita Chopra Chatterjee",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-suhita",
+      "code": "HS"
+    },
+    {
+      "faculty": "Vijai Nath Giri",
+      "department": "Humanities and Social Sciences",
+      "designation": "Professor",
+      "encrypt_key": "hs-vng",
+      "code": "HS"
+    },
+    {
+      "faculty": "Zakir Husain",
+      "department": "Humanities and Social Sciences",
+      "designation": "Associate Professor",
+      "encrypt_key": "hs-dzhusain",
+      "code": "HS"
+    },
+    {
+      "faculty": "Ankhi Banerjee",
+      "department": "Ranbir and Chitra Gupta School of Infrastructure Design and Mngt.",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "id-ankhi",
+      "code": "ID"
+    },
+    {
+      "faculty": "Arkopal Kishore Goswami",
+      "department": "Ranbir and Chitra Gupta School of Infrastructure Design and Mngt.",
+      "designation": "Assistant Professor",
+      "encrypt_key": "id-akgoswami",
+      "code": "ID"
+    },
+    {
+      "faculty": "Bharath Haridas Aithal",
+      "department": "Ranbir and Chitra Gupta School of Infrastructure Design and Mngt.",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "id-bhaithal",
+      "code": "ID"
+    },
+    {
+      "faculty": "Swati Maitra",
+      "department": "Ranbir and Chitra Gupta School of Infrastructure Design and Mngt.",
+      "designation": "Assistant Professor",
+      "encrypt_key": "id-swati",
+      "code": "ID"
+    },
+    {
+      "faculty": "Akhilesh Kumar",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "im-akumar",
+      "code": "IM"
+    },
+    {
+      "faculty": "Biswajit Mahanty",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Professor",
+      "encrypt_key": "im-bm",
+      "code": "IM"
+    },
+    {
+      "faculty": "Goutam Sen",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "im-gsen",
+      "code": "IM"
+    },
+    {
+      "faculty": "Jhareswar Maiti",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Professor",
+      "encrypt_key": "im-jmaiti",
+      "code": "IM"
+    },
+    {
+      "faculty": "Jitendra Kumar Jha",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "im-jkjha",
+      "code": "IM"
+    },
+    {
+      "faculty": "Jitesh J Thakkar",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "im-jt",
+      "code": "IM"
+    },
+    {
+      "faculty": "Mamata Jenamani",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Professor",
+      "encrypt_key": "im-mj",
+      "code": "IM"
+    },
+    {
+      "faculty": "Manoj Kumar Tiwari",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Professor",
+      "encrypt_key": "im-mktiwari9",
+      "code": "IM"
+    },
+    {
+      "faculty": "O. Bala Krishna",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Visiting Professor",
+      "encrypt_key": "im-obkrishna",
+      "code": "IM"
+    },
+    {
+      "faculty": "Pradip Kumar Ray",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Professor",
+      "encrypt_key": "im-pkr",
+      "code": "IM"
+    },
+    {
+      "faculty": "Sarada Prasad Sarmah",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Professor",
+      "encrypt_key": "im-spsarmah",
+      "code": "IM"
+    },
+    {
+      "faculty": "Sayak Roychowdhury",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "im-b8ddd4e23c3d98fe4c4c61177afffac2",
+      "code": "IM"
+    },
+    {
+      "faculty": "Sri Krishna Kumar",
+      "department": "Industrial and Systems Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "im-srikrishna",
+      "code": "IM"
+    },
+    {
+      "faculty": "Arindam Basu",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ip-arindam",
+      "code": "IP"
+    },
+    {
+      "faculty": "Balraj Kaur Sidhu",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ip-bksidhu",
+      "code": "IP"
+    },
+    {
+      "faculty": "Dipa Dube",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Professor",
+      "encrypt_key": "ip-dipadube",
+      "code": "IP"
+    },
+    {
+      "faculty": "Gaurav Shukla",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ip-gs",
+      "code": "IP"
+    },
+    {
+      "faculty": "Gouri Ashok Gargate",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ip-gouri",
+      "code": "IP"
+    },
+    {
+      "faculty": "Indrajit Dube",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Professor",
+      "encrypt_key": "ip-indrajit",
+      "code": "IP"
+    },
+    {
+      "faculty": "Niharika Sahoo Bhattacharya",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ip-niharika",
+      "code": "IP"
+    },
+    {
+      "faculty": "Padmavati Manchikanti",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Professor",
+      "encrypt_key": "ip-mpadma",
+      "code": "IP"
+    },
+    {
+      "faculty": "Raju K D",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Professor",
+      "encrypt_key": "ip-kdraju",
+      "code": "IP"
+    },
+    {
+      "faculty": "Shreya Matilal",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ip-shreya",
+      "code": "IP"
+    },
+    {
+      "faculty": "S R Subramanian",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ip-subramanian",
+      "code": "IP"
+    },
+    {
+      "faculty": "Uday Shankar",
+      "department": "Rajiv Gandhi School of Intellectual Property Law",
+      "designation": "Associate Professor",
+      "encrypt_key": "ip-uday",
+      "code": "IP"
+    },
+    {
+      "faculty": "Adrijit Goswami",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-goswami",
+      "code": "MA"
+    },
+    {
+      "faculty": "Asish Ganguly",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-aganguly",
+      "code": "MA"
+    },
+    {
+      "faculty": "Bappaditya Bhowmik",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-bappaditya",
+      "code": "MA"
+    },
+    {
+      "faculty": "Bibhas Adhikari",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-bibhas",
+      "code": "MA"
+    },
+    {
+      "faculty": "Buddhananda Banerjee",
+      "department": "Mathematics",
+      "designation": "Visiting Asst Professor",
+      "encrypt_key": "ma-bbanerjee",
+      "code": "MA"
+    },
+    {
+      "faculty": "Chandal Nahak",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-cnahak",
+      "code": "MA"
+    },
+    {
+      "faculty": "Debapriya Biswas",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-priya",
+      "code": "MA"
+    },
+    {
+      "faculty": "Debjani Chakraborty",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-debjani",
+      "code": "MA"
+    },
+    {
+      "faculty": "Geetanjali Panda",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-geetanjali",
+      "code": "MA"
+    },
+    {
+      "faculty": "Gnaneshwar Nelakanti",
+      "department": "Mathematics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ma-gnanesh",
+      "code": "MA"
+    },
+    {
+      "faculty": "G P Raja Sekhar",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-rajas",
+      "code": "MA"
+    },
+    {
+      "faculty": "Hari Shankar Mahato",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-hsmahato",
+      "code": "MA"
+    },
+    {
+      "faculty": "Jitendra Kumar",
+      "department": "Mathematics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ma-jkumar",
+      "code": "MA"
+    },
+    {
+      "faculty": "Koeli Ghoshal",
+      "department": "Mathematics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ma-koeli",
+      "code": "MA"
+    },
+    {
+      "faculty": "Mahendra Prasad Biswal",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-mpbiswal",
+      "code": "MA"
+    },
+    {
+      "faculty": "Mousumi Mandal",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-mousumi",
+      "code": "MA"
+    },
+    {
+      "faculty": "Nitin Gupta",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-nitin.gupta",
+      "code": "MA"
+    },
+    {
+      "faculty": "Pawan Kumar",
+      "department": "Mathematics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ma-pawan",
+      "code": "MA"
+    },
+    {
+      "faculty": "Pratima Panigrahi",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-pratima",
+      "code": "MA"
+    },
+    {
+      "faculty": "P V S N Murthy",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-pvsnm",
+      "code": "MA"
+    },
+    {
+      "faculty": "Rajesh Kannan",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-rajeshkannan",
+      "code": "MA"
+    },
+    {
+      "faculty": "Rajni Kant Pandey",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-rkp",
+      "code": "MA"
+    },
+    {
+      "faculty": "Ramakrishna Nanduri",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-nanduri",
+      "code": "MA"
+    },
+    {
+      "faculty": "Ratna Dutta",
+      "department": "Mathematics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ma-ratna",
+      "code": "MA"
+    },
+    {
+      "faculty": "Rupanwita Gayen",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-rupanwita",
+      "code": "MA"
+    },
+    {
+      "faculty": "Somesh Kumar",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-smsh",
+      "code": "MA"
+    },
+    {
+      "faculty": "Somnath Bhattacharyya",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-somnath",
+      "code": "MA"
+    },
+    {
+      "faculty": "Sourav Mukhopadhyay",
+      "department": "Mathematics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ma-sourav",
+      "code": "MA"
+    },
+    {
+      "faculty": "Swanand Ravindra Khare",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-srkhare",
+      "code": "MA"
+    },
+    {
+      "faculty": "T Raja Sekhar",
+      "department": "Mathematics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ma-trajasekhar",
+      "code": "MA"
+    },
+    {
+      "faculty": "Umesh Chandra Gupta",
+      "department": "Mathematics",
+      "designation": "Professor",
+      "encrypt_key": "ma-umesh",
+      "code": "MA"
+    },
+    {
+      "faculty": "Abhijit Guha",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-a.guha",
+      "code": "ME"
+    },
+    {
+      "faculty": "Aditya Bandopadhyay",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor (T Track)",
+      "encrypt_key": "me-aditya",
+      "code": "ME"
+    },
+    {
+      "faculty": "Ajay Muljibhai Sidpara",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-ajaymsidpara",
+      "code": "ME"
+    },
+    {
+      "faculty": "Amiya Ranjan Mohanty",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-amohanty",
+      "code": "ME"
+    },
+    {
+      "faculty": "Anandaroop Bhattacharya",
+      "department": "Mechanical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "me-anandaroop",
+      "code": "ME"
+    },
+    {
+      "faculty": "Anirvan Dasgupta",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-anir",
+      "code": "ME"
+    },
+    {
+      "faculty": "Arun Kumar Samantaray",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-samantaray",
+      "code": "ME"
+    },
+    {
+      "faculty": "Ashish Kumar Nath",
+      "department": "Mechanical Engineering",
+      "designation": "Visiting Professor",
+      "encrypt_key": "me-6dbdbf29bae16a810e264a8bd6e4b821",
+      "code": "ME"
+    },
+    {
+      "faculty": "Asimava Roy Choudhury",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-archie",
+      "code": "ME"
+    },
+    {
+      "faculty": "Atul Jain",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-atuljain",
+      "code": "ME"
+    },
+    {
+      "faculty": "Biswajit Maiti",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-bmaiti",
+      "code": "ME"
+    },
+    {
+      "faculty": "Cheruvu Siva Kumar",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-kumar",
+      "code": "ME"
+    },
+    {
+      "faculty": "Chirag Deepak Kalelkar",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-kalelkar",
+      "code": "ME"
+    },
+    {
+      "faculty": "Dhananjay Kumar Srivastava",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-d1dd8694b6108ff7bccc19acd47be4ff",
+      "code": "ME"
+    },
+    {
+      "faculty": "Dilip Kumar Pratihar",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-dkpra",
+      "code": "ME"
+    },
+    {
+      "faculty": "Goutam Chakraborty",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-goutam",
+      "code": "ME"
+    },
+    {
+      "faculty": "Jeevanjyoti Chakraborty",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-jeevan",
+      "code": "ME"
+    },
+    {
+      "faculty": "Jinu Paul",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-a62567b46de3c8efcf74bdf8317532b3",
+      "code": "ME"
+    },
+    {
+      "faculty": "Kingshook Bhattacharyya",
+      "department": "Mechanical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "me-king",
+      "code": "ME"
+    },
+    {
+      "faculty": "Kumar Ray",
+      "department": "Mechanical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "me-raykr",
+      "code": "ME"
+    },
+    {
+      "faculty": "Maddali Ramgopal",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-ramg",
+      "code": "ME"
+    },
+    {
+      "faculty": "Manab Kumar Das",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-manab",
+      "code": "ME"
+    },
+    {
+      "faculty": "Manas Chandra Ray",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-mcray",
+      "code": "ME"
+    },
+    {
+      "faculty": "Mihir Sarangi",
+      "department": "Mechanical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "me-smihir",
+      "code": "ME"
+    },
+    {
+      "faculty": "Partha Pratim Bandyopadhyay",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-ppb",
+      "code": "ME"
+    },
+    {
+      "faculty": "Partha Saha",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-psaha",
+      "code": "ME"
+    },
+    {
+      "faculty": "Prasanta Kumar Das",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-pkd",
+      "code": "ME"
+    },
+    {
+      "faculty": "Rajaram Lakkaraju",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-rlakkaraju",
+      "code": "ME"
+    },
+    {
+      "faculty": "Ranjan Bhattacharyya",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-rbmail",
+      "code": "ME"
+    },
+    {
+      "faculty": "Sandipan Ghosh Moulic",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-moulic",
+      "code": "ME"
+    },
+    {
+      "faculty": "Sanjay Gupta",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-sangupta",
+      "code": "ME"
+    },
+    {
+      "faculty": "Sankha Deb",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-sankha.deb",
+      "code": "ME"
+    },
+    {
+      "faculty": "Sati Nath Bhattacharyya",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-snb",
+      "code": "ME"
+    },
+    {
+      "faculty": "Somnath Roy",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-somnath.roy",
+      "code": "ME"
+    },
+    {
+      "faculty": "Soumitra Paul",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-spaul",
+      "code": "ME"
+    },
+    {
+      "faculty": "Sourav Mitra",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-sourav",
+      "code": "ME"
+    },
+    {
+      "faculty": "Souvik Bhattacharyya",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-souvik",
+      "code": "ME"
+    },
+    {
+      "faculty": "Sovan Lal Das",
+      "department": "Mechanical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "me-sovandas",
+      "code": "ME"
+    },
+    {
+      "faculty": "S Ramanujam",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "me-rmnjm",
+      "code": "ME"
+    },
+    {
+      "faculty": "Subhransu Roy",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-suroy",
+      "code": "ME"
+    },
+    {
+      "faculty": "Sukanta Kumar Dash",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-sdash",
+      "code": "ME"
+    },
+    {
+      "faculty": "Suman Chakraborty",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-suman",
+      "code": "ME"
+    },
+    {
+      "faculty": "Surjya Kanta Pal",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "encrypt_key": "me-skpal",
+      "code": "ME"
+    },
+    {
+      "faculty": "Sushanta Kumar Panda",
+      "department": "Mechanical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "me-sushanta.panda",
+      "code": "ME"
+    },
+    {
+      "faculty": "Vikranth Racherla",
+      "department": "Mechanical Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "me-vikranth.racherla",
+      "code": "ME"
+    },
+    {
+      "faculty": "Abhiram Kumar Verma",
+      "department": "Mining Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mi-akverma",
+      "code": "MI"
+    },
+    {
+      "faculty": "Aditya Kumar Patra",
+      "department": "Mining Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mi-akpatra",
+      "code": "MI"
+    },
+    {
+      "faculty": "Arun Kumar Majumder",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-akm",
+      "code": "MI"
+    },
+    {
+      "faculty": "Ashis Bhattacherjee",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-ashisb",
+      "code": "MI"
+    },
+    {
+      "faculty": "Basanta Kumar Prusty",
+      "department": "Mining Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mi-bkprusty",
+      "code": "MI"
+    },
+    {
+      "faculty": "Bibhuti Bhusan Mandal",
+      "department": "Mining Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mi-bbmandal",
+      "code": "MI"
+    },
+    {
+      "faculty": "Biswajit Samanta",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-samantab",
+      "code": "MI"
+    },
+    {
+      "faculty": "Debashish Chakravarty",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-dc",
+      "code": "MI"
+    },
+    {
+      "faculty": "Debasis Deb",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-deb",
+      "code": "MI"
+    },
+    {
+      "faculty": "Ganga Prasad Karmakar",
+      "department": "Mining Engineering",
+      "designation": "Visiting Professor",
+      "encrypt_key": "mi-gpkarmakar",
+      "code": "MI"
+    },
+    {
+      "faculty": "Jayanta Bhattacharyya",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-jayantab",
+      "code": "MI"
+    },
+    {
+      "faculty": "Karanam Uma Maheshwar Rao",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-umr",
+      "code": "MI"
+    },
+    {
+      "faculty": "Kaushik Dey",
+      "department": "Mining Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mi-kausdey",
+      "code": "MI"
+    },
+    {
+      "faculty": "Khanindra Pathak",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-khanindra",
+      "code": "MI"
+    },
+    {
+      "faculty": "M P Dikshit",
+      "department": "Mining Engineering",
+      "designation": "Visiting Professor",
+      "encrypt_key": "mi-8c0b698103bb1b28583b8ecdc46e453a",
+      "code": "MI"
+    },
+    {
+      "faculty": "Samir Kumar Das",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-samirdas",
+      "code": "MI"
+    },
+    {
+      "faculty": "Samir Kumar Pal",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-palsk",
+      "code": "MI"
+    },
+    {
+      "faculty": "S Suryanarayana Bhamidipati",
+      "department": "Mining Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mi-bssastry",
+      "code": "MI"
+    },
+    {
+      "faculty": "Debashree Guha Adhya",
+      "department": "School of Medical Science and Technology",
+      "designation": "Visiting Asst Professor",
+      "encrypt_key": "mm-debashree_smst",
+      "code": "MM"
+    },
+    {
+      "faculty": "Gayatri Mukherjee",
+      "department": "School of Medical Science and Technology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mm-gayatri.mukherjee",
+      "code": "MM"
+    },
+    {
+      "faculty": "Jyotirmoy Chatterjee",
+      "department": "School of Medical Science and Technology",
+      "designation": "Professor",
+      "encrypt_key": "mm-jchatterjee",
+      "code": "MM"
+    },
+    {
+      "faculty": "Koel Chaudhury",
+      "department": "School of Medical Science and Technology",
+      "designation": "Professor",
+      "encrypt_key": "mm-koel",
+      "code": "MM"
+    },
+    {
+      "faculty": "Mahitosh Mandal",
+      "department": "School of Medical Science and Technology",
+      "designation": "Professor",
+      "encrypt_key": "mm-mahitosh",
+      "code": "MM"
+    },
+    {
+      "faculty": "Manjunatha Mahadevappa",
+      "department": "School of Medical Science and Technology",
+      "designation": "Professor",
+      "encrypt_key": "mm-mmaha2",
+      "code": "MM"
+    },
+    {
+      "faculty": "Nishant Chakravorty",
+      "department": "School of Medical Science and Technology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mm-nishant",
+      "code": "MM"
+    },
+    {
+      "faculty": "Praphulla Chandra Shukla",
+      "department": "School of Medical Science and Technology",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mm-pcshukla",
+      "code": "MM"
+    },
+    {
+      "faculty": "Sangeeta Das Bhattacharya",
+      "department": "School of Medical Science and Technology",
+      "designation": "Professor",
+      "encrypt_key": "mm-sangeeta",
+      "code": "MM"
+    },
+    {
+      "faculty": "Santanu Dhara",
+      "department": "School of Medical Science and Technology",
+      "designation": "Professor",
+      "encrypt_key": "mm-sdhara",
+      "code": "MM"
+    },
+    {
+      "faculty": "Satadal Saha",
+      "department": "School of Medical Science and Technology",
+      "designation": "Visiting Professor",
+      "encrypt_key": "mm-dc7dc157733fca10bd8da952a6eb23db",
+      "code": "MM"
+    },
+    {
+      "faculty": "Soumen Das",
+      "department": "School of Medical Science and Technology",
+      "designation": "Professor",
+      "encrypt_key": "mm-sou",
+      "code": "MM"
+    },
+    {
+      "faculty": "Ayan Roy Chaudhuri",
+      "department": "Materials Science Centre",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ms-ayan",
+      "code": "MS"
+    },
+    {
+      "faculty": "Bhanu Bhusan Khatua",
+      "department": "Materials Science Centre",
+      "designation": "Associate Professor",
+      "encrypt_key": "ms-khatuabb",
+      "code": "MS"
+    },
+    {
+      "faculty": "Chacko Jacob",
+      "department": "Materials Science Centre",
+      "designation": "Professor",
+      "encrypt_key": "ms-cjacob",
+      "code": "MS"
+    },
+    {
+      "faculty": "Debabrata Pradhan",
+      "department": "Materials Science Centre",
+      "designation": "Associate Professor",
+      "encrypt_key": "ms-deb",
+      "code": "MS"
+    },
+    {
+      "faculty": "Hemakesh Mohapatra",
+      "department": "Materials Science Centre",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "ms-hemakesh.m",
+      "code": "MS"
+    },
+    {
+      "faculty": "Pallab Banerji",
+      "department": "Materials Science Centre",
+      "designation": "Professor",
+      "encrypt_key": "ms-pallab",
+      "code": "MS"
+    },
+    {
+      "faculty": "Rajat Kumar Das",
+      "department": "Materials Science Centre",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ms-rajat",
+      "code": "MS"
+    },
+    {
+      "faculty": "Shibayan Roy",
+      "department": "Materials Science Centre",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ms-shibayan",
+      "code": "MS"
+    },
+    {
+      "faculty": "Subhasish Basu Majumder",
+      "department": "Materials Science Centre",
+      "designation": "Professor",
+      "encrypt_key": "ms-subhasish",
+      "code": "MS"
+    },
+    {
+      "faculty": "Susanta Banerjee",
+      "department": "Materials Science Centre",
+      "designation": "Professor",
+      "encrypt_key": "ms-susanta",
+      "code": "MS"
+    },
+    {
+      "faculty": "Amit Bhaduri",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mt-abhaduri",
+      "code": "MT"
+    },
+    {
+      "faculty": "Amlan Dutta",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mt-amlan.dutta",
+      "code": "MT"
+    },
+    {
+      "faculty": "Chandra Sekhar Tiwary",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "mt-chandra.tiwary",
+      "code": "MT"
+    },
+    {
+      "faculty": "Debalay Chakrabarti",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mt-debalay",
+      "code": "MT"
+    },
+    {
+      "faculty": "Gour Gopal Roy",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mt-ggroy",
+      "code": "MT"
+    },
+    {
+      "faculty": "Gour Prasad Das",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Visiting Professor",
+      "encrypt_key": "mt-gpdas",
+      "code": "MT"
+    },
+    {
+      "faculty": "Indranil Manna",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mt-imanna",
+      "code": "MT"
+    },
+    {
+      "faculty": "Indrani Sen",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mt-indrani.sen",
+      "code": "MT"
+    },
+    {
+      "faculty": "Jayanta Das",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mt-j.das",
+      "code": "MT"
+    },
+    {
+      "faculty": "Jyotsna Dutta Majumdar",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mt-jyotsna",
+      "code": "MT"
+    },
+    {
+      "faculty": "Karabi Das",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mt-karabi",
+      "code": "MT"
+    },
+    {
+      "faculty": "Koushik Biswas",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mt-k_biswas",
+      "code": "MT"
+    },
+    {
+      "faculty": "Mangal Roy",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mt-mroy",
+      "code": "MT"
+    },
+    {
+      "faculty": "Narendra Nath Acharya",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mt-nnacharya",
+      "code": "MT"
+    },
+    {
+      "faculty": "Nirupam Chakraborti",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mt-nchakrab",
+      "code": "MT"
+    },
+    {
+      "faculty": "Prodip Kumar Sen",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Visiting Professor",
+      "encrypt_key": "mt-pksen",
+      "code": "MT"
+    },
+    {
+      "faculty": "Rahul Mitra",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mt-rahul",
+      "code": "MT"
+    },
+    {
+      "faculty": "Shampa Aich",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mt-saich",
+      "code": "MT"
+    },
+    {
+      "faculty": "Shiv Brat Singh",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mt-sbs22",
+      "code": "MT"
+    },
+    {
+      "faculty": "Siddhartha Das",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mt-sdas",
+      "code": "MT"
+    },
+    {
+      "faculty": "Siddhartha Roy",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "mt-siddhartha",
+      "code": "MT"
+    },
+    {
+      "faculty": "Somjeet Biswas",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mt-76a271c64a315732aa56eeb7277a63d4",
+      "code": "MT"
+    },
+    {
+      "faculty": "Sudipto Ghosh",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Professor",
+      "encrypt_key": "mt-sudipto",
+      "code": "MT"
+    },
+    {
+      "faculty": "Sujoy Kumar Kar",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mt-sujoy.kar",
+      "code": "MT"
+    },
+    {
+      "faculty": "Sumantra Mandal",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Assistant Professor",
+      "encrypt_key": "mt-sumantra.mandal",
+      "code": "MT"
+    },
+    {
+      "faculty": "Tapas Kumar Bandyopadhyay",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mt-tapas",
+      "code": "MT"
+    },
+    {
+      "faculty": "Tapas Laha",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mt-laha",
+      "code": "MT"
+    },
+    {
+      "faculty": "Tarun Kumar Kundu",
+      "department": "Metallurgical and Materials Engineering",
+      "designation": "Associate Professor",
+      "encrypt_key": "mt-tkkundu",
+      "code": "MT"
+    },
+    {
+      "faculty": "Anirban Bhattacharyya",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Assistant Professor",
+      "encrypt_key": "na-ab",
+      "code": "NA"
+    },
+    {
+      "faculty": "Arunjyoti Sarkar",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Assistant Professor",
+      "encrypt_key": "na-arun",
+      "code": "NA"
+    },
+    {
+      "faculty": "Ashoke Bhar",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Associate Professor",
+      "encrypt_key": "na-bhar",
+      "code": "NA"
+    },
+    {
+      "faculty": "Bikas Chaudhuri",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Visiting Faculty",
+      "encrypt_key": "na-8e9bd6853fa732eae1a0f7dface58044",
+      "code": "NA"
+    },
+    {
+      "faculty": "Debabrata Sen",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Professor",
+      "encrypt_key": "na-deb",
+      "code": "NA"
+    },
+    {
+      "faculty": "Hari V Warrior",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Professor",
+      "encrypt_key": "na-warrior",
+      "code": "NA"
+    },
+    {
+      "faculty": "Kiran Vijayan",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Assistant Professor",
+      "encrypt_key": "na-kiran.vijayan",
+      "code": "NA"
+    },
+    {
+      "faculty": "Nabanita Datta",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Assistant Professor",
+      "encrypt_key": "na-ndatta",
+      "code": "NA"
+    },
+    {
+      "faculty": "Om Prakash Sha",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Professor",
+      "encrypt_key": "na-ops",
+      "code": "NA"
+    },
+    {
+      "faculty": "Prasad Kumar Bhaskaran",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Professor",
+      "encrypt_key": "na-pkbhaskaran",
+      "code": "NA"
+    },
+    {
+      "faculty": "Ranadev Datta",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Assistant Professor",
+      "encrypt_key": "na-ranadev",
+      "code": "NA"
+    },
+    {
+      "faculty": "Ritwik Ghoshal",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "na-ritwik",
+      "code": "NA"
+    },
+    {
+      "faculty": "Trilochan Sahoo",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Professor",
+      "encrypt_key": "na-tsahoo",
+      "code": "NA"
+    },
+    {
+      "faculty": "Vishwanath Nagarajan",
+      "department": "Ocean Engg and Naval Architecture",
+      "designation": "Associate Professor",
+      "encrypt_key": "na-vishwanath_n",
+      "code": "NA"
+    },
+    {
+      "faculty": "Achintya Dhar",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-adhar",
+      "code": "PH"
+    },
+    {
+      "faculty": "Ajay Kumar Singh",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-singh",
+      "code": "PH"
+    },
+    {
+      "faculty": "Amal Kumar Das",
+      "department": "Physics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ph-amal",
+      "code": "PH"
+    },
+    {
+      "faculty": "Amar Nath Gupta",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-ang",
+      "code": "PH"
+    },
+    {
+      "faculty": "Amreesh Chandra",
+      "department": "Physics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ph-achandra",
+      "code": "PH"
+    },
+    {
+      "faculty": "Anushree Roy",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-anushree",
+      "code": "PH"
+    },
+    {
+      "faculty": "Arghya Taraphder",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-arghya",
+      "code": "PH"
+    },
+    {
+      "faculty": "Bhupendra Nath Dev",
+      "department": "Physics",
+      "designation": "Visiting Professor",
+      "encrypt_key": "ph-bhupen.dev",
+      "code": "PH"
+    },
+    {
+      "faculty": "Debamalya Banerjee",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-debamalya",
+      "code": "PH"
+    },
+    {
+      "faculty": "Debraj Choudhury",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-debraj",
+      "code": "PH"
+    },
+    {
+      "faculty": "Dipak Kumar Goswami",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-dipak",
+      "code": "PH"
+    },
+    {
+      "faculty": "Jyotirmoy Bhattacharya",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-794a51bb65913debd98f73111705738a",
+      "code": "PH"
+    },
+    {
+      "faculty": "Kamal Lochan Panigrahi",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-panigrahi",
+      "code": "PH"
+    },
+    {
+      "faculty": "Krishna Kumar",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-kumar",
+      "code": "PH"
+    },
+    {
+      "faculty": "Maruthi Manoj Brundavanam",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-bmmanoj",
+      "code": "PH"
+    },
+    {
+      "faculty": "Partha Roy Chaudhuri",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-roycp",
+      "code": "PH"
+    },
+    {
+      "faculty": "Poornachandra Sekhar Burada",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-psburada",
+      "code": "PH"
+    },
+    {
+      "faculty": "Pragya Shukla",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-shukla",
+      "code": "PH"
+    },
+    {
+      "faculty": "Prasanta Kumar Datta",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-pkdatta",
+      "code": "PH"
+    },
+    {
+      "faculty": "Sajal Dhara",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-sajaldhara",
+      "code": "PH"
+    },
+    {
+      "faculty": "Samit Kumar Ray",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-physkr",
+      "code": "PH"
+    },
+    {
+      "faculty": "Samudra Roy",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-samudra.roy",
+      "code": "PH"
+    },
+    {
+      "faculty": "Sandipan Sengupta",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-sandipan",
+      "code": "PH"
+    },
+    {
+      "faculty": "Sanjeev Kumar Srivastava",
+      "department": "Physics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ph-sanjeev",
+      "code": "PH"
+    },
+    {
+      "faculty": "Sayan Kar",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-sayan",
+      "code": "PH"
+    },
+    {
+      "faculty": "Shivakiran B N Bhaktha",
+      "department": "Physics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ph-kiranbhaktha",
+      "code": "PH"
+    },
+    {
+      "faculty": "Sitikantha Dhurjati Das",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-sitikantha.das",
+      "code": "PH"
+    },
+    {
+      "faculty": "Somnath Bharadwaj",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-somnath",
+      "code": "PH"
+    },
+    {
+      "faculty": "Sonjoy Majumder",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-sonjoym",
+      "code": "PH"
+    },
+    {
+      "faculty": "Sudhansu Sekhar Mandal",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-sudhansu",
+      "code": "PH"
+    },
+    {
+      "faculty": "Sugata Pratik Khastgir",
+      "department": "Physics",
+      "designation": "Associate Professor",
+      "encrypt_key": "ph-pratik",
+      "code": "PH"
+    },
+    {
+      "faculty": "Tapan Kumar Nath",
+      "department": "Physics",
+      "designation": "Professor",
+      "encrypt_key": "ph-tnath",
+      "code": "PH"
+    },
+    {
+      "faculty": "Tirtha Sankar Ray",
+      "department": "Physics",
+      "designation": "Assistant Professor",
+      "encrypt_key": "ph-tsray",
+      "code": "PH"
+    },
+    {
+      "faculty": "Utpal Sarkar",
+      "department": "Physics",
+      "designation": "Visiting Professor",
+      "encrypt_key": "ph-utpal",
+      "code": "PH"
+    },
+    {
+      "faculty": "Piyush Kumar Singh",
+      "department": "Rural Development",
+      "designation": "Assistant Professor",
+      "encrypt_key": "rd-psingh",
+      "code": "RD"
+    },
+    {
+      "faculty": "Pradip Kumar Bhowmick",
+      "department": "Rural Development",
+      "designation": "Associate Professor",
+      "encrypt_key": "rd-pradipb",
+      "code": "RD"
+    },
+    {
+      "faculty": "Somnath Ghosal",
+      "department": "Rural Development",
+      "designation": "Assistant Professor",
+      "encrypt_key": "rd-somnath",
+      "code": "RD"
+    },
+    {
+      "faculty": "Monalisa Sarma",
+      "department": "Subir Chowdhury School of Quality and Reliability",
+      "designation": "Assistant Professor",
+      "encrypt_key": "re-monalisa",
+      "code": "RE"
+    },
+    {
+      "faculty": "Neeraj Kumar Goyal",
+      "department": "Subir Chowdhury School of Quality and Reliability",
+      "designation": "Associate Professor",
+      "encrypt_key": "re-ngoyal",
+      "code": "RE"
+    },
+    {
+      "faculty": "Rajiv Nandan Rai",
+      "department": "Subir Chowdhury School of Quality and Reliability",
+      "designation": "Assistant Professor Grade-I",
+      "encrypt_key": "re-rnrai",
+      "code": "RE"
+    },
+    {
+      "faculty": "Sanjay Kumar Chaturvedi",
+      "department": "Subir Chowdhury School of Quality and Reliability",
+      "designation": "Professor",
+      "encrypt_key": "re-skcrec",
+      "code": "RE"
+    },
+    {
+      "faculty": "V N Achutha Naikan",
+      "department": "Subir Chowdhury School of Quality and Reliability",
+      "designation": "Professor",
+      "encrypt_key": "re-naikan",
+      "code": "RE"
+    },
+    {
+      "faculty": "Basab Chakraborty",
+      "department": "Rajendra Mishra School of Engg Entrepreneurship",
+      "designation": "Associate Professor",
+      "encrypt_key": "rj-basab",
+      "code": "RJ"
+    },
+    {
+      "faculty": "Bhaskar Bhowmick",
+      "department": "Rajendra Mishra School of Engg Entrepreneurship",
+      "designation": "Assistant Professor",
+      "encrypt_key": "rj-bhaskar",
+      "code": "RJ"
+    },
+    {
+      "faculty": "Mamoni Banerjee",
+      "department": "Rajendra Mishra School of Engg Entrepreneurship",
+      "designation": "Assistant Professor",
+      "encrypt_key": "rj-mamoni",
+      "code": "RJ"
+    },
+    {
+      "faculty": "Manoj Kumar Mondal",
+      "department": "Rajendra Mishra School of Engg Entrepreneurship",
+      "designation": "Assistant Professor",
+      "encrypt_key": "rj-manoj",
+      "code": "RJ"
+    },
+    {
+      "faculty": "Prabha Bhola",
+      "department": "Rajendra Mishra School of Engg Entrepreneurship",
+      "designation": "Assistant Professor",
+      "encrypt_key": "rj-prabha",
+      "code": "RJ"
+    },
+    {
+      "faculty": "Pranab Kumar Dan",
+      "department": "Rajendra Mishra School of Engg Entrepreneurship",
+      "designation": "Associate Professor",
+      "encrypt_key": "rj-pkdan",
+      "code": "RJ"
+    },
+    {
+      "faculty": "Ram Babu Roy",
+      "department": "Rajendra Mishra School of Engg Entrepreneurship",
+      "designation": "Assistant Professor",
+      "encrypt_key": "rj-rambabu",
+      "code": "RJ"
+    },
+    {
+      "faculty": "Titas Bhattacharjee (Rudra)",
+      "department": "Rajendra Mishra School of Engg Entrepreneurship",
+      "designation": "Assistant Professor",
+      "encrypt_key": "rj-titas",
+      "code": "RJ"
+    },
+    {
+      "faculty": "Anil Kumar Bhowmick",
+      "department": "Rubber Technology",
+      "designation": "Professor of Eminence",
+      "encrypt_key": "rt-anilkb",
+      "code": "RT"
+    },
+    {
+      "faculty": "Kinsuk Naskar",
+      "department": "Rubber Technology",
+      "designation": "Professor",
+      "encrypt_key": "rt-knaskar",
+      "code": "RT"
+    },
+    {
+      "faculty": "Narayan Chandra Das",
+      "department": "Rubber Technology",
+      "designation": "Associate Professor",
+      "encrypt_key": "rt-ncdas",
+      "code": "RT"
+    },
+    {
+      "faculty": "Nikhil Kumar Singha",
+      "department": "Rubber Technology",
+      "designation": "Professor",
+      "encrypt_key": "rt-nks",
+      "code": "RT"
+    },
+    {
+      "faculty": "Santanu Chattopadhyay",
+      "department": "Rubber Technology",
+      "designation": "Professor",
+      "encrypt_key": "rt-santanu",
+      "code": "RT"
+    },
+    {
+      "faculty": "Ajoy Chakrabarty",
+      "department": "Rekhi Centre of Excellence for the Science of Happiness",
+      "designation": "DISTINGUISHED VISITING FACULTY",
+      "encrypt_key": "rx-0c64e7f75252cb21642e8e21b61412ce",
+      "code": "RX"
+    },
+    {
+      "faculty": "Saamdu Chetri",
+      "department": "Rekhi Centre of Excellence for the Science of Happiness",
+      "designation": "Visiting Faculty",
+      "encrypt_key": "rx-saamdu.chetri",
+      "code": "RX"
+    },
+    {
+      "faculty": "Bhabagrahi Sahoo",
+      "department": "School of Water Resources",
+      "designation": "Associate Professor",
+      "encrypt_key": "wm-bsahoo",
+      "code": "WM"
+    },
+    {
+      "faculty": "Manoj Kumar Tiwari",
+      "department": "School of Water Resources",
+      "designation": "Assistant Professor",
+      "encrypt_key": "wm-mktiwari",
+      "code": "WM"
+    },
+    {
+      "faculty": "Renji Remesan",
+      "department": "School of Water Resources",
+      "designation": "Assistant Professor",
+      "encrypt_key": "wm-renji.remesan",
+      "code": "WM"
+    }
+]  
