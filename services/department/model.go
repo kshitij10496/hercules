@@ -9,7 +9,7 @@ import (
 // GetDepartments returns the list of departments in IITKGP
 func GetDepartments(db *sql.DB) (data common.Departments, err error) {
 	// TODO: Fetch data from ERP. Use a JSON as backup.
-	rows, err := db.Query("SELECT code, name FROM department")
+	rows, err := db.Query("SELECT code, name FROM departments;")
 	if err != nil {
 		return nil, err
 	}
