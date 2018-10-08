@@ -57,3 +57,14 @@ const (
 		room int REFERENCES rooms(id)
 	);`
 )
+
+const (
+	TableInsertionDepartment  = `INSERT INTO departments (code, name) VALUES ($1, $2);`
+	TableInsertionDesignation = `INSERT INTO faculty_designations (designation) VALUES ($1);`
+	TableInsertionFaculty     = `INSERT INTO faculty (name, designation, department) VALUES ($1, $2, $3);`
+)
+
+const (
+	TableReadDepartment  = `SELECT id FROM departments WHERE code=$1;`
+	TableReadDesignation = `SELECT id FROM faculty_designations WHERE designation=$1;`
+)

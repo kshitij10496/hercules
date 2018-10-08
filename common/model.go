@@ -43,16 +43,11 @@ func (c *Course) GetCourseInfo(db *sql.DB) error {
 }
 
 // FacultyDesignation represents the designation of a Faculty member.
-type FacultyDesignation string
+type FacultyDesignation struct {
+	Designation string `json:"designation"`
+}
 
-// Professor represents the faculty designation of a Professor.
-const Professor = FacultyDesignation("Professor")
-
-// AssociateProfessor represents the faculty designation of an Associate Professor.
-const AssociateProfessor = FacultyDesignation("Associate Professor")
-
-// VisitingFaculty represents the faculty designation of a Visiting Faculty.
-const VisitingFaculty = FacultyDesignation("Visiting Faculty")
+var Professor = FacultyDesignation{"Professor"}
 
 // FacultyMember represents the information related to a faculty member at IIT KGP.
 type FacultyMember struct {
