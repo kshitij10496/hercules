@@ -18,6 +18,20 @@ type Department struct {
 // Departments represents the response returned by the DepartmentsHandler.
 type Departments []Department
 
+// FacultyDesignation represents the designation of a Faculty member.
+type FacultyDesignation string
+
+// FacultyMember represents the information related to a faculty member at IIT KGP.
+type FacultyMember struct {
+	Name        string             `json:"name"`
+	Department  Department         `json:"department"`
+	Designation FacultyDesignation `json:"designation"`
+	// TODO: [mcmp] Add research interests
+}
+
+// Faculty represents the response returned by the FacultyHandler.
+type Faculty []FacultyMember
+
 // Course denotes the information related to each course.
 type Course struct {
 	Name    string `json:"name"`
@@ -41,20 +55,6 @@ func (c *Course) GetCourseInfo(db *sql.DB) error {
 
 	return ErrCourseNotFound
 }
-
-// FacultyDesignation represents the designation of a Faculty member.
-type FacultyDesignation string
-
-// FacultyMember represents the information related to a faculty member at IIT KGP.
-type FacultyMember struct {
-	Name        string             `json:"name"`
-	Department  Department         `json:"department"`
-	Designation FacultyDesignation `json:"designation"`
-	// TODO: [mcmp] Add research interests
-}
-
-// Faculty represents the response returned by the FacultyHandler.
-type Faculty []FacultyMember
 
 // SlotTime represents the daily timing slots.
 type SlotTime int

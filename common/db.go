@@ -1,14 +1,14 @@
 package common
 
 const (
-	// Pre-populated + Scrapped
+	// Scrapped from Faculty Directory
 	tableCreationDepartments = `CREATE TABLE departments (
 		id SERIAL PRIMARY KEY,
 		code varchar(5) NOT NULL,	-- 2 character code of each department
 		name varchar(95) NOT NULL		-- Full name of the department
 	);`
 
-	// Pre-populated + Scrapped
+	// Scrapped from Faculty Directory
 	tableCreationFacultyDesignation = `CREATE TABLE faculty_designations (
 		id SERIAL PRIMARY KEY,
 		designation varchar(80) NOT NULL	-- Designations in KGP
@@ -20,7 +20,7 @@ const (
 		room varchar(80) NOT NULL		-- Room Name/Room No
 	);`
 
-	// Pre-populated
+	// Pre-populated manually.
 	// 9 slots daily over a work week => 9 * 5 = 45 slots
 	tableCreationTimeSlots = `CREATE TABLE time_slots (
 		id SERIAL PRIMARY KEY,
@@ -28,6 +28,7 @@ const (
 		slot varchar(5) NOT NULL	-- Time slots in a working day e.g 8 AM
 	);`
 
+	// Scrapped from Faculty Directory
 	// Every faculty member should have a designation and a department.
 	tableCreationFaculty = `CREATE TABLE faculty (
 		id SERIAL PRIMARY KEY,
