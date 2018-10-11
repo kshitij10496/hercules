@@ -13,15 +13,22 @@ var Routes = common.Routes{
 	common.Route{
 		Name:        "Course Info",
 		Method:      "GET",
-		Pattern:     "/info/all",
-		HandlerFunc: ServiceCourse.handlerCourseInfoAll,
+		Pattern:     "/info",
+		HandlerFunc: ServiceCourse.handlerCourseInfo,
 		PathPrefix:  common.VERSION + "/course",
 	},
 	common.Route{
-		Name:        "Course Info",
-		Method:      "POST",
-		Pattern:     "/info",
-		HandlerFunc: ServiceCourse.handlerCourseInfo,
+		Name:        "Courses From Department",
+		Method:      "GET",
+		Pattern:     "/info/department/{code}",
+		HandlerFunc: ServiceCourse.handlerCoursesFromDepartment,
+		PathPrefix:  common.VERSION + "/course",
+	},
+	common.Route{
+		Name:        "Courses From Faculty Member",
+		Method:      "GET",
+		Pattern:     "/info/faculty",
+		HandlerFunc: ServiceCourse.handlerCoursesFromFaculty,
 		PathPrefix:  common.VERSION + "/course",
 	},
 }

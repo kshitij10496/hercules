@@ -52,70 +52,70 @@ func ReadFaculty(r *http.Request) (facultyMember common.FacultyMember, err error
 }
 
 func GetTimetable(db *sql.DB, name string) (data *common.Timetable, err error) {
-	timetable := &common.Timetable{
-		Monday: []common.Slot{
-			common.Slot{
-				Course: common.Course{
-					Name:    "OCEAN CIRCULATION",
-					Credits: 3,
-					Code:    "NA61002",
-				},
-				Timing: common.AM10,
-				Room:   common.NC231,
-			},
-		},
-		Tuesday: []common.Slot{
-			common.Slot{
-				Course: common.Course{
-					Name:    "COASTAL ENGINEERING",
-					Credits: 3,
-					Code:    "NA61001",
-				},
-				Timing: common.PM5,
-				Room:   common.NC142,
-			},
-		},
-		Wednesday: []common.Slot{
-			common.Slot{
-				Course: common.Course{
-					Name:    "OCEAN CIRCULATION",
-					Credits: 3,
-					Code:    "NA61002",
-				},
-				Timing: common.PM12,
-				Room:   common.NC231,
-			},
+	// timetable := &common.Timetable{
+	// 	Monday: []common.Slot{
+	// 		common.Slot{
+	// 			Course: common.Course{
+	// 				Name:    "OCEAN CIRCULATION",
+	// 				Credits: 3,
+	// 				Code:    "NA61002",
+	// 			},
+	// 			Timing: common.AM10,
+	// 			Room:   common.NC231,
+	// 		},
+	// 	},
+	// 	Tuesday: []common.Slot{
+	// 		common.Slot{
+	// 			Course: common.Course{
+	// 				Name:    "COASTAL ENGINEERING",
+	// 				Credits: 3,
+	// 				Code:    "NA61001",
+	// 			},
+	// 			Timing: common.PM5,
+	// 			Room:   common.NC142,
+	// 		},
+	// 	},
+	// 	Wednesday: []common.Slot{
+	// 		common.Slot{
+	// 			Course: common.Course{
+	// 				Name:    "OCEAN CIRCULATION",
+	// 				Credits: 3,
+	// 				Code:    "NA61002",
+	// 			},
+	// 			Timing: common.PM12,
+	// 			Room:   common.NC231,
+	// 		},
 
-			common.Slot{
-				Course: common.Course{
-					Name:    "COASTAL ENGINEERING",
-					Credits: 3,
-					Code:    "NA61001",
-				},
-				Timing: common.PM5,
-				Room:   common.NC142,
-			},
-		},
-		Thursday: []common.Slot{
-			common.Slot{
-				Course: common.Course{
-					Name:    "OCEAN CIRCULATION",
-					Credits: 3,
-					Code:    "NA61002",
-				},
-				Timing: common.PM12,
-				Room:   common.NC231,
-			},
-			common.Slot{
-				Course: common.Course{
-					Name:    "COASTAL ENGINEERING",
-					Credits: 3,
-					Code:    "NA61001",
-				},
-				Timing: common.PM5,
-				Room:   common.NC142,
-			},
-		},
-	}
-	return timetable, nil
+	// 		common.Slot{
+	// 			Course: common.Course{
+	// 				Name:    "COASTAL ENGINEERING",
+	// 				Credits: 3,
+	// 				Code:    "NA61001",
+	// 			},
+	// 			Timing: common.PM5,
+	// 			Room:   common.NC142,
+	// 		},
+	// 	},
+	// 	Thursday: []common.Slot{
+	// 		common.Slot{
+	// 			Course: common.Course{
+	// 				Name:    "OCEAN CIRCULATION",
+	// 				Credits: 3,
+	// 				Code:    "NA61002",
+	// 			},
+	// 			Timing: common.PM12,
+	// 			Room:   common.NC231,
+	// 		},
+	// 		common.Slot{
+	// 			Course: common.Course{
+	// 				Name:    "COASTAL ENGINEERING",
+	// 				Credits: 3,
+	// 				Code:    "NA61001",
+	// 			},
+	// 			Timing: common.PM5,
+	// 			Room:   common.NC142,
+	// 		},
+	// 	},
+	// }
+	return nil, nil
 }
