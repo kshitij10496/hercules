@@ -10,6 +10,7 @@ import (
 )
 
 var facultyDirectoryFile = "/Users/kshitij10496/Software/go/src/github.com/kshitij10496/hercules/data/faculty_directory.json"
+var coursesDetailsFile = "/Users/kshitij10496/Software/go/src/github.com/kshitij10496/hercules/data/courses_details.json"
 
 // serviceMigration implements the server interface
 //
@@ -34,17 +35,8 @@ func (s *serviceMigration) GetURL() string {
 	return s.URL
 }
 
-// SetDB sets the service to use the given DB.
-// Note that this function overwrites the current value.
-//
-func (s *serviceMigration) ConnectDB(url string) error {
-	db, err := sql.Open("postgres", url)
-	if err != nil {
-		return err
-	}
-	s.DB = db
-
-	// TODO: Find an effective way to perform data migration.
+func migrations(db *sql.DB) (err error) {
+	// // TODO: Find an effective way to perform data migration.
 	// err = readFromJSONDepartments(db, facultyDirectoryFile)
 	// if err != nil {
 	// 	return err
@@ -56,9 +48,28 @@ func (s *serviceMigration) ConnectDB(url string) error {
 	// }
 
 	// err = readFromJSONFaculty(db, facultyDirectoryFile)
-	// return err
+	// if err != nil {
+	// 	return err
+	// }
+
+	// err = readFromCourses(db, coursesDetailsFile)
+	// if err != nil {
+	// 	return err
+	// }
 
 	return nil
+}
+
+// SetDB sets the service to use the given DB.
+// Note that this function overwrites the current value.
+//
+func (s *serviceMigration) ConnectDB(url string) error {
+	db, err := sql.Open("postgres", url)
+	if err != nil {
+		return err
+	}
+	s.DB = db
+	return migrations(db)
 }
 
 func (s *serviceMigration) CloseDB() error {

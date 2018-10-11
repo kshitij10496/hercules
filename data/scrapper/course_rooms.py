@@ -54,10 +54,11 @@ def parse_table_row(cells):
     course_code = cells[0].text
     course_name = cells[1].text
 
-    profs = (cells[2].text).split(",")
+    profs = cells[2].text.split(",")
     # remove whitespaces, if any
     # ensure no duplicates because I accept that people make mistaeks.
-    course_profs = list(set(prof.strip() for prof in profs))
+    # ensure that the name is in standard form
+    course_profs = list(set(prof.strip().title() for prof in profs))
 
     course_credits = int(cells[4].text)
 

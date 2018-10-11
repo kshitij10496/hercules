@@ -63,9 +63,12 @@ const (
 	TableInsertionDepartment  = `INSERT INTO departments (code, name) VALUES ($1, $2);`
 	TableInsertionDesignation = `INSERT INTO faculty_designations (designation) VALUES ($1);`
 	TableInsertionFaculty     = `INSERT INTO faculty (name, designation, department) VALUES ($1, $2, $3);`
+	TableInsertionCourses     = `INSERT INTO courses (code, name, credits, faculty) VALUES ($1, $2, $3, $4);`
+	TableInsertionRooms       = `INSERT INTO rooms (room) VALUES ($1);`
 )
 
 const (
 	TableReadDepartment  = `SELECT id FROM departments WHERE code=$1;`
 	TableReadDesignation = `SELECT id FROM faculty_designations WHERE designation=$1;`
+	TableReadFaculty     = `SELECT id FROM faculty WHERE name=$1`
 )
