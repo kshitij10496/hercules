@@ -46,7 +46,8 @@ const (
 		code varchar(10) NOT NULL,
 		name varchar(80) NOT NULL,
 		credits int,
-		faculty int REFERENCES faculty(id)
+		faculty int REFERENCES faculty(id),
+		department int REFERENCES departments(id)
 	);`
 
 	// Course must exist to show up in the timetable.
@@ -63,7 +64,7 @@ const (
 	TableInsertionDepartment  = `INSERT INTO departments (code, name) VALUES ($1, $2);`
 	TableInsertionDesignation = `INSERT INTO faculty_designations (designation) VALUES ($1);`
 	TableInsertionFaculty     = `INSERT INTO faculty (name, designation, department) VALUES ($1, $2, $3);`
-	TableInsertionCourses     = `INSERT INTO courses (code, name, credits, faculty) VALUES ($1, $2, $3, $4);`
+	TableInsertionCourses     = `INSERT INTO courses (code, name, credits, faculty, department) VALUES ($1, $2, $3, $4, $5);`
 	TableInsertionRooms       = `INSERT INTO rooms (room) VALUES ($1);`
 )
 

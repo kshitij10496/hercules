@@ -165,6 +165,13 @@ type readCourse struct {
 
 type readCourses []readCourse
 
+type readDepartmentCourse struct {
+	Department string      `json:"dept"`
+	Courses    readCourses `json:"courses"`
+}
+
+type readDepartmentCourses []readDepartmentCourse
+
 func readFromCourses(db *sql.DB, filename string) error {
 	coursesFile, err := os.Open(filename)
 	if err != nil {
@@ -174,37 +181,46 @@ func readFromCourses(db *sql.DB, filename string) error {
 
 	decoder := json.NewDecoder(coursesFile)
 
-	var courses readCourses
-	err = decoder.Decode(&courses)
+	var departmentCourses readDepartmentCourses
+	err = decoder.Decode(&departmentCourses)
 	if err != nil {
 		return err
 	}
 
-	for _, course := range courses {
-		// Add a new row for each prof
-		for _, prof := range course.Profs {
-			// Find the professor's unique ID and add it to DB
-			var profID int
+	for _, deptCourses := range departmentCourses {
+		var deptID int
 
-			row := db.QueryRow(common.TableReadFaculty, prof)
-			if err := row.Scan(&profID); err != nil {
-				log.Println("[read] faculty:", prof, err)
-				continue
-			}
-
-			_, err = db.Exec(common.TableInsertionCourses, course.Code, course.Name, course.Credits, profID)
-			if err != nil {
-				log.Println("[insertion] courses:", course, profID, err)
-			}
+		row := db.QueryRow(common.TableReadDepartment, deptCourses.Department)
+		if err := row.Scan(&deptID); err != nil {
+			log.Println("[read] department:", deptCourses.Department, err)
+			continue
 		}
 
-		for _, room := range course.Rooms {
-			_, err = db.Exec(common.TableInsertionRooms, room)
-			if err == nil {
-				log.Println("[insertion] rooms:", room)
+		for _, course := range deptCourses.Courses {
+			// Add a new row for each prof
+			for _, prof := range course.Profs {
+				// Find the professor's unique ID and add it to DB
+				var profID int
+
+				row := db.QueryRow(common.TableReadFaculty, prof)
+				if err := row.Scan(&profID); err != nil {
+					log.Println("[read] faculty:", prof, err)
+					continue
+				}
+
+				_, err = db.Exec(common.TableInsertionCourses, course.Code, course.Name, course.Credits, profID, deptID)
+				if err != nil {
+					log.Println("[insertion] courses:", course, profID, err)
+				}
+			}
+
+			for _, room := range course.Rooms {
+				_, err = db.Exec(common.TableInsertionRooms, room)
+				if err == nil {
+					log.Println("[insertion] rooms:", room)
+				}
 			}
 		}
-
 	}
 	return nil
 }
