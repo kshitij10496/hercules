@@ -42,8 +42,19 @@ class Course:
     def __str__(self):
         return 'Course(code={!r}, name={!r}, profs={!r}, credits={!r}, slots={!r}, rooms={!r})'.format(self.code, self.name, self.profs, self.credits, self.slots, self.rooms)
 
+class DepartmentCourses:
+    def __init__(self, dept, courses):
+        self.dept = dept
+        self.courses = courses
+
+    def __str__(self):
+        return 'DepartmentCourses(dept={0}, courses={1})'.format(self.dept, self.courses)
+
 class CourseEncoder(json.JSONEncoder):
     def default(self, o):
+        if isinstance(o, DepartmentCourses):
+            return o.__dict__
+
         if isinstance(o, Course):
             # TODO: Prettify JSON encoding by adding indentation and new lines.
             return o.__dict__
@@ -154,12 +165,13 @@ def main():
 
     all_courses = []
     for dept in departments:
-        dept_courses = department_subjects_list(dept, JSESSIONID)
-        if dept_courses is None:
+        courses = department_subjects_list(dept, JSESSIONID)
+        if courses is None:
             print("Cannot load courses for {0}".format(dept))
             continue
         # TODO: Find an efficient way to do this using itertools, maybe
-        all_courses += dept_courses 
+        dept_courses = DepartmentCourses(dept, courses)
+        all_courses.append(dept_courses)
 
     print("TOTAL COURSES:", len(all_courses))
     # Encode data and store it in a JSON file
