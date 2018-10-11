@@ -51,9 +51,30 @@ func getCoursesFromDepartment(db *sql.DB, department common.Department) (respons
 	return courses, nil
 }
 
-// GetCoursesFromFaculty returns all the courses offered by the given faculty member.
+// getCoursesFromFaculty returns all the courses offered by the given faculty member.
 //
-func GetCoursesFromFaculty(db *sql.DB, facultyMember common.FacultyMember) (common.Courses, error) {
+func getCoursesFromFaculty(db *sql.DB, facultyMember common.FacultyMember) (responseCourses, error) {
+	query := `SELECT c.code, c.name, c.credits, f.name, d.code, d.name, fd.designation 
+				FROM courses c, faculty f, departments d, faculty_designations fd 
+				WHERE f.name=$1 AND d.code=$2 
+					AND f.id = c.faculty 
+					AND f.department=d.id 
+					AND f.designation=fd.id`
 
-	return nil, nil
+	rows, err := db.Query(query, facultyMember.Name, facultyMember.Department.Code)
+	if err != nil {
+		return nil, err
+	}
+	courses := responseCourses{}
+	for rows.Next() {
+		var newCourse responseCourse
+		err = rows.Scan(&newCourse.Code, &newCourse.Name, &newCourse.Credits,
+			&newCourse.Faculty.Name, &newCourse.Faculty.Department.Code,
+			&newCourse.Faculty.Department.Name, &newCourse.Faculty.Designation)
+		if err != nil {
+			log.Printf("Error while scanning faculty courses: %+v, err: %v\n", facultyMember, err)
+		}
+		courses = append(courses, newCourse)
+	}
+	return courses, nil
 }
