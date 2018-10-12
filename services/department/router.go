@@ -11,12 +11,19 @@ import (
 
 var Routes = common.Routes{
 	common.Route{
-		Name:        "Department Info",
+		Name:        "Information for all the departments",
 		Method:      "GET",
-		Pattern:     "/info",
-		HandlerFunc: ServiceDepartment.departmentsHandler,
+		Pattern:     "/info/all",
+		HandlerFunc: ServiceDepartment.handlerDepartments,
 		PathPrefix:  common.VERSION + "/department",
 	},
+	// common.Route{
+	// 	Name:        "Department specific information",
+	// 	Method:      "GET",
+	// 	Pattern:     "/info/{code}",
+	// 	HandlerFunc: ServiceDepartment.handlerDepartment,
+	// 	PathPrefix:  common.VERSION + "/department",
+	// },
 }
 
 // serviceDepartment implements the server interface

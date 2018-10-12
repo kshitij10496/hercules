@@ -31,6 +31,7 @@ var Routes = common.Routes{
 		HandlerFunc: ServiceCourse.handlerCoursesFromFaculty,
 		PathPrefix:  common.VERSION + "/course",
 	},
+	// TODO: Add more interesting endpoints on a needs-basis
 }
 
 // serviceCourse implements the server interface

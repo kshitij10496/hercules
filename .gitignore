@@ -17,3 +17,11 @@ server
 
 # VS Code
 .vscode
+
+# Data files
+
+# Generate using course_rooms.py
+data/courses_details.json
+
+# Generate with faculty_directory.py
+data/faculty_directory.json

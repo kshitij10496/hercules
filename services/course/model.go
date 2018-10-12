@@ -76,5 +76,7 @@ func getCoursesFromFaculty(db *sql.DB, facultyMember common.FacultyMember) (resp
 		}
 		courses = append(courses, newCourse)
 	}
+
+	// TODO: Possibly add a check to validate that the prof belongs to the department
 	return courses, nil
 }

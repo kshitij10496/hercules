@@ -7,7 +7,7 @@ import (
 	"github.com/kshitij10496/hercules/common"
 )
 
-func (sd *serviceDepartment) departmentsHandler(w http.ResponseWriter, r *http.Request) {
+func (sd *serviceDepartment) handlerDepartments(w http.ResponseWriter, r *http.Request) {
 	// ctx := context.Background()
 	// conn, err := sd.GetDBConnection(ctx)
 	// if err != nil {
