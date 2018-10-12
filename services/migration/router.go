@@ -11,6 +11,7 @@ import (
 
 var facultyDirectoryFile = "/Users/kshitij10496/Software/go/src/github.com/kshitij10496/hercules/data/faculty_directory.json"
 var coursesDetailsFile = "/Users/kshitij10496/Software/go/src/github.com/kshitij10496/hercules/data/courses_details.json"
+var slotsFile = "/Users/kshitij10496/Software/go/src/github.com/kshitij10496/hercules/data/slots.csv"
 
 // serviceMigration implements the server interface
 //
@@ -36,22 +37,27 @@ func (s *serviceMigration) GetURL() string {
 }
 
 func migrations(db *sql.DB) (err error) {
-	// // TODO: Find an effective way to perform data migration.
+	// TODO: Find an effective way to perform data migration.
+
+	// Migrate `departments`
 	// err = readFromJSONDepartments(db, facultyDirectoryFile)
 	// if err != nil {
 	// 	return err
 	// }
 
-	// err = readFromJSONFacultyDesignations(db, facultyDirectoryFile)
+	// Migrate `slots` and `time_slots`
+	// err = readFromTimeSlots(db, slotsFile)
 	// if err != nil {
 	// 	return err
 	// }
 
+	// Migrate `faculty_designations` and `faculty`
 	// err = readFromJSONFaculty(db, facultyDirectoryFile)
 	// if err != nil {
 	// 	return err
 	// }
 
+	// Migrate `rooms`, `courses`, `courses_faculty`, `courses_slots` and `courses_rooms`
 	// err = readFromCourses(db, coursesDetailsFile)
 	// if err != nil {
 	// 	return err
