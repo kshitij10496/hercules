@@ -1,6 +1,7 @@
 package course
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -9,7 +10,7 @@ import (
 	"github.com/kshitij10496/hercules/common"
 )
 
-func (sc *serviceCourse) handlerCourseInfo(w http.ResponseWriter, r *http.Request) {
+func (sc *serviceCourse) handlerCourseTimetable(w http.ResponseWriter, r *http.Request) {
 	// ctx := context.Background()
 	// var course *common.Course
 	// err := common.DecodeFromJSON(r, course)
@@ -26,18 +27,21 @@ func (sc *serviceCourse) handlerCourseInfo(w http.ResponseWriter, r *http.Reques
 
 	// // TODO: Catch the error returned while closing connection
 	// // defer conn.Close()
-	// err = course.GetCourse(sc.DB)
-	// if err != nil {
-	// 	w.WriteHeader(http.StatusInternalServerError)
-	// 	log.Fatal(err)
-	// }
-	// common.RespondWithJSON(w, r, http.StatusOK, *course)
-	// encoder := json.NewEncoder(w)
-	// err = encoder.Encode(response)
-	// if err != nil {
-	// 	w.WriteHeader(http.StatusInternalServerError)
-	// 	log.Fatal(err)
-	// }
+	courseCode, found := mux.Vars(r)["code"]
+	if !found {
+		http.Error(w, "[required]: Course Code in URL Parameter", http.StatusBadRequest)
+		log.Println("Bad Request: No course code provided")
+	}
+
+	fmt.Println("CODE:", courseCode)
+	course := common.Course{Code: courseCode}
+	timetable, err := getCourseTimetable(sc.DB, course)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal(err)
+	}
+
+	common.RespondWithJSON(w, r, http.StatusOK, timetable)
 }
 
 func (sc *serviceCourse) handlerCoursesFromDepartment(w http.ResponseWriter, r *http.Request) {

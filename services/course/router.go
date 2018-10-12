@@ -10,13 +10,13 @@ import (
 )
 
 var Routes = common.Routes{
-	// common.Route{
-	// 	Name:        "Course Info",
-	// 	Method:      "GET",
-	// 	Pattern:     "/info",
-	// 	HandlerFunc: ServiceCourse.handlerCourseInfo,
-	// 	PathPrefix:  common.VERSION + "/course",
-	// },
+	common.Route{
+		Name:        "Courses Timetable",
+		Method:      "GET",
+		Pattern:     "/timetable/{code}",
+		HandlerFunc: ServiceCourse.handlerCourseTimetable,
+		PathPrefix:  common.VERSION + "/course",
+	},
 	common.Route{
 		Name:        "Courses From Department",
 		Method:      "GET",
@@ -31,6 +31,7 @@ var Routes = common.Routes{
 		HandlerFunc: ServiceCourse.handlerCoursesFromFaculty,
 		PathPrefix:  common.VERSION + "/course",
 	},
+
 	// TODO: Add more interesting endpoints on a needs-basis
 }
 

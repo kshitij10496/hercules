@@ -53,39 +53,43 @@ type Course struct {
 // Courses represents the reponse by the CoursesHandler.
 type Courses []Course
 
-// SlotTime represents the daily timing slots.
-type SlotTime int
+// Slot represents a course slot used for allocating a subject.
+type Slot string
 
-const (
-	AM8 = iota + 1
-	AM9
-	AM10
-	AM11
-	PM12
-	PM2
-	PM3
-	PM4
-	PM5
-)
+type Slots []Slot
+
+// Time represents a possible time for scheduling class.
+type Time struct {
+
+	// TODO: Use time.Weekday
+	Day string `json:"day"`
+	// TODO: Use time.Time
+	Time string `json:"time"`
+}
+
+type TimeSlot struct {
+	Time `json:"time"`
+	Slot `json:"slot"`
+}
 
 type Room string
 
-type Slot struct {
-	Course Course   `json:"course"`
-	Timing SlotTime `json:"slot"`
-	Room   Room     `json:"room"`
+type Rooms []Room
+
+type TimetableSlot struct {
+	Course   `json:"course"`
+	TimeSlot `json:"slot"`
+	Rooms    `json:"rooms"`
 }
+
+type TimetableSlots []TimetableSlot
 
 type Timetable struct {
-	Monday    []Slot `json:"Monday"`
-	Tuesday   []Slot `json:"Tuesday"`
-	Wednesday []Slot `json:"Wednesday"`
-	Thursday  []Slot `json:"Thursday"`
-	Friday    []Slot `json:"Friday"`
-}
-
-type TimeTableResponse struct {
-	Timetable Timetable `json:"timetable"`
+	Monday    TimetableSlots `json:"Monday"`
+	Tuesday   TimetableSlots `json:"Tuesday"`
+	Wednesday TimetableSlots `json:"Wednesday"`
+	Thursday  TimetableSlots `json:"Thursday"`
+	Friday    TimetableSlots `json:"Friday"`
 }
 
 // RespondWithJSON is the common function to be used by all the handlers while

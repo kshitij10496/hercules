@@ -93,7 +93,8 @@ const (
 const (
 	TableReadDepartment  = `SELECT id FROM departments WHERE code=$1;`
 	TableReadDesignation = `SELECT id FROM faculty_designations WHERE designation=$1;`
-	TableReadFaculty     = `SELECT id FROM faculty WHERE name=$1`
-	TableReadSlots       = `SELECT id FROM slots WHERE slot=$1`
-	TableReadRooms       = `SELECT id FROM rooms WHERE room=$1`
+	TableReadFaculty     = `SELECT id FROM faculty WHERE name=$1;`
+	TableReadSlots       = `SELECT id FROM slots WHERE slot=$1;`
+	TableReadRooms       = `SELECT id FROM rooms WHERE room=$1;`
+	TableReadCourses     = `SELECT id FROM courses WHERE code=$1;`
 )
