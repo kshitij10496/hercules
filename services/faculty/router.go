@@ -26,9 +26,9 @@ var Routes = common.Routes{
 	},
 	common.Route{
 		Name:        "Faculty Timetable",
-		Method:      "POST",
+		Method:      "GET",
 		Pattern:     "/timetable",
-		HandlerFunc: ServiceFaculty.facultyTimetableHandler,
+		HandlerFunc: ServiceFaculty.handlerFacultyTimetable,
 		PathPrefix:  common.VERSION + "/faculty",
 	},
 }

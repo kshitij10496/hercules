@@ -2,7 +2,6 @@ package course
 
 import (
 	"database/sql"
-	"fmt"
 	"log"
 
 	"github.com/kshitij10496/hercules/common"
@@ -94,7 +93,7 @@ func getCourseTimetable(db *sql.DB, course common.Course) (*common.Timetable, er
 		log.Println("[read] courses:", err)
 		return nil, err
 	}
-	fmt.Println("COURSEID:", courseID)
+
 	query = `SELECT room FROM course_rooms WHERE course=$1;`
 	rows, err := db.Query(query, courseID)
 	if err != nil {
@@ -121,8 +120,6 @@ func getCourseTimetable(db *sql.DB, course common.Course) (*common.Timetable, er
 		rooms = append(rooms, newRoom)
 	}
 
-	fmt.Println("ROOMS:", rooms)
-
 	query = `SELECT slot FROM course_slots WHERE course=$1;`
 	rows, err = db.Query(query, courseID)
 	if err != nil {
@@ -137,7 +134,6 @@ func getCourseTimetable(db *sql.DB, course common.Course) (*common.Timetable, er
 			log.Println("Error scanning course_slots:", err)
 			continue
 		}
-		fmt.Println("SLOTID:", slotID)
 
 		query = `SELECT s.slot, t.day, t.time
 				FROM slots s, time t, time_slots ts 

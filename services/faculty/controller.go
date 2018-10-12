@@ -43,27 +43,41 @@ func (sf *serviceFaculty) handlerFacultyDepartment(w http.ResponseWriter, r *htt
 	common.RespondWithJSON(w, r, http.StatusOK, faculty)
 }
 
-func (sf *serviceFaculty) facultyTimetableHandler(w http.ResponseWriter, r *http.Request) {
+func (sf *serviceFaculty) handlerFacultyTimetable(w http.ResponseWriter, r *http.Request) {
 	// ctx := context.Background()
-
-	faculty, err := ReadFaculty(r)
-	if err != nil {
-		w.WriteHeader(http.StatusBadRequest)
-		log.Println(err)
+	values := r.URL.Query()
+	names, found := values["name"]
+	if !found || len(names) != 1 {
+		http.Error(w, "[required]: name as a query parameter", http.StatusBadRequest)
+		log.Println("Bad Request: No faculty name provided")
+		return
+	}
+	deptCodes, found := values["dept"]
+	if !found || len(deptCodes) != 1 {
+		http.Error(w, "[required]: dept as query parameter", http.StatusBadRequest)
+		log.Println("Bad Request: No faculty department provided")
+		return
 	}
 
+	facultyMember := common.FacultyMember{
+		Name: names[0],
+		Department: common.Department{
+			Code: deptCodes[0],
+		},
+	}
 	// conn, err := sf.GetDBConnection(ctx)
 	// if err != nil {
 	// 	w.WriteHeader(http.StatusInternalServerError)
 	// 	log.Fatal("Error connecting to DB:", err)
 	// }
 
-	timetable, err := GetTimetable(sf.DB, faculty.Name)
+	timetable, err := GetTimetable(sf.DB, facultyMember)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Println(err)
+		return
 	}
 
-	response := common.TimeTableResponse{Timetable: *timetable}
+	response := timetable
 	common.RespondWithJSON(w, r, http.StatusOK, response)
 }
