@@ -3,6 +3,7 @@ package faculty
 import (
 	"database/sql"
 	"encoding/json"
+	"log"
 	"net/http"
 
 	"github.com/kshitij10496/hercules/common"
@@ -33,6 +34,33 @@ func GetFaculty(db *sql.DB) (data common.Faculty, err error) {
 			Name:        name,
 			Designation: designation,
 			Department:  department,
+		}
+
+		faculty = append(faculty, newFacultyMember)
+	}
+
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+
+	return faculty, nil
+}
+
+func GetFacultyDepartment(db *sql.DB, deptCode string) (common.Faculty, error) {
+	query := `SELECT f.name, fd.designation, d.code, d.name FROM faculty f, departments d, faculty_designations fd WHERE d.code=$1 AND f.department=d.id AND f.designation=fd.id`
+	rows, err := db.Query(query, deptCode)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var faculty common.Faculty
+	for rows.Next() {
+		var newFacultyMember common.FacultyMember
+		err := rows.Scan(&newFacultyMember.Name, &newFacultyMember.Designation, &newFacultyMember.Department.Code, &newFacultyMember.Department.Name)
+		if err != nil {
+			log.Printf("Error fetching department faculty: %v, err: %v", deptCode, err)
+			continue
 		}
 
 		faculty = append(faculty, newFacultyMember)

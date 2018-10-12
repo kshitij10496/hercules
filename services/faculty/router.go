@@ -11,10 +11,17 @@ import (
 
 var Routes = common.Routes{
 	common.Route{
-		Name:        "Faculty Info",
+		Name:        "Faculty Info All",
 		Method:      "GET",
-		Pattern:     "/info",
-		HandlerFunc: ServiceFaculty.facultyHandler,
+		Pattern:     "/info/all",
+		HandlerFunc: ServiceFaculty.handlerFacultyAll,
+		PathPrefix:  common.VERSION + "/faculty",
+	},
+	common.Route{
+		Name:        "Faculty Info Department",
+		Method:      "GET",
+		Pattern:     "/info/{code}",
+		HandlerFunc: ServiceFaculty.handlerFacultyDepartment,
 		PathPrefix:  common.VERSION + "/faculty",
 	},
 	common.Route{
