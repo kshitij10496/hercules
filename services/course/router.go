@@ -10,13 +10,13 @@ import (
 )
 
 var Routes = common.Routes{
-	common.Route{
-		Name:        "Course Info",
-		Method:      "GET",
-		Pattern:     "/info",
-		HandlerFunc: ServiceCourse.handlerCourseInfo,
-		PathPrefix:  common.VERSION + "/course",
-	},
+	// common.Route{
+	// 	Name:        "Course Info",
+	// 	Method:      "GET",
+	// 	Pattern:     "/info",
+	// 	HandlerFunc: ServiceCourse.handlerCourseInfo,
+	// 	PathPrefix:  common.VERSION + "/course",
+	// },
 	common.Route{
 		Name:        "Courses From Department",
 		Method:      "GET",

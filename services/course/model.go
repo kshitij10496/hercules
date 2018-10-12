@@ -10,29 +10,23 @@ import (
 // responseCourse refers to the JSON response body of a course.
 // TODO: Explore the use of struct embedding here
 type responseCourse struct {
-	Code    string               `json:"code"`
-	Name    string               `json:"name"`
-	Credits int                  `json:"credits"`
-	Faculty common.FacultyMember `json:"faculty"`
+	Code       string             `json:"code"`
+	Name       string             `json:"name"`
+	Credits    int                `json:"credits"`
+	Department *common.Department `json:"department,omitempty"`
+}
+
+func newResponseCourse() *responseCourse {
+	return &responseCourse{Department: &common.Department{}}
 }
 
 type responseCourses []responseCourse
 
-// GetCourseFromID populates the course with all the relevant information given the course code.
-// If no such course exists, an ErrCourseNotFound error is returned.
-func GetCourseFromID(db *sql.DB, courseID int) (common.Course, error) {
-	return common.Course{}, nil
-}
-
 // GetCoursesFromDepartment returns all the courses offered by a given department.
 //
 func getCoursesFromDepartment(db *sql.DB, department common.Department) (responseCourses, error) {
-	query := `SELECT c.code, c.name, c.credits, f.name, d.code, d.name, fd.designation 
-				FROM courses c, faculty f, departments d, faculty_designations fd 
-				WHERE c.department=$1 
-					AND f.id = c.faculty 
-					AND f.department=d.id 
-					AND f.designation=fd.id`
+	query := `SELECT c.code, c.name, c.credits FROM courses c, departments d
+				WHERE c.department=$1 AND d.id=c.department`
 	rows, err := db.Query(query, department.ID)
 	if err != nil {
 		return nil, err
@@ -40,9 +34,7 @@ func getCoursesFromDepartment(db *sql.DB, department common.Department) (respons
 	courses := responseCourses{}
 	for rows.Next() {
 		var newCourse responseCourse
-		err = rows.Scan(&newCourse.Code, &newCourse.Name, &newCourse.Credits,
-			&newCourse.Faculty.Name, &newCourse.Faculty.Department.Code,
-			&newCourse.Faculty.Department.Name, &newCourse.Faculty.Designation)
+		err = rows.Scan(&newCourse.Code, &newCourse.Name, &newCourse.Credits)
 		if err != nil {
 			log.Printf("Error while scanning department courses: %v, err: %v\n", department.Code, err)
 		}
@@ -54,29 +46,38 @@ func getCoursesFromDepartment(db *sql.DB, department common.Department) (respons
 // getCoursesFromFaculty returns all the courses offered by the given faculty member.
 //
 func getCoursesFromFaculty(db *sql.DB, facultyMember common.FacultyMember) (responseCourses, error) {
-	query := `SELECT c.code, c.name, c.credits, f.name, d.code, d.name, fd.designation 
-				FROM courses c, faculty f, departments d, faculty_designations fd 
-				WHERE f.name=$1 AND d.code=$2 
-					AND f.id = c.faculty 
-					AND f.department=d.id 
-					AND f.designation=fd.id`
-
-	rows, err := db.Query(query, facultyMember.Name, facultyMember.Department.Code)
+	// Validate department
+	var deptID int
+	err := db.QueryRow(common.TableReadDepartment, facultyMember.Department.Code).Scan(&deptID)
 	if err != nil {
 		return nil, err
 	}
-	courses := responseCourses{}
+
+	query := `SELECT id FROM faculty WHERE name=$1 AND department=$2`
+	// Validate faculty
+	var facultyID int
+	err = db.QueryRow(query, facultyMember.Name, deptID).Scan(&facultyID)
+	if err != nil {
+		return nil, err
+	}
+
+	query = `SELECT c.code, c.name, c.credits, d.code, d.name 
+				FROM course_faculty cf, courses c, departments d 
+				WHERE cf.faculty=$1 AND cf.course=c.id AND d.id=c.department`
+	rows, err := db.Query(query, facultyID)
+	if err != nil {
+		return nil, err
+	}
+	var courses responseCourses
 	for rows.Next() {
-		var newCourse responseCourse
+		newCourse := newResponseCourse()
 		err = rows.Scan(&newCourse.Code, &newCourse.Name, &newCourse.Credits,
-			&newCourse.Faculty.Name, &newCourse.Faculty.Department.Code,
-			&newCourse.Faculty.Department.Name, &newCourse.Faculty.Designation)
+			&newCourse.Department.Code, &newCourse.Department.Name)
 		if err != nil {
 			log.Printf("Error while scanning faculty courses: %+v, err: %v\n", facultyMember, err)
 		}
-		courses = append(courses, newCourse)
+		courses = append(courses, *newCourse)
 	}
 
-	// TODO: Possibly add a check to validate that the prof belongs to the department
 	return courses, nil
 }
