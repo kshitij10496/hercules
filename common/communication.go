@@ -13,9 +13,9 @@ func SendToService(service, method, endpoint string, query url.Values, body inte
 		Timeout: time.Second * 5,
 	}
 
-	u := fmt.Sprintf("http://localhost:8080%s/%s%s", VERSION, service, endpoint)
+	u := fmt.Sprintf("https://hercules-10496.herokuapp.com%s/%s%s", VERSION, service, endpoint)
 	if query != nil {
-		u = fmt.Sprintf("http://localhost:8080%s/%s%s?%s", VERSION, service, endpoint, query.Encode())
+		u = fmt.Sprintf("%s?%s", u, query.Encode())
 	}
 
 	fmt.Println("URL:", u)
