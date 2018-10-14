@@ -1,62 +1,108 @@
 package course
 
 import (
-	"io"
-	"io/ioutil"
+	"encoding/json"
 	"log"
 	"net/http"
 	"net/http/httptest"
-	"strings"
+	"os"
 	"testing"
 
+	"github.com/gorilla/mux"
+	_ "github.com/lib/pq"
+
 	"github.com/stretchr/testify/assert"
+
+	"github.com/kshitij10496/hercules/common"
 )
 
-var server *httptest.Server
+var testServer *httptest.Server
+var testServiceCourse serviceCourse
 
-func setup() {
-	server = httptest.NewServer(ServiceCourse.Router)
+func setup() error {
+
+	testServiceCourse = serviceCourse{
+		Name:   "service-course",
+		URL:    "/course",
+		Router: common.NewSubRouter(Routes),
+	}
+
+	// Grab $DATABASE_URL from env
+	databaseURL := os.Getenv("DATABASE_URL")
+	if databaseURL == "" {
+		log.Fatal("Missing: DATABASE_URL environment variable")
+	}
+	testServer = httptest.NewServer(&testServiceCourse)
+	return testServiceCourse.ConnectDB(databaseURL)
+
 }
 
 func teardown() {
-	server.Close()
+	testServiceCourse.CloseDB()
+	testServer.Close()
 }
 
-func Test_CoursesInfo(t *testing.T) {
-	setup()
+func Test_handlerCoursesFromDepartment(t *testing.T) {
+	err := setup()
 	defer teardown()
 
-	tests := []struct {
-		name             string
-		method           string
-		path             string
-		body             io.Reader
-		expectedResponse string
-		expectedStatus   int
+	if !assert.NoError(t, err) {
+		t.Fatalf("unable to setup test: %v\n", err)
+	}
+
+	endpoint := "/info/department"
+
+	tt := []struct {
+		name           string
+		method         string
+		code           string
+		expectedStatus int
 	}{
 		{
-			name:           "Valid Course Info",
+			name:           "Valid Department MA",
 			method:         "GET",
-			path:           "/course/info",
-			body:           strings.NewReader(`{"code":"NA61001"}`),
+			code:           "MA",
 			expectedStatus: http.StatusOK,
+		},
+		{
+			name:           "Invalid Department",
+			method:         "GET",
+			code:           "ABCD",
+			expectedStatus: http.StatusBadRequest,
+		},
+		{
+			name:           "No Department",
+			method:         "GET",
+			expectedStatus: http.StatusBadRequest,
 		},
 	}
 
-	for _, test := range tests {
-		request, err := http.NewRequest(test.method, server.URL+test.path, test.body)
-		assert.NoError(t, err)
-		log.Println("Successfully created the request")
-		log.Println("URL: ", server.URL+test.path)
+	for _, tc := range tt {
+		t.Run(tc.name, func(t *testing.T) {
+			url := testServer.URL + common.VERSION + testServiceCourse.URL + endpoint
+			var req *http.Request
+			req, err = http.NewRequest(tc.method, url, nil)
+			if err != nil {
+				t.Fatal("cannot create request:", err)
+			}
+			if tc.code != "" {
+				req = mux.SetURLVars(req, map[string]string{"code": tc.code})
+				log.Println("UPDATED req:", req.URL.String())
+			}
+			rec := httptest.NewRecorder()
 
-		response, err := http.DefaultClient.Do(request)
-		assert.NoError(t, err)
+			testServiceCourse.handlerCoursesFromDepartment(rec, req)
+			res := rec.Result()
+			assert.Equal(t, res.StatusCode, tc.expectedStatus)
+			defer res.Body.Close()
 
-		actualResponse, err := ioutil.ReadAll(response.Body)
-		assert.NoError(t, err)
+			var course responseCourses
+			decoder := json.NewDecoder(res.Body)
+			err = decoder.Decode(&course)
 
-		assert.Equal(t, test.expectedResponse, actualResponse, "Response")
-		assert.Equal(t, test.expectedStatus, response.StatusCode, "Status Code")
+			if res.StatusCode == http.StatusOK {
+				assert.Equal(t, err, nil)
+			}
+		})
 	}
-
 }

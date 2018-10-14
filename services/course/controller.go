@@ -52,6 +52,7 @@ func (sc *serviceCourse) handlerCoursesFromDepartment(w http.ResponseWriter, r *
 	if !found {
 		http.Error(w, "[required]: Department Code in URL Parameter", http.StatusBadRequest)
 		log.Println("Bad Request: No department code provided")
+		return
 	}
 
 	department := common.Department{Code: deptCode}
