@@ -12,4 +12,3 @@ RUN go build .
 CMD ["./hercules"]
 
 EXPOSE 8080
-D55C222D8C84172B36936948A64867DE.worker1
