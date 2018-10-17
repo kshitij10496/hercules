@@ -1,11 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"os"
 
 	"github.com/gorilla/mux"
+	"github.com/kelseyhightower/envconfig"
 	_ "github.com/lib/pq"
 
 	"github.com/kshitij10496/hercules/common"
@@ -16,16 +18,11 @@ import (
 )
 
 func main() {
-	// Grab $PORT from env
-	port := os.Getenv("PORT")
-	if port == "" {
-		log.Fatal("Missing: PORT environment variable")
-	}
-
-	// Grab $DATABASE_URL from env
-	databaseURL := os.Getenv("DATABASE_URL")
-	if databaseURL == "" {
-		log.Fatal("Missing: DATABASE_URL environment variable")
+	var config common.Config
+	if err := envconfig.Process("hercules", &config); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		envconfig.Usage("hercules", &config)
+		os.Exit(1)
 	}
 
 	// Create a new router
@@ -46,7 +43,7 @@ func main() {
 	for name, server := range servers {
 		log.Printf("%s creating...\n", name)
 
-		err := server.ConnectDB(databaseURL)
+		err := server.ConnectDB(config.DatabaseURL)
 		if err != nil {
 			log.Fatalf("Error connecting with DB for %s: %v\n", name, err)
 		}
@@ -57,8 +54,8 @@ func main() {
 	}
 	// TODO: Handle services page and home page
 
-	log.Printf("Server starting on %v\n", port)
-	if err := http.ListenAndServe(":"+port, mainRouter); err != nil {
+	log.Printf("Server starting on %v\n", config.Port)
+	if err := http.ListenAndServe(":"+config.Port, mainRouter); err != nil {
 		for name, server := range servers {
 			log.Printf("%s closing...\n", name)
 
