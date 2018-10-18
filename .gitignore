@@ -25,3 +25,6 @@ data/courses_details.json
 
 # Generate with faculty_directory.py
 data/faculty_directory.json
+
+# For python compiled files
+data/scrapper/__pycache__
