@@ -56,7 +56,6 @@ class CourseEncoder(json.JSONEncoder):
             return o.__dict__
 
         if isinstance(o, Course):
-            # TODO: Prettify JSON encoding by adding indentation and new lines.
             return o.__dict__
         raise TypeError("Object of type '{type} is not JSON Serializable".format(o.__class__.__name__))
 
@@ -176,7 +175,7 @@ def main():
     print("TOTAL COURSES:", len(all_courses))
     # Encode data and store it in a JSON file
     with open(OUTPUT_FILE, 'w') as f:
-        json.dump(all_courses, f, cls=CourseEncoder)
+        json.dump(all_courses, f, cls=CourseEncoder, indent=4, sort_keys=True)
     
 if __name__ == "__main__":
     main()
