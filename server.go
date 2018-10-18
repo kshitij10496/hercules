@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 	"net/http"
-	"os"
 
 	"github.com/gorilla/mux"
+	"github.com/kelseyhightower/envconfig"
 	_ "github.com/lib/pq"
 
 	"github.com/kshitij10496/hercules/common"
@@ -15,18 +15,24 @@ import (
 	"github.com/kshitij10496/hercules/services/migration"
 )
 
+type Specification struct {
+	Port        string `required:"true"`
+	DatabaseUrl string `required:"true"`
+}
+
 func main() {
-	// Grab $PORT from env
-	port := os.Getenv("PORT")
-	if port == "" {
-		log.Fatal("Missing: PORT environment variable")
+	// Get $PORT and $DATABASE_URL from env
+	var s Specification
+	err := envconfig.Process("hercules", &s)
+	if err != nil {
+		log.Fatal(err.Error())
 	}
 
-	// Grab $DATABASE_URL from env
-	databaseURL := os.Getenv("DATABASE_URL")
-	if databaseURL == "" {
-		log.Fatal("Missing: DATABASE_URL environment variable")
-	}
+	port := s.Port
+	databaseURL := s.DatabaseUrl
+
+	log.Print("From envconfig:")
+	log.Print(s.Port, s.DatabaseUrl)
 
 	// Create a new router
 	mainRouter := mux.NewRouter()
