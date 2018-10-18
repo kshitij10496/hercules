@@ -1,6 +1,7 @@
 import sys
 import json
 import requests
+import argparse
 
 from requests_html import HTML, HTMLSession
 
@@ -139,20 +140,29 @@ def department_subjects_list(dept_code, session_id):
     return courses
 
 
-# TODO: Add CLI option for accepting input file
-# TODO: Add CLI option for specifying output file
 def main():
     # 1. Obtain all department codes
     # 2. Get individual department courses
     # 3. Concatenate all the courses
     # 4. Encode the resulting data into a JSON
     # 5. Store it in a JSON file
-    if len(sys.argv) != 4:
-        print("USAGE: python course_rooms.py <JSESSIONID> <input-file> <output-file>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description='Scrape department timetables')
 
-    JSESSIONID, INPUT_FILE, OUTPUT_FILE = sys.argv[1:]
-    
+    parser.add_argument("-i", "--input-file", dest="input_file", required=True,
+            help="path to the input file containing department codes")
+
+    parser.add_argument("-o", "--output-file", dest="output_file", required=True,
+            help="path to the output json file")
+
+    parser.add_argument("--jsession-id", dest="jsession_id", required=True,
+            help="JSESSIONID extracted from the ERP")
+
+    args = parser.parse_args()
+
+    JSESSIONID = args.jsession_id
+    INPUT_FILE = args.input_file
+    OUTPUT_FILE = args.output_file
+
     departments = []
     with open(INPUT_FILE, "r") as f:
         for line in f.readlines():
