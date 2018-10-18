@@ -31,9 +31,6 @@ func main() {
 	port := s.Port
 	databaseURL := s.DatabaseUrl
 
-	log.Print("From envconfig:")
-	log.Print(s.Port, s.DatabaseUrl)
-
 	// Create a new router
 	mainRouter := mux.NewRouter()
 
