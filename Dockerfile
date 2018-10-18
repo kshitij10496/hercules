@@ -1,7 +1,7 @@
 FROM golang:1.11
 
-ENV PORT=8080
-ENV DATABASE_URL="user=kshitij10496 dbname=herculesdb sslmode=disable"
+ENV HERCULES_PORT=8080
+ENV HERCULES_DATABASEURL="user=kshitij10496 dbname=herculesdb sslmode=disable"
 
 RUN mkdir -p /go/src/github.com/kshitij10496/hercules
 WORKDIR /go/src/github.com/kshitij10496/hercules
