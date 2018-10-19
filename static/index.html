@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hercules</title>
+</head>
+
+<body>
+    <h1>Welcome to Hercules!</h1>
+
+    <h2>API endpoints</h2>
+
+    <div class="card">
+        <h3>service-course</h3>
+        <ul>
+            <li><span class="code">/course/timetable/{code}</span>Timetable of a course given the course code</li>
+            <li><span class="code">/course/info/department/{code}</span>List of all the courses offered by a department</li>
+            <li><span class="code">/course/info/faculty</span>List of all the courses offered by a faculty member</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>service-department</h3>
+        <ul>
+            <li><span class="code">/department/info/all</span>List of all the departments</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>service-faculty</h3>
+        <ul>
+            <li><span class="code">/faculty/info/all</span>List all the faculty members at IIT Kharagpur</li>
+            <li><span class="code">/faculty/info/{code}</span>List all the faculty members of a particular department</li>
+            <li><span class="code">/faculty/timetable</span>Timetable of a faculty member</li>
+        </ul>
+    </div>
+</body>
+
+</html>
