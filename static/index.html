@@ -12,31 +12,54 @@
 <body>
     <h1>Welcome to Hercules!</h1>
 
+    <a href="https://hercules-10496.herokuapp.com/api/v1">https://hercules-10496.herokuapp.com/api/v1</a>
+
     <h2>API endpoints</h2>
 
     <div class="card">
         <h3>service-course</h3>
-        <ul>
-            <li><span class="code">/course/timetable/{code}</span>Timetable of a course given the course code</li>
-            <li><span class="code">/course/info/department/{code}</span>List of all the courses offered by a department</li>
-            <li><span class="code">/course/info/faculty</span>List of all the courses offered by a faculty member</li>
-        </ul>
+        <table>
+            <tr>
+                <td><a href="https://hercules-10496.herokuapp.com/api/v1/course/timetable/MA61023" class="code">/course/timetable/{code}</a></td>
+                <td>Timetable of a course given the course code</td>
+            </tr>
+            <tr>
+                <td><a href="https://hercules-10496.herokuapp.com/api/v1/course/info/department/MA" class="code">/course/info/department/{code}</a></td>
+                <td>List of all the courses offered by a department</td>
+            </tr>
+            <tr>
+                <td><a href="https://hercules-10496.herokuapp.com/api/v1/course/info/faculty?name=Pratima%20Panigrahi&dept=MA" class="code">/course/info/faculty</a></td>
+                <td>List of all the courses offered by a faculty member</td>
+            </tr>
+        </table>
     </div>
 
     <div class="card">
         <h3>service-department</h3>
-        <ul>
-            <li><span class="code">/department/info/all</span>List of all the departments</li>
-        </ul>
+        <table>
+            <tr>
+                <td><a href="https://hercules-10496.herokuapp.com/api/v1/department/info/all" class="code">/department/info/all</a></td>
+                <td>List of all the departments</td>
+            </tr>
+        </table>
     </div>
 
     <div class="card">
         <h3>service-faculty</h3>
-        <ul>
-            <li><span class="code">/faculty/info/all</span>List all the faculty members at IIT Kharagpur</li>
-            <li><span class="code">/faculty/info/{code}</span>List all the faculty members of a particular department</li>
-            <li><span class="code">/faculty/timetable</span>Timetable of a faculty member</li>
-        </ul>
+        <table>
+            <tr>
+                <td><a href="https://hercules-10496.herokuapp.com/api/v1/faculty/info/all" class="code">/faculty/info/all</a></td>
+                <td>List all the faculty members at IIT Kharagpur</td>
+            </tr>
+            <tr>
+                <td><a href="https://hercules-10496.herokuapp.com/api/v1/faculty/info/MA" class="code">/faculty/info/{code}</a></td>
+                <td>List all the faculty members of a particular department</td>
+            </tr>
+            <tr>
+                <td><a href="https://hercules-10496.herokuapp.com/api/v1/faculty/timetable?name=Pratima%20Panigrahi&dept=MA" class="code">/faculty/timetable</a></td>
+                <td>Timetable of a faculty member</td>
+            </tr>
+        </table>
     </div>
 </body>
 
