@@ -29,6 +29,7 @@
   go-version = "1.11"
   install = ["."] # Explicit is better than implicit.
   ensure = true
+  
 
 [[constraint]]
   name = "github.com/lib/pq"
