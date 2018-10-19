@@ -24,6 +24,11 @@
 #   go-tests = true
 #   unused-packages = true
 
+[metadata.heroku]
+  root-package = "github.com/kshitij10496/hercules"
+  go-version = "1.11"
+  install = ["."] # Explicit is better than implicit.
+  ensure = true
 
 [[constraint]]
   name = "github.com/lib/pq"
