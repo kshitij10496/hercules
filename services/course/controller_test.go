@@ -27,10 +27,10 @@ func setup() error {
 		Router: common.NewSubRouter(Routes),
 	}
 
-	// Grab $DATABASE_URL from env
-	databaseURL := os.Getenv("DATABASE_URL")
+	// Grab $HERCULES_DATABASE from env
+	databaseURL := os.Getenv("HERCULES_DATABASE")
 	if databaseURL == "" {
-		log.Fatal("Missing: DATABASE_URL environment variable")
+		log.Fatal("Missing: HERCULES_DATABASE environment variable")
 	}
 	testServer = httptest.NewServer(&testServiceCourse)
 	return testServiceCourse.ConnectDB(databaseURL)

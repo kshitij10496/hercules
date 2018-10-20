@@ -43,7 +43,7 @@ func main() {
 	for name, server := range servers {
 		log.Printf("%s creating...\n", name)
 
-		err := server.ConnectDB(config.DatabaseURL)
+		err := server.ConnectDB(config.Database)
 		if err != nil {
 			log.Fatalf("Error connecting with DB for %s: %v\n", name, err)
 		}
