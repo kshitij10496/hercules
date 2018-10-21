@@ -8,13 +8,9 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/kelseyhightower/envconfig"
-	_ "github.com/lib/pq"
-
 	"github.com/kshitij10496/hercules/common"
-	"github.com/kshitij10496/hercules/services/course"
 	"github.com/kshitij10496/hercules/services/department"
-	"github.com/kshitij10496/hercules/services/faculty"
-	"github.com/kshitij10496/hercules/services/migration"
+	_ "github.com/lib/pq"
 )
 
 func main() {
@@ -33,10 +29,10 @@ func main() {
 
 	// List all the services
 	servers := map[string]common.Server{
-		"service-course":     &course.ServiceCourse,
+		// "service-course":     &course.ServiceCourse,
 		"service-department": &department.ServiceDepartment,
-		"service-faculty":    &faculty.ServiceFaculty,
-		"service-migration":  &migration.ServiceMigration,
+		// "service-faculty":    &faculty.ServiceFaculty,
+		// "service-migration":  &migration.ServiceMigration,
 	}
 
 	// Connect each service with the DB and add them to the subrouters
