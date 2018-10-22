@@ -53,6 +53,7 @@ func main() {
 		log.Printf("%s created!\n", name)
 	}
 	// TODO: Handle services page and home page
+	mainRouter.HandleFunc(common.VERSION, http.FileServer(http.Dir("./static"))
 
 	log.Printf("Server starting on %v\n", config.Port)
 	if err := http.ListenAndServe(":"+config.Port, mainRouter); err != nil {
