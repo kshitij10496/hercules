@@ -1,13 +1,11 @@
 package department
 
 import (
-	"fmt"
-	"log"
+	"encoding/json"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 
-	"github.com/gorilla/mux"
 	"github.com/kshitij10496/hercules/common"
 	"github.com/stretchr/testify/assert"
 )
@@ -15,32 +13,7 @@ import (
 var testDepartmentService *serviceDepartment
 var testServer *httptest.Server
 
-func newFakeRouter() *mux.Router {
-	var fakeRoutes = common.Routes{
-		common.Route{
-			Name:        "Information for all the departments",
-			Method:      "GET",
-			Pattern:     "/info/all",
-			HandlerFunc: testDepartmentService.handlerDepartments,
-			PathPrefix:  common.VERSION + "/department",
-		},
-	}
-
-	router := mux.NewRouter().StrictSlash(true)
-	for _, route := range fakeRoutes {
-		path := route.PathPrefix + route.Pattern
-		router.
-			Methods(route.Method).
-			Path(path).
-			Name(route.Name).
-			Handler(route.HandlerFunc)
-
-		log.Println("created route:", route.Method, path)
-	}
-	return router
-}
-
-func setup() error {
+func newFakeServiceDepartment(hasRoutes bool) *serviceDepartment {
 	testDepartmentService = &serviceDepartment{
 		Service: common.Service{
 			Name: "service-department",
@@ -48,54 +21,79 @@ func setup() error {
 		},
 		DB: NewFakeDataSouce(),
 	}
-
-	testDepartmentService.Router = newFakeRouter()
-	testServer = httptest.NewServer(testDepartmentService)
-	return testDepartmentService.ConnectDB("dummy_url")
+	if hasRoutes {
+		testDepartmentService.Router = initRoutes(testDepartmentService)
+	}
+	return testDepartmentService
 }
 
-func teardown() error {
-	testServer.Close()
+func setup(sd *serviceDepartment) (*httptest.Server, error) {
+	err := sd.ConnectDB("dummy_url")
+	if err != nil {
+		return nil, nil
+	}
+	testServer = httptest.NewServer(sd)
+	return testServer, nil
+}
+
+func teardown(sd *serviceDepartment) error {
 	return testDepartmentService.CloseDB()
 }
 
-func Test_GetDepartments(t *testing.T) {
-	err := setup()
-	assert.NoError(t, err)
+func Test_Handler_GetDepartments(t *testing.T) {
+	// Setup tests
+	testDepartmentService := newFakeServiceDepartment(false)
+	// testServer, err := setup(testDepartmentService)
+	// assert.NoError(t, err)
+	// Teardown tests
+	// defer testServer.Close()
+	defer teardown(testDepartmentService)
 	// TODO: Handler error during teardown
-	defer teardown()
 
-	fmt.Printf("testDepartmentService: %+v\n", testDepartmentService)
-	endpoint := "/info/all"
+	// endpoint := "/info/all"
 
 	tt := []struct {
 		name           string
 		method         string
 		expectedStatus int
+		expectedBody   common.Departments
 	}{
 		{
 			name:           "Valid request",
 			method:         "GET",
 			expectedStatus: http.StatusOK,
+			expectedBody: common.Departments{
+				common.Department{
+					Name: "Mathematics",
+					Code: "MA",
+				},
+				common.Department{
+					Name: "Computer Science",
+					Code: "CS",
+				},
+			},
 		},
 	}
 
-	url := testServer.URL + common.VERSION + testDepartmentService.URL + endpoint
+	// url := testServer.URL + common.VERSION + testDepartmentService.URL + endpoint
 	for _, tc := range tt {
 		t.Run(tc.name, func(t *testing.T) {
-			var req *http.Request
-			req, err = http.NewRequest(tc.method, url, nil)
+			req, err := http.NewRequest(tc.method, "", nil)
 			if err != nil {
 				t.Fatal("cannot create request:", err)
 			}
 			rec := httptest.NewRecorder()
 
-			fmt.Printf("testDepartmentService: %+v\n", testDepartmentService)
-
 			testDepartmentService.handlerDepartments(rec, req)
 
 			res := rec.Result()
 			assert.Equal(t, tc.expectedStatus, res.StatusCode)
+			assert.NotNil(t, res.Body)
+
+			var responseBody common.Departments
+			err = json.NewDecoder(res.Body).Decode(&responseBody)
+			assert.NoError(t, err)
+			assert.Equal(t, tc.expectedBody, responseBody)
 		})
 	}
 }

@@ -19,7 +19,7 @@ type realDataSource struct {
 }
 
 func NewRealDataSource() *realDataSource {
-	log.Println("creating a new real data source...")
+	log.Println("creating a new real departmentsDatasource...")
 	return &realDataSource{db: nil}
 }
 
@@ -46,7 +46,7 @@ type fakeDataSource struct {
 }
 
 func NewFakeDataSouce() *fakeDataSource {
-	log.Println("Creating a new fake data source")
+	log.Println("Creating a new fake departmentsDatasource")
 	return &fakeDataSource{"dummy"}
 }
 func (f *fakeDataSource) ConnectDS(url string) error {

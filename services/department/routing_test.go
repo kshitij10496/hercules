@@ -1,7 +1,6 @@
 package department
 
 import (
-	"fmt"
 	"net/http"
 	"testing"
 
@@ -9,30 +8,53 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_GetDepartments_ete(t *testing.T) {
-	err := setup()
+func Test_Routing_GetDepartments(t *testing.T) {
+	// Setup tests
+	testDepartmentService := newFakeServiceDepartment(true)
+	testServer, err := setup(testDepartmentService)
 	assert.NoError(t, err)
-	// TODO: Handler error during teardown
-	defer teardown()
 
-	fmt.Printf("testDepartmentService: %+v\n", testDepartmentService)
-	endpoint := "/info/all"
+	// Teardown tests
+	defer testServer.Close()
+	defer teardown(testDepartmentService)
+	// TODO: Handler error during teardown
 
 	tt := []struct {
 		name           string
 		method         string
+		endpoint       string
 		expectedStatus int
 	}{
 		{
 			name:           "Valid request",
+			method:         "GET",
+			endpoint:       "/info/all",
 			expectedStatus: http.StatusOK,
+		},
+		{
+			name:           "Invalid request endpoint",
+			method:         "GET",
+			endpoint:       "/info/al",
+			expectedStatus: http.StatusNotFound,
+		},
+		{
+			name:           "Invalid request method",
+			method:         "POST",
+			endpoint:       "info/all",
+			expectedStatus: http.StatusNotFound,
 		},
 	}
 
-	url := testServer.URL + common.VERSION + testDepartmentService.URL + endpoint
 	for _, tc := range tt {
 		t.Run(tc.name, func(t *testing.T) {
-			res, err := http.Get(url)
+			url := testServer.URL + common.VERSION + testDepartmentService.URL + tc.endpoint
+			var req *http.Request
+			req, err = http.NewRequest(tc.method, url, nil)
+			if err != nil {
+				t.Fatal("cannot create request:", err)
+			}
+			client := testServer.Client()
+			res, err := client.Do(req)
 			assert.NoError(t, err)
 			assert.Equal(t, tc.expectedStatus, res.StatusCode)
 		})

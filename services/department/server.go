@@ -37,16 +37,14 @@ func (s *serviceDepartment) CloseDB() error {
 	return s.DB.CloseDS()
 }
 
-// ServiceDepartment represents the course service.
-var ServiceDepartment serviceDepartment
-
-func init() {
-	ServiceDepartment = serviceDepartment{
+func NewServiceDepartment() *serviceDepartment {
+	ServiceDepartment := &serviceDepartment{
 		common.Service{
-			Name:   "service-department",
-			URL:    "/department",
-			Router: common.NewSubRouter(Routes),
+			Name: "service-department",
+			URL:  "/department",
 		},
 		NewRealDataSource(),
 	}
+	ServiceDepartment.Router = initRoutes(ServiceDepartment)
+	return ServiceDepartment
 }
