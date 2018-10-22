@@ -1,5 +1,6 @@
 package common
 
+// Tier-1: Fundamental tables
 const (
 	// Scrapped from Faculty Directory
 	tableCreationDepartments = `CREATE TABLE departments (
@@ -14,18 +15,34 @@ const (
 		designation varchar(80) NOT NULL	-- Designations in KGP
 	);`
 
-	// Pre-populated manually.
-	// 9 slots daily over a work week => 9 * 5 = 45 slots
-	tableCreationTimeSlots = `CREATE TABLE time_slots (
+	// Scrapped from Department Timetable
+	tableCreationSlots = `CREATE TABLE slots (
 		id SERIAL PRIMARY KEY,
-		day varchar(10) NOT NULL,	-- Week Day
-		slot varchar(5) NOT NULL	-- Time slots in a working day e.g 8 AM
+		slot varchar(10)			-- Slot used by administration for timetable
 	);`
 
-	// Pre-populated + Scrapped
+	// Pre-popoulated
+	// Updated manually when the academic timings change.
+	// 9 slots daily over a work week => 9 * 5 = 45 slots
+	tableCreationTime = `CREATE TABLE time_slots (
+		id SERIAL PRIMARY KEY,
+		day varchar(10) NOT NULL,	-- Week Day
+		time varchar(5) NOT NULL	-- Time slots in a working day e.g 8 AM
+	);`
+
+	// Scrapped From Department Timetable
 	tableCreationRooms = `CREATE TABLE rooms (
 		id SERIAL PRIMARY KEY,
 		room varchar(80) NOT NULL		-- Room Name/Room No
+	);`
+)
+
+// Tier-2: Tables built on top of the Tier-1 tables
+const (
+	tableCreationTimeSlots = `CREATE TABLE time_slots (
+		id SERIAL PRIMARY KEY,
+		slot int REFERENCES slots(id),
+		time int REFERENCES time_slots(id)
 	);`
 
 	// Scrapped from Faculty Directory
@@ -49,13 +66,10 @@ const (
 		faculty int REFERENCES faculty(id),
 		department int REFERENCES departments(id)
 	);`
+)
 
-	tableCreationSlots = `CREATE TABLE slots (
-		id SERIAL PRIMARY KEY,
-		slot varchar(10),
-		time int REFERENCES time_slots(id)
-	);`
-
+// Tier 3: Tables built on top of Tier 1 and Tier 2 tables
+const (
 	tableCreationCourseFaculty = `CREATE TABLE course_faculty (
 		id SERIAL PRIMARY KEY,
 		faculty int REFERENCES faculty(id),
@@ -77,6 +91,7 @@ const (
 	);`
 )
 
+// Table Insertion statements
 const (
 	TableInsertionDepartments         = `INSERT INTO departments (code, name) VALUES ($1, $2);`
 	TableInsertionFacultyDesignations = `INSERT INTO faculty_designations (designation) VALUES ($1) RETURNING id;`
@@ -90,6 +105,7 @@ const (
 	TableInsertionTimeSlots           = `INSERT INTO time_slots (time, slot) VALUES ($1, $2);`
 )
 
+// Table querying statements given the id
 const (
 	TableReadDepartment  = `SELECT id FROM departments WHERE code=$1;`
 	TableReadDesignation = `SELECT id FROM faculty_designations WHERE designation=$1;`
