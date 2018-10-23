@@ -2,106 +2,116 @@ package course
 
 import (
 	"encoding/json"
-	"log"
 	"net/http"
 	"net/http/httptest"
-	"os"
 	"testing"
 
 	"github.com/gorilla/mux"
-	_ "github.com/lib/pq"
-
-	"github.com/stretchr/testify/assert"
-
 	"github.com/kshitij10496/hercules/common"
+	_ "github.com/lib/pq"
+	"github.com/stretchr/testify/assert"
 )
 
-var testServer *httptest.Server
-var testServiceCourse serviceCourse
-
-func setup() error {
-
-	testServiceCourse = serviceCourse{
-		Name:   "service-course",
-		URL:    "/course",
-		Router: common.NewSubRouter(Routes),
+func newFakeServiceCourse(hasRoutes bool) *serviceCourse {
+	ServiceCourse := &serviceCourse{
+		common.Service{
+			Name: "service-course",
+			URL:  "/course",
+		},
+		NewFakeDataSouce(),
+	}
+	if hasRoutes {
+		ServiceCourse.Router = initRoutes(ServiceCourse)
 	}
 
-	// Grab $HERCULES_DATABASE from env
-	databaseURL := os.Getenv("HERCULES_DATABASE")
-	if databaseURL == "" {
-		log.Fatal("Missing: HERCULES_DATABASE environment variable")
-	}
-	testServer = httptest.NewServer(&testServiceCourse)
-	return testServiceCourse.ConnectDB(databaseURL)
-
+	return ServiceCourse
 }
 
-func teardown() {
-	testServiceCourse.CloseDB()
-	testServer.Close()
+func setup(sc *serviceCourse) (*httptest.Server, error) {
+	err := sc.ConnectDB("dummy_url")
+	if err != nil {
+		return nil, nil
+	}
+	testServer := httptest.NewServer(sc)
+	return testServer, nil
+}
+
+func teardown(sc *serviceCourse) error {
+	return sc.CloseDB()
 }
 
 func Test_handlerCoursesFromDepartment(t *testing.T) {
-	err := setup()
-	defer teardown()
-
-	if !assert.NoError(t, err) {
-		t.Fatalf("unable to setup test: %v\n", err)
-	}
-
-	endpoint := "/info/department"
+	testServiceCourse := newFakeServiceCourse(false)
+	defer teardown(testServiceCourse)
+	// TODO: Handle error returned during teardown
 
 	tt := []struct {
 		name           string
 		method         string
 		code           string
 		expectedStatus int
+		expectedBody   responseCourses
 	}{
 		{
-			name:           "Valid Department MA",
-			method:         "GET",
-			code:           "MA",
-			expectedStatus: http.StatusOK,
+			"Valid Department MA",
+			"GET",
+			"MA",
+			http.StatusOK,
+			responseCourses{
+				responseCourse{
+					Code:    "MA10496",
+					Name:    "MA Course 1",
+					Credits: 10,
+				},
+			},
 		},
 		{
-			name:           "Invalid Department",
-			method:         "GET",
-			code:           "ABCD",
-			expectedStatus: http.StatusBadRequest,
+			"Invalid Department",
+			"GET",
+			"ABCD",
+			http.StatusBadRequest,
+			responseCourses{
+				responseCourse{
+					Code:    "CS10496",
+					Name:    "CS Course 1",
+					Credits: 10,
+				},
+			},
 		},
 		{
 			name:           "No Department",
 			method:         "GET",
 			expectedStatus: http.StatusBadRequest,
+			expectedBody:   nil,
 		},
 	}
 
 	for _, tc := range tt {
 		t.Run(tc.name, func(t *testing.T) {
-			url := testServer.URL + common.VERSION + testServiceCourse.URL + endpoint
-			var req *http.Request
-			req, err = http.NewRequest(tc.method, url, nil)
+			req, err := http.NewRequest(tc.method, "", nil)
 			if err != nil {
 				t.Fatal("cannot create request:", err)
 			}
 			if tc.code != "" {
 				req = mux.SetURLVars(req, map[string]string{"code": tc.code})
-				log.Println("UPDATED req:", req.URL.String())
 			}
 			rec := httptest.NewRecorder()
 
-			testServiceCourse.handlerCoursesFromDepartment(rec, req)
+			handler := http.HandlerFunc(testServiceCourse.handlerCoursesFromDepartment)
+			handler.ServeHTTP(rec, req)
+
 			res := rec.Result()
-			assert.Equal(t, res.StatusCode, tc.expectedStatus)
+			assert.Equal(t, tc.expectedStatus, res.StatusCode)
+
 			defer res.Body.Close()
+			if tc.expectedStatus == http.StatusOK {
+				assert.NotNil(t, res.Body)
 
-			var course responseCourses
-			decoder := json.NewDecoder(res.Body)
-			err = decoder.Decode(&course)
+				var responseBody responseCourses
+				err := json.NewDecoder(res.Body).Decode(&responseBody)
+				assert.NoError(t, err)
 
-			if res.StatusCode == http.StatusOK {
-				assert.Equal(t, err, nil)
+				assert.Equal(t, tc.expectedBody, responseBody)
 			}
 		})
 	}

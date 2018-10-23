@@ -2,6 +2,8 @@ package course
 
 import (
 	"database/sql"
+	"errors"
+	"fmt"
 	"log"
 
 	"github.com/kshitij10496/hercules/common"
@@ -76,12 +78,40 @@ func (f *fakeDataSource) CloseDS() error {
 
 func (f *fakeDataSource) GetDepartmentInfo(d *common.Department) error {
 	// TODO: Enter mock data for testing
+	switch d.Code {
+	case "MA":
+		d.ID = "1"
+	case "CS":
+		d.ID = "2"
+	default:
+		return errors.New("not a valid department")
+	}
 	return nil
 }
 
-func (f *fakeDataSource) GetCoursesFromDepartment(d common.Department) (responseCourses, error) {
+func (f *fakeDataSource) GetCoursesFromDepartment(d common.Department) (data responseCourses, err error) {
 	// TODO: Enter mock data for testing
-	return nil, nil
+	switch d.ID {
+	case "1":
+		data = responseCourses{
+			responseCourse{
+				Code:    "MA10496",
+				Name:    "MA Course 1",
+				Credits: 10,
+			},
+		}
+	case "2":
+		data = responseCourses{
+			responseCourse{
+				Code:    "CS10496",
+				Name:    "CS Course 1",
+				Credits: 10,
+			},
+		}
+	default:
+		return nil, fmt.Errorf("Cannot find courses for dept:%+v", d.Code)
+	}
+	return data, nil
 }
 
 func (f *fakeDataSource) GetCoursesFromFaculty(fm common.FacultyMember) (responseCourses, error) {

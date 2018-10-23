@@ -48,7 +48,7 @@ func (sc *serviceCourse) handlerCoursesFromDepartment(w http.ResponseWriter, r *
 	// 2. DB lookup to fetch course information
 	// 3. Return the data
 	deptCode, found := mux.Vars(r)["code"]
-	if !found {
+	if !found || deptCode == "" {
 		http.Error(w, "[required]: Department Code in URL Parameter", http.StatusBadRequest)
 		log.Println("Bad Request: No department code provided")
 		return

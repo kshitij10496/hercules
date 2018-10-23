@@ -10,11 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var testDepartmentService *serviceDepartment
-var testServer *httptest.Server
-
 func newFakeServiceDepartment(hasRoutes bool) *serviceDepartment {
-	testDepartmentService = &serviceDepartment{
+	testDepartmentService := &serviceDepartment{
 		Service: common.Service{
 			Name: "service-department",
 			URL:  "/department",
@@ -32,25 +29,17 @@ func setup(sd *serviceDepartment) (*httptest.Server, error) {
 	if err != nil {
 		return nil, nil
 	}
-	testServer = httptest.NewServer(sd)
+	testServer := httptest.NewServer(sd)
 	return testServer, nil
 }
 
 func teardown(sd *serviceDepartment) error {
-	return testDepartmentService.CloseDB()
+	return sd.CloseDB()
 }
 
 func Test_Handler_GetDepartments(t *testing.T) {
-	// Setup tests
 	testDepartmentService := newFakeServiceDepartment(false)
-	// testServer, err := setup(testDepartmentService)
-	// assert.NoError(t, err)
-	// Teardown tests
-	// defer testServer.Close()
 	defer teardown(testDepartmentService)
-	// TODO: Handler error during teardown
-
-	// endpoint := "/info/all"
 
 	tt := []struct {
 		name           string
@@ -75,7 +64,6 @@ func Test_Handler_GetDepartments(t *testing.T) {
 		},
 	}
 
-	// url := testServer.URL + common.VERSION + testDepartmentService.URL + endpoint
 	for _, tc := range tt {
 		t.Run(tc.name, func(t *testing.T) {
 			req, err := http.NewRequest(tc.method, "", nil)
@@ -84,10 +72,13 @@ func Test_Handler_GetDepartments(t *testing.T) {
 			}
 			rec := httptest.NewRecorder()
 
-			testDepartmentService.handlerDepartments(rec, req)
+			handler := http.HandlerFunc(testDepartmentService.handlerDepartments)
+			handler.ServeHTTP(rec, req)
 
 			res := rec.Result()
 			assert.Equal(t, tc.expectedStatus, res.StatusCode)
+
+			defer res.Body.Close()
 			assert.NotNil(t, res.Body)
 
 			var responseBody common.Departments

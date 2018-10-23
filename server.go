@@ -9,6 +9,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/kelseyhightower/envconfig"
 	"github.com/kshitij10496/hercules/common"
+	"github.com/kshitij10496/hercules/services/course"
 	"github.com/kshitij10496/hercules/services/department"
 	_ "github.com/lib/pq"
 )
@@ -29,8 +30,8 @@ func main() {
 
 	// List all the services
 	servers := map[string]common.Server{
-		// "service-course":     &course.ServiceCourse,
-		"service-department": &department.ServiceDepartment,
+		"service-course":     course.NewServiceCourse(),
+		"service-department": department.NewServiceDepartment(),
 		// "service-faculty":    &faculty.ServiceFaculty,
 		// "service-migration":  &migration.ServiceMigration,
 	}
