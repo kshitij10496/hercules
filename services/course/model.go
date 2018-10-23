@@ -23,10 +23,10 @@ type responseCourses []responseCourse
 
 // GetCoursesFromDepartment returns all the courses offered by a given department.
 //
-func getCoursesFromDepartment(db *sql.DB, department common.Department) (responseCourses, error) {
+func getCoursesFromDepartment(db *sql.DB, d common.Department) (responseCourses, error) {
 	query := `SELECT c.code, c.name, c.credits FROM courses c, departments d
 				WHERE c.department=$1 AND d.id=c.department`
-	rows, err := db.Query(query, department.ID)
+	rows, err := db.Query(query, d.ID)
 	if err != nil {
 		return nil, err
 	}
@@ -35,7 +35,7 @@ func getCoursesFromDepartment(db *sql.DB, department common.Department) (respons
 		var newCourse responseCourse
 		err = rows.Scan(&newCourse.Code, &newCourse.Name, &newCourse.Credits)
 		if err != nil {
-			log.Printf("Error while scanning department courses: %v, err: %v\n", department.Code, err)
+			log.Printf("Error while scanning department courses: %v, err: %v\n", d.Code, err)
 		}
 		courses = append(courses, newCourse)
 	}
