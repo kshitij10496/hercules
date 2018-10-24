@@ -13,8 +13,10 @@ type courseDataSource interface {
 	ConnectDS(string) error
 	CloseDS() error
 
-	GetCoursesFromDepartment(common.Department) (responseCourses, error)
 	GetDepartmentInfo(*common.Department) error
+	GetCourseInfo(*common.Course) error
+
+	GetCoursesFromDepartment(common.Department) (responseCourses, error)
 	GetCoursesFromFaculty(common.FacultyMember) (responseCourses, error)
 	GetCourseTimetable(common.Course) (*common.Timetable, error)
 }
@@ -42,6 +44,10 @@ func (ds *realDataSource) CloseDS() error {
 
 func (ds *realDataSource) GetDepartmentInfo(d *common.Department) error {
 	return d.GetInfo(ds.db)
+}
+
+func (ds *realDataSource) GetCourseInfo(c *common.Course) error {
+	return c.GetInfo(ds.db)
 }
 
 func (ds *realDataSource) GetCoursesFromDepartment(d common.Department) (responseCourses, error) {
@@ -89,14 +95,24 @@ func (f *fakeDataSource) GetDepartmentInfo(d *common.Department) error {
 	return nil
 }
 
+func (f *fakeDataSource) GetCourseInfo(c *common.Course) error {
+	switch c.Code {
+	case "MA10496":
+		c.Name = "MATHEMATICS DUMMY COURSE"
+		c.Credits = 10
+	default:
+		return errors.New("not a valid course")
+	}
+	return nil
+}
+
 func (f *fakeDataSource) GetCoursesFromDepartment(d common.Department) (data responseCourses, err error) {
-	// TODO: Enter mock data for testing
 	switch d.ID {
 	case "1":
 		data = responseCourses{
 			responseCourse{
 				Code:    "MA10496",
-				Name:    "MA Course 1",
+				Name:    "MATHEMATICS DUMMY COURSE",
 				Credits: 10,
 			},
 		}
@@ -104,7 +120,7 @@ func (f *fakeDataSource) GetCoursesFromDepartment(d common.Department) (data res
 		data = responseCourses{
 			responseCourse{
 				Code:    "CS10496",
-				Name:    "CS Course 1",
+				Name:    "CS DUMMY COURSE",
 				Credits: 10,
 			},
 		}
@@ -114,12 +130,97 @@ func (f *fakeDataSource) GetCoursesFromDepartment(d common.Department) (data res
 	return data, nil
 }
 
-func (f *fakeDataSource) GetCoursesFromFaculty(fm common.FacultyMember) (responseCourses, error) {
-	// TODO: Enter mock data for testing
-	return nil, nil
+func (f *fakeDataSource) GetCoursesFromFaculty(fm common.FacultyMember) (data responseCourses, err error) {
+	switch fm.Name {
+	case "DUMMY FACULTY MEMBER":
+		data = responseCourses{
+			responseCourse{
+				Code:    "MA10496",
+				Name:    "MATHEMATICS DUMMY COURSE",
+				Credits: 10,
+				Department: &common.Department{
+					Name: "Mathematics",
+					Code: "MA",
+				},
+			},
+			responseCourse{
+				Code:    "CS10496",
+				Name:    "CS DUMMY COURSE",
+				Credits: 10,
+				Department: &common.Department{
+					Name: "Computer Science",
+					Code: "CS",
+				},
+			},
+		}
+	default:
+		return nil, fmt.Errorf("No a valid faculty member")
+	}
+	return data, nil
 }
 
-func (f *fakeDataSource) GetCourseTimetable(c common.Course) (*common.Timetable, error) {
-	// TODO: Enter mock data for testing
-	return nil, nil
+func (f *fakeDataSource) GetCourseTimetable(c common.Course) (data *common.Timetable, err error) {
+	switch c.Code {
+	case "MA10496":
+		data = &common.Timetable{
+			Monday: common.TimetableSlots{
+				common.TimetableSlot{
+					common.Course{
+						Name:    "MATHEMATICS DUMMY COURSE",
+						Code:    "MA10496",
+						Credits: 10,
+					},
+					common.TimeSlot{
+						common.Time{
+							Day:  "Monday",
+							Time: "12 PM",
+						},
+						common.Slot("DUMMY SLOT"),
+					},
+					common.Rooms{
+						common.Room("DUMMY ROOM"),
+					},
+				},
+			},
+			Tuesday: common.TimetableSlots{
+				common.TimetableSlot{
+					common.Course{
+						Name:    "MATHEMATICS DUMMY COURSE",
+						Code:    "MA10496",
+						Credits: 10,
+					},
+					common.TimeSlot{
+						common.Time{
+							Day:  "Tuesday",
+							Time: "10 AM",
+						},
+						common.Slot("DUMMY SLOT"),
+					},
+					common.Rooms{
+						common.Room("DUMMY ROOM"),
+					},
+				},
+				common.TimetableSlot{
+					common.Course{
+						Name:    "MATHEMATICS DUMMY COURSE",
+						Code:    "MA10496",
+						Credits: 10,
+					},
+					common.TimeSlot{
+						common.Time{
+							Day:  "Tuesday",
+							Time: "11 AM",
+						},
+						common.Slot("DUMMY SLOT"),
+					},
+					common.Rooms{
+						common.Room("DUMMY ROOM"),
+					},
+				},
+			},
+		}
+	default:
+		return nil, fmt.Errorf("No timetable for course: %+v", c.Code)
+	}
+	return data, nil
 }

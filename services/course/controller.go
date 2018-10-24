@@ -33,10 +33,17 @@ func (sc *serviceCourse) handlerCourseTimetable(w http.ResponseWriter, r *http.R
 	}
 
 	course := common.Course{Code: courseCode}
+	err := sc.DB.GetCourseInfo(&course)
+	if err != nil {
+		http.Error(w, "[invalid]: Invalid Department Code in URL Parameter", http.StatusBadRequest)
+		log.Println("Bad Request: Invalid department code provided", err)
+		return
+	}
+
 	timetable, err := sc.DB.GetCourseTimetable(course)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		log.Printf("%s: %s\n", course.Code, err)
+		log.Printf("Bad Request: Invalid course code provided %s: %s\n", course.Code, err)
 		return
 	}
 
