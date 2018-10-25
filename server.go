@@ -11,6 +11,7 @@ import (
 	"github.com/kshitij10496/hercules/common"
 	"github.com/kshitij10496/hercules/services/course"
 	"github.com/kshitij10496/hercules/services/department"
+	"github.com/kshitij10496/hercules/services/faculty"
 	_ "github.com/lib/pq"
 )
 
@@ -32,7 +33,7 @@ func main() {
 	servers := map[string]common.Server{
 		"service-course":     course.NewServiceCourse(),
 		"service-department": department.NewServiceDepartment(),
-		// "service-faculty":    &faculty.ServiceFaculty,
+		"service-faculty":    faculty.NewServiceFaculty(),
 		// "service-migration":  &migration.ServiceMigration,
 	}
 
