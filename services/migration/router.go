@@ -1,7 +1,6 @@
 package migration
 
 import (
-	"context"
 	"database/sql"
 	"log"
 	"net/http"
@@ -15,17 +14,16 @@ var slotsFile = "/Users/kshitij10496/Software/go/src/github.com/kshitij10496/her
 
 // serviceMigration implements the server interface
 //
-type serviceMigration common.Service
+type serviceMigration struct {
+	common.Service
+	DB *sql.DB
+}
 
 func (s *serviceMigration) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// TODO: What should go in here?
 	log.Printf("[request initiate] %s - %v\n", s.Name, r.URL)
 	s.Router.ServeHTTP(w, r)
 	log.Printf("[request end] %s - %v\n", s.Name, r.URL)
-}
-
-func (s *serviceMigration) GetDBConnection(ctx context.Context) (*sql.Conn, error) {
-	return s.DB.Conn(ctx)
 }
 
 func (s *serviceMigration) GetName() string {
@@ -82,13 +80,14 @@ func (s *serviceMigration) CloseDB() error {
 	return s.DB.Close()
 }
 
-// serviceMigration represents the course service.
-var ServiceMigration serviceMigration
-
-func init() {
-	ServiceMigration = serviceMigration{
-		Name:   "service-migration",
-		URL:    "/migration",
-		Router: common.NewSubRouter(nil),
+func NewServiceMigration() *serviceMigration {
+	ServiceMigration := &serviceMigration{
+		common.Service{
+			Name: "service-migration",
+			URL:  "/migration",
+		},
+		nil,
 	}
+	ServiceMigration.Router = common.NewSubRouter(nil)
+	return ServiceMigration
 }
