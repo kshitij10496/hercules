@@ -97,6 +97,7 @@ type Timetable struct {
 func RespondWithJSON(w http.ResponseWriter, r *http.Request, status int, data interface{}) {
 	var buf bytes.Buffer
 	encoder := json.NewEncoder(&buf)
+	encoder.SetIndent("", "    ")
 	err := encoder.Encode(data)
 	if err != nil {
 		http.Error(w, ErrDataEncoding.Error(), http.StatusInternalServerError)
