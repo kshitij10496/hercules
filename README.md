@@ -55,3 +55,53 @@ Apart from contributing LoC, you can help us by discussing some of the techincal
 - [ ] Keep the DB updated: Schedule the scrapping of data from the source links and triage.
 - [ ] Testing handlers, unit testing models and functional testing services.
 - [ ] Deploy services after writing `docker-compose`.
+
+
+### Local environment setup
+
+1. Clone the project
+
+```bash
+go get github.com/kshitij10496/hercules
+```
+
+2. Download the dependencies (Run this command in the project root)
+
+```bash
+dep ensure
+```
+
+3. Setup Local Database
+
+- Make sure you have `postgresql` instaled in order to use the cli comands `createdb` and  `pg_restore`
+
+- We can run postgresql locally but lets use a docker version instead:
+    (We're creating a container with the latest version of postgres, exposing the default port `5432`, with the default user `postgres` and password `postgres`)
+
+```bash
+docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+```
+
+- Create the database
+
+```bash
+createdb herculesdb
+```
+
+- Restore the backup located in the project root:
+(hercules_backup_XXXXXXXX.dump)
+```bash
+pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d hercules_testdb ./hercules_backup_20181020.dump
+```
+
+4. Expose the Database connection settings in your terminal
+
+```bash
+export HERCULES_DATABASE="user=postgres password=postgres dbname=herculesdb sslmode=disable"
+```
+
+5. Run the project and have fun
+
+```bash
+go run server.go
+```
