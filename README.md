@@ -2,6 +2,8 @@
 
 **hercules**, the Roman God of Power, will provide you with the API for information related to IIT Kharagpur's academic life.
 
+![artwork](images/artwork.jpg "Hide of the Nemean lion worn by Hercules")
+
 # Motivation
 
 - No more ad-hoc scrapping code.
