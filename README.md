@@ -55,3 +55,8 @@ Apart from contributing LoC, you can help us by discussing some of the techincal
 - [ ] Keep the DB updated: Schedule the scrapping of data from the source links and triage.
 - [ ] Testing handlers, unit testing models and functional testing services.
 - [ ] Deploy services after writing `docker-compose`.
+
+
+### Local environment setup
+
+In order to know the requirements and setting up the project and database locally, visit [Development Workflow wiki](https://github.com/kshitij10496/hercules/wiki/Development-Workflow)
