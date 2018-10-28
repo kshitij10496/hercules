@@ -16,7 +16,7 @@ func newFakeServiceDepartment(hasRoutes bool) *serviceDepartment {
 			Name: "service-department",
 			URL:  "/department",
 		},
-		DB: NewFakeDataSouce(),
+		DB: newFakeDataSouce(),
 	}
 	if hasRoutes {
 		testDepartmentService.Router = initRoutes(testDepartmentService)

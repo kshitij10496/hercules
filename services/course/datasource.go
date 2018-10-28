@@ -25,7 +25,7 @@ type realDataSource struct {
 	db *sql.DB
 }
 
-func NewRealDataSource() *realDataSource {
+func newRealDataSource() *realDataSource {
 	log.Println("creating a new real datasource...")
 	return &realDataSource{db: nil}
 }
@@ -68,10 +68,11 @@ type fakeDataSource struct {
 	db string
 }
 
-func NewFakeDataSouce() *fakeDataSource {
+func newFakeDataSouce() *fakeDataSource {
 	log.Println("Creating a new fake courseDataSource")
 	return &fakeDataSource{"dummy"}
 }
+
 func (f *fakeDataSource) ConnectDS(url string) error {
 	log.Printf("Connecting to fake courseDataSource: %v\n", url)
 	return nil

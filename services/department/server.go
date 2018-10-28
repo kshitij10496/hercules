@@ -37,13 +37,14 @@ func (s *serviceDepartment) CloseDB() error {
 	return s.DB.CloseDS()
 }
 
+// NewServiceDepartment instantiates a new department-service with a real database connection.
 func NewServiceDepartment() *serviceDepartment {
 	ServiceDepartment := &serviceDepartment{
 		common.Service{
 			Name: "service-department",
 			URL:  "/department",
 		},
-		NewRealDataSource(),
+		newRealDataSource(),
 	}
 	ServiceDepartment.Router = initRoutes(ServiceDepartment)
 	return ServiceDepartment

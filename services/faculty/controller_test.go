@@ -18,7 +18,7 @@ func newFakeServiceFaculty(hasRoutes bool) *serviceFaculty {
 			Name: "service-faculty",
 			URL:  "/faculty",
 		},
-		NewFakeFacultyDataSource(),
+		newFakeFacultyDataSource(),
 	}
 	if hasRoutes {
 		ServiceCourse.Router = initRoutes(ServiceCourse)

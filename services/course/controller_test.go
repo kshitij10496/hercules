@@ -19,7 +19,7 @@ func newFakeServiceCourse(hasRoutes bool) *serviceCourse {
 			Name: "service-course",
 			URL:  "/course",
 		},
-		NewFakeDataSouce(),
+		newFakeDataSouce(),
 	}
 	if hasRoutes {
 		ServiceCourse.Router = initRoutes(ServiceCourse)

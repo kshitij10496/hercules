@@ -21,7 +21,7 @@ type realFacultyDataSource struct {
 	db *sql.DB
 }
 
-func NewRealFacultyDataSource() *realFacultyDataSource {
+func newRealFacultyDataSource() *realFacultyDataSource {
 	log.Println("creating a new real facultyDataSource...")
 	return &realFacultyDataSource{db: nil}
 }
@@ -54,7 +54,7 @@ type fakeFacultyDataSource struct {
 	db string
 }
 
-func NewFakeFacultyDataSource() *fakeFacultyDataSource {
+func newFakeFacultyDataSource() *fakeFacultyDataSource {
 	log.Println("Creating a new fake facultyDataSource")
 	return &fakeFacultyDataSource{"dummy"}
 }

@@ -40,13 +40,14 @@ func (s *serviceFaculty) CloseDB() error {
 	return s.DB.CloseDS()
 }
 
+// NewServiceFaculty instantiates a new faculty-service with a real database connection.
 func NewServiceFaculty() *serviceFaculty {
 	ServiceFaculty := &serviceFaculty{
 		common.Service{
 			Name: "service-faculty",
 			URL:  "/faculty",
 		},
-		NewRealFacultyDataSource(),
+		newRealFacultyDataSource(),
 	}
 	ServiceFaculty.Router = initRoutes(ServiceFaculty)
 	return ServiceFaculty

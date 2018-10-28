@@ -36,13 +36,14 @@ func (s *serviceCourse) CloseDB() error {
 	return s.DB.CloseDS()
 }
 
+// NewServiceCourse instantiates a new course-service with a real database connection.
 func NewServiceCourse() *serviceCourse {
 	ServiceCourse := &serviceCourse{
 		common.Service{
 			Name: "service-course",
 			URL:  "/course",
 		},
-		NewRealDataSource(),
+		newRealDataSource(),
 	}
 	ServiceCourse.Router = initRoutes(ServiceCourse)
 	return ServiceCourse

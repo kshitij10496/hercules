@@ -19,6 +19,8 @@ type Server interface {
 	GetURL() string
 }
 
+// HerculesDB represents the interface that needs to be satisfied by the
+// database layer in order to work with the application API.
 type HerculesDB interface {
 	ConnectDB(databaseURL string) error
 

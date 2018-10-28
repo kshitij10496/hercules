@@ -80,6 +80,7 @@ func (s *serviceMigration) CloseDB() error {
 	return s.DB.Close()
 }
 
+// NewServiceMigration instantiates a new migration-service with a real database connection.
 func NewServiceMigration() *serviceMigration {
 	ServiceMigration := &serviceMigration{
 		common.Service{
