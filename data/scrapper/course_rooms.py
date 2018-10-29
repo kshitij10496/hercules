@@ -60,6 +60,30 @@ class CourseEncoder(json.JSONEncoder):
             return o.__dict__
         raise TypeError("Object of type '{type} is not JSON Serializable".format(o.__class__.__name__))
 
+
+# Used to clean up malformed rooms.
+#
+# The first element is the things to match and the second is the replacement
+#
+# Some examples:
+# [['In Deptt', '0'], 'In Dept']
+# ['In Deptt', 'In Dept']
+MALFORMED_ROOM_FIXES = [
+    [['In Deptt', '0'], 'In Dept'],
+]
+
+
+# This function fixes up some malformed data on IIT Kharagpur's website
+def clean_room(room):
+    for fix in MALFORMED_ROOM_FIXES:
+        malformed_rooms = fix[0] if isinstance(fix[0], list) else [fix[0]]
+        fixed_room = fix[1]
+        for malformed_room in malformed_rooms:
+            if malformed_room == room:
+                return fixed_room
+    return room
+
+
 # This function parses a table row (list of cells) and returns a new course.
 def parse_table_row(cells):
     course_code = cells[0].text
@@ -83,7 +107,7 @@ def parse_table_row(cells):
         # remove whitespaces, if any
         # ensure no duplicates since I prefer minimalism.
         rooms = (cells[6].text).split(",")
-        course_rooms = list(set(room.strip() for room in rooms))
+        course_rooms = list(set(clean_room(room.strip()) for room in rooms))
 
     course = Course(
                     code=course_code,
