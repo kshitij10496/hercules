@@ -64,23 +64,17 @@ class CourseEncoder(json.JSONEncoder):
 # Used to clean up malformed rooms.
 #
 # The first element is the things to match and the second is the replacement
-#
-# Some examples:
-# [['In Deptt', '0'], 'In Dept']
-# ['In Deptt', 'In Dept']
-MALFORMED_ROOM_FIXES = [
-    [['In Deptt', '0'], 'In Dept'],
-]
+MALFORMED_ROOMS = {
+    'In Deptt': 'In Dept',
+    '0': 'In Dept'
+}
 
 
 # This function fixes up some malformed data on IIT Kharagpur's website
 def clean_room(room):
-    for fix in MALFORMED_ROOM_FIXES:
-        malformed_rooms = fix[0] if isinstance(fix[0], list) else [fix[0]]
-        fixed_room = fix[1]
-        for malformed_room in malformed_rooms:
-            if malformed_room == room:
-                return fixed_room
+    for k, v in MALFORMED_ROOMS:
+        if k == room:
+            return v
     return room
 
 
