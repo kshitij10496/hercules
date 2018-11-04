@@ -1,12 +1,10 @@
 package course
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
-
 	"github.com/kshitij10496/hercules/common"
 )
 
@@ -31,14 +29,15 @@ func (sc *serviceCourse) handlerCourseTimetable(w http.ResponseWriter, r *http.R
 	if !found {
 		http.Error(w, "[required]: Course Code in URL Parameter", http.StatusBadRequest)
 		log.Println("Bad Request: No course code provided")
+		return
 	}
 
-	fmt.Println("CODE:", courseCode)
 	course := common.Course{Code: courseCode}
 	timetable, err := getCourseTimetable(sc.DB, course)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		log.Fatal(err)
+		log.Printf("%s: %s\n", course.Code, err)
+		return
 	}
 
 	common.RespondWithJSON(w, r, http.StatusOK, timetable)

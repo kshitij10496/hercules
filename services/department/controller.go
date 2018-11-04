@@ -17,7 +17,8 @@ func (sd *serviceDepartment) handlerDepartments(w http.ResponseWriter, r *http.R
 	departments, err := GetDepartments(sd.DB)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 	common.RespondWithJSON(w, r, http.StatusOK, departments)
 }
