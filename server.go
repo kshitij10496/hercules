@@ -52,6 +52,9 @@ func main() {
 		log.Printf("%s created!\n", name)
 	}
 	// TODO: Handle services page and home page
+	staticPath := common.VERSION + "/static/"
+	staticHandler := http.StripPrefix(staticPath, http.FileServer(http.Dir("./static")))
+	mainRouter.PathPrefix(staticPath).Handler(staticHandler)
 
 	log.Printf("Server starting on %v\n", config.Port)
 	if err := http.ListenAndServe(":"+config.Port, mainRouter); err != nil {
