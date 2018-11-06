@@ -53,6 +53,14 @@ type Course struct {
 // Courses represents the reponse by the CoursesHandler.
 type Courses []Course
 
+// GetInfo method populates the receiver with id and name for the given code.
+func (c *Course) GetInfo(db *sql.DB) error {
+	// Validate the received department code
+	query := "SELECT name, credits FROM courses WHERE code=$1"
+	row := db.QueryRow(query, c.Code)
+	return row.Scan(&c.Name, &c.Credits)
+}
+
 // Slot represents a course slot used for allocating a subject.
 type Slot string
 
