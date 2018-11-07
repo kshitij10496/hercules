@@ -34,11 +34,11 @@ class Session:
 
     def __init__(self):
         self.sess = requests.Session()
-        self.sessionToken = Session.__get_session_cookie(self)
-        self.ssoToken = Session.__get_sso_token(self)
-        self.academicToken = Session.__get_acad_cookie(self)
+        self.sessionToken = Session.__generate_session_cookie(self)
+        self.ssoToken = Session.__generate_sso_token(self)
+        self.academicToken = Session.__generate_acad_cookie(self)
 
-    def __get_session_cookie (self):
+    def __generate_session_cookie (self):
         """
         Requests for the session id by requesting for erp home page.
 
@@ -55,7 +55,7 @@ class Session:
         return (session_token)
 
 
-    def __get_sso_token(self):
+    def __generate_sso_token(self):
         """
         Prompts the user to enter the details and sign into erp with the entered details
 
@@ -96,7 +96,7 @@ class Session:
 
             print("Wrong password/security answer\n")
 
-    def __get_acad_cookie(self):
+    def __generate_acad_cookie(self):
         """
         Gets the academicToken after loggin into erp
         Arguments:
@@ -108,3 +108,34 @@ class Session:
         response_acad = self.sess.get(GET_ACAD_TOKEN_URL)
         academicToken = response_acad.cookies["JSID#/Acad"]
         return academicToken
+
+    def getSessionToken(self):
+        """
+        Returns the erp sessionToken
+
+        arguments = NIL
+
+        Returns 1 argument : Session Token (type = str)
+        """
+        return self.academicToken
+
+    def getSSOToken(self):
+        """
+        Returns the SSOToken
+
+        arguments = NIL
+
+        Returns 1 argument : SSO Token (type = str)
+        """
+        return self.academicToken
+
+    def getAcadToken(self):
+        """
+        Returns the academicToken
+
+        arguments = NIL
+
+        Returns 1 argument : academic Token (type = str)
+
+        """
+        return self.academicToken
