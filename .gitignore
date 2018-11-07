@@ -28,3 +28,4 @@ data/faculty_directory.json
 
 # For python compiled files
 data/scrapper/__pycache__
+data/scrapper/erplogin/__pycache__
