@@ -14,17 +14,17 @@ class Session:
     Logs into erpr after prompting the user to enter details
 
     
-    Class Attributes:
-    >>>self.sessionToken
-    >>>self.ssoToken
-    >>>self.academicToken
+    Class Attributes::
+    -self.sessionToken #the erp SessionToken or JSESSIONID (as named by erp)
+    -self.ssoToken    #the SSOToken obtained after loggin into erp
+    -self.academicToken #the academic token, useful for getting the data from erp
 
     Basic Usage::
 
     >>>from erplogin import erpSession
     >>>s = erpSession.Session()
-    
     >>>academicToken = s.academicToken
+
     """
 
     headers = {
@@ -108,34 +108,3 @@ class Session:
         response_acad = self.sess.get(GET_ACAD_TOKEN_URL)
         academicToken = response_acad.cookies["JSID#/Acad"]
         return academicToken
-
-    def getSessionToken(self):
-        """
-        Returns the erp SessionToken or JSESSIONID (as named by erp)
-
-        arguments = NIL
-
-        Returns 1 argument : Session Token (type = str)
-        """
-        return self.sessionToken
-
-    def getSSOToken(self):
-        """
-        Returns the SSOToken
-
-        arguments = NIL
-
-        Returns 1 argument : SSO Token (type = str)
-        """
-        return self.ssoToken
-
-    def getAcadToken(self):
-        """
-        Returns the AcademicToken, or JSID#/ACAD 
-
-        arguments = NIL
-
-        Returns 1 argument : academic Token (type = str)
-
-        """
-        return self.academicToken
