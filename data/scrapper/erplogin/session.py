@@ -7,7 +7,7 @@ LOGIN_URL = 'https://erp.iitkgp.ac.in/SSOAdministration/auth.htm'
 GET_ACAD_TOKEN_URL = 'https://erp.iitkgp.ac.in/Acad/central_breadth_tt.jsp?action=second'
 
 
-class Session:
+class ERPSession:
     """
     An erp session
 
@@ -21,8 +21,8 @@ class Session:
 
     Basic Usage::
 
-    >>>from erplogin import erpSession
-    >>>s = erpSession.Session()
+    >>>from erplogin.session import ERPSession
+    >>>s = ERPSession()
     >>>academicToken = s.academicToken
 
     """
