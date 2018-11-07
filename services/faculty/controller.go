@@ -15,7 +15,11 @@ func (sf *serviceFaculty) handlerFacultyAll(w http.ResponseWriter, r *http.Reque
 	// 	w.WriteHeader(http.StatusInternalServerError)
 	// 	log.Fatal("Error connecting to DB:", err)
 	// }
-	faculty, err := GetFaculty(sf.DB)
+	if sf.DB == nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Println("cannot initiate database connection")
+	}
+	faculty, err := sf.DB.GetFaculty()
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Println(err)
@@ -35,7 +39,8 @@ func (sf *serviceFaculty) handlerFacultyDepartment(w http.ResponseWriter, r *htt
 		http.Error(w, "[required]: Department code in URL parameter", http.StatusBadRequest)
 		return
 	}
-	faculty, err := GetFacultyDepartment(sf.DB, deptCode)
+	// TODO: Validate the deptCode
+	faculty, err := sf.DB.GetFacultyDepartment(deptCode)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Println(err)
@@ -71,7 +76,7 @@ func (sf *serviceFaculty) handlerFacultyTimetable(w http.ResponseWriter, r *http
 	// 	log.Fatal("Error connecting to DB:", err)
 	// }
 
-	timetable, err := GetTimetable(sf.DB, facultyMember)
+	timetable, err := sf.DB.GetTimetable(facultyMember)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Println(err)

@@ -1,6 +1,7 @@
 import sys
 import json
 import requests
+import argparse
 
 from requests_html import HTML, HTMLSession
 
@@ -56,9 +57,26 @@ class CourseEncoder(json.JSONEncoder):
             return o.__dict__
 
         if isinstance(o, Course):
-            # TODO: Prettify JSON encoding by adding indentation and new lines.
             return o.__dict__
         raise TypeError("Object of type '{type} is not JSON Serializable".format(o.__class__.__name__))
+
+
+# Used to clean up malformed rooms.
+#
+# The first element is the things to match and the second is the replacement
+MALFORMED_ROOMS = {
+    'In Deptt': 'In Dept',
+    '0': 'In Dept'
+}
+
+
+# This function fixes up some malformed data on IIT Kharagpur's website
+def clean_room(room):
+    for k, v in MALFORMED_ROOMS:
+        if k == room:
+            return v
+    return room
+
 
 # This function parses a table row (list of cells) and returns a new course.
 def parse_table_row(cells):
@@ -83,7 +101,7 @@ def parse_table_row(cells):
         # remove whitespaces, if any
         # ensure no duplicates since I prefer minimalism.
         rooms = (cells[6].text).split(",")
-        course_rooms = list(set(room.strip() for room in rooms))
+        course_rooms = list(set(clean_room(room.strip()) for room in rooms))
 
     course = Course(
                     code=course_code,
@@ -139,20 +157,29 @@ def department_subjects_list(dept_code, session_id):
     return courses
 
 
-# TODO: Add CLI option for accepting input file
-# TODO: Add CLI option for specifying output file
 def main():
     # 1. Obtain all department codes
     # 2. Get individual department courses
     # 3. Concatenate all the courses
     # 4. Encode the resulting data into a JSON
     # 5. Store it in a JSON file
-    if len(sys.argv) != 4:
-        print("USAGE: python course_rooms.py <JSESSIONID> <input-file> <output-file>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description='Scrape department timetables')
 
-    JSESSIONID, INPUT_FILE, OUTPUT_FILE = sys.argv[1:]
-    
+    parser.add_argument("-i", "--input-file", dest="input_file", required=True,
+            help="path to the input file containing department codes")
+
+    parser.add_argument("-o", "--output-file", dest="output_file", required=True,
+            help="path to the output json file")
+
+    parser.add_argument("--jsession-id", dest="jsession_id", required=True,
+            help="JSESSIONID extracted from the ERP")
+
+    args = parser.parse_args()
+
+    JSESSIONID = args.jsession_id
+    INPUT_FILE = args.input_file
+    OUTPUT_FILE = args.output_file
+
     departments = []
     with open(INPUT_FILE, "r") as f:
         for line in f.readlines():
@@ -176,7 +203,7 @@ def main():
     print("TOTAL COURSES:", len(all_courses))
     # Encode data and store it in a JSON file
     with open(OUTPUT_FILE, 'w') as f:
-        json.dump(all_courses, f, cls=CourseEncoder)
+        json.dump(all_courses, f, cls=CourseEncoder, indent=4, sort_keys=True)
     
 if __name__ == "__main__":
     main()

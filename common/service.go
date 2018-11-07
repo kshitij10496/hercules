@@ -1,8 +1,6 @@
 package common
 
 import (
-	"context"
-	"database/sql"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -14,17 +12,19 @@ import (
 type Server interface {
 	http.Handler
 
+	HerculesDB
+
 	GetName() string
 
 	GetURL() string
+}
 
+// HerculesDB represents the interface that needs to be satisfied by the
+// database layer in order to work with the application API.
+type HerculesDB interface {
 	ConnectDB(databaseURL string) error
 
 	CloseDB() error
-	// GetDBConnection creates a connection to the DB given a context.
-	// The context is generated for each request and cleaned up after response.
-	//
-	GetDBConnection(ctx context.Context) (*sql.Conn, error)
 }
 
 // Service is the implementation of the Server interface.
@@ -32,7 +32,6 @@ type Server interface {
 type Service struct {
 	Name   string
 	URL    string
-	DB     *sql.DB
 	Router *mux.Router
 }
 

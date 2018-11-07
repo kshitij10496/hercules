@@ -53,6 +53,14 @@ type Course struct {
 // Courses represents the reponse by the CoursesHandler.
 type Courses []Course
 
+// GetInfo method populates the receiver with id and name for the given code.
+func (c *Course) GetInfo(db *sql.DB) error {
+	// Validate the received department code
+	query := "SELECT name, credits FROM courses WHERE code=$1"
+	row := db.QueryRow(query, c.Code)
+	return row.Scan(&c.Name, &c.Credits)
+}
+
 // Slot represents a course slot used for allocating a subject.
 type Slot string
 
@@ -97,12 +105,14 @@ type Timetable struct {
 func RespondWithJSON(w http.ResponseWriter, r *http.Request, status int, data interface{}) {
 	var buf bytes.Buffer
 	encoder := json.NewEncoder(&buf)
+	encoder.SetIndent("", "    ")
 	err := encoder.Encode(data)
 	if err != nil {
 		http.Error(w, ErrDataEncoding.Error(), http.StatusInternalServerError)
 		return
 	}
 	w.WriteHeader(status)
+	w.Header().Set("Content-Type", "application/json")
 	_, err = io.Copy(w, &buf)
 	if err != nil {
 		log.Println("RespondWithJSON:", err)

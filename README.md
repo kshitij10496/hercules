@@ -2,6 +2,8 @@
 
 **hercules**, the Roman God of Power, will provide you with the API for information related to IIT Kharagpur's academic life.
 
+![artwork](images/artwork.jpg "Hide of the Nemean lion worn by Hercules")
+
 # Motivation
 
 - No more ad-hoc scrapping code.
@@ -55,3 +57,8 @@ Apart from contributing LoC, you can help us by discussing some of the techincal
 - [ ] Keep the DB updated: Schedule the scrapping of data from the source links and triage.
 - [ ] Testing handlers, unit testing models and functional testing services.
 - [ ] Deploy services after writing `docker-compose`.
+
+
+### Local environment setup
+
+In order to know the requirements and setting up the project and database locally, visit [Development Workflow wiki](https://github.com/kshitij10496/hercules/wiki/Development-Workflow)

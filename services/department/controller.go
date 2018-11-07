@@ -14,10 +14,16 @@ func (sd *serviceDepartment) handlerDepartments(w http.ResponseWriter, r *http.R
 	// 	w.WriteHeader(http.StatusInternalServerError)
 	// 	log.Fatal("Error connecting to DB:", err)
 	// }
-	departments, err := GetDepartments(sd.DB)
+	if sd.DB == nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		log.Fatal("cannot setup env")
+		return
+	}
+	departments, err := sd.DB.GetDepartments()
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 	common.RespondWithJSON(w, r, http.StatusOK, departments)
 }

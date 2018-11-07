@@ -48,6 +48,7 @@ func GetFaculty(db *sql.DB) (data common.Faculty, err error) {
 	return faculty, nil
 }
 
+// GetFacultyDepartment fetches all the faculty members of a particular department.
 func GetFacultyDepartment(db *sql.DB, deptCode string) (common.Faculty, error) {
 	query := `SELECT f.name, fd.designation, d.code, d.name FROM faculty f, departments d, faculty_designations fd WHERE d.code=$1 AND f.department=d.id AND f.designation=fd.id`
 	rows, err := db.Query(query, deptCode)
@@ -84,6 +85,7 @@ type responseCourse struct {
 
 type responseCourses []responseCourse
 
+// GetTimetable fetches teh timetable of a given faculty member.
 func GetTimetable(db *sql.DB, facultyMember common.FacultyMember) (*common.Timetable, error) {
 	// Get courses for the faculty member from service-course
 	query := url.Values{

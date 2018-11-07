@@ -9,6 +9,11 @@
 			"Rev": "9e1f5955c0d22b55d9e20d6faa28589f83b2faca"
 		},
 		{
+			"ImportPath": "github.com/kelseyhightower/envconfig",
+			"Comment": "v1.3.0-13-gdd1402a",
+			"Rev": "dd1402a4d99de9ac2f396cd6fcb957bc2c695ec1"
+		},
+		{
 			"ImportPath": "github.com/lib/pq",
 			"Comment": "v1.0.0",
 			"Rev": "4ded0e9383f75c197b3a2aaa6d590ac52df6fd79"

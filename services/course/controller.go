@@ -1,12 +1,10 @@
 package course
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
-
 	"github.com/kshitij10496/hercules/common"
 )
 
@@ -31,14 +29,22 @@ func (sc *serviceCourse) handlerCourseTimetable(w http.ResponseWriter, r *http.R
 	if !found {
 		http.Error(w, "[required]: Course Code in URL Parameter", http.StatusBadRequest)
 		log.Println("Bad Request: No course code provided")
+		return
 	}
 
-	fmt.Println("CODE:", courseCode)
 	course := common.Course{Code: courseCode}
-	timetable, err := getCourseTimetable(sc.DB, course)
+	err := sc.DB.GetCourseInfo(&course)
+	if err != nil {
+		http.Error(w, "[invalid]: Invalid Department Code in URL Parameter", http.StatusBadRequest)
+		log.Println("Bad Request: Invalid department code provided", err)
+		return
+	}
+
+	timetable, err := sc.DB.GetCourseTimetable(course)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		log.Fatal(err)
+		log.Printf("Bad Request: Invalid course code provided %s: %s\n", course.Code, err)
+		return
 	}
 
 	common.RespondWithJSON(w, r, http.StatusOK, timetable)
@@ -49,14 +55,14 @@ func (sc *serviceCourse) handlerCoursesFromDepartment(w http.ResponseWriter, r *
 	// 2. DB lookup to fetch course information
 	// 3. Return the data
 	deptCode, found := mux.Vars(r)["code"]
-	if !found {
+	if !found || deptCode == "" {
 		http.Error(w, "[required]: Department Code in URL Parameter", http.StatusBadRequest)
 		log.Println("Bad Request: No department code provided")
 		return
 	}
 
 	department := common.Department{Code: deptCode}
-	err := department.GetInfo(sc.DB)
+	err := sc.DB.GetDepartmentInfo(&department)
 	if err != nil {
 		// TODO: There could be 2 possible reasons for error here:
 		// 		1. Invalid Department code
@@ -66,7 +72,7 @@ func (sc *serviceCourse) handlerCoursesFromDepartment(w http.ResponseWriter, r *
 		return
 	}
 
-	courses, err := getCoursesFromDepartment(sc.DB, department)
+	courses, err := sc.DB.GetCoursesFromDepartment(department)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Printf("Server Error: Cannot fetch courses for department: %+v, err: %v\n", department, err)
@@ -100,7 +106,7 @@ func (sc *serviceCourse) handlerCoursesFromFaculty(w http.ResponseWriter, r *htt
 		},
 	}
 
-	courses, err := getCoursesFromFaculty(sc.DB, facultyMember)
+	courses, err := sc.DB.GetCoursesFromFaculty(facultyMember)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		log.Printf("Server Error: Cannot fetch courses for faculty: %+v, err: %v\n", facultyMember, err)
