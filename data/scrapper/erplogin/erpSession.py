@@ -111,13 +111,13 @@ class Session:
 
     def getSessionToken(self):
         """
-        Returns the erp sessionToken
+        Returns the erp SessionToken or JSESSIONID (as named by erp)
 
         arguments = NIL
 
         Returns 1 argument : Session Token (type = str)
         """
-        return self.academicToken
+        return self.sessionToken
 
     def getSSOToken(self):
         """
@@ -127,11 +127,11 @@ class Session:
 
         Returns 1 argument : SSO Token (type = str)
         """
-        return self.academicToken
+        return self.ssoToken
 
     def getAcadToken(self):
         """
-        Returns the academicToken
+        Returns the AcademicToken, or JSID#/ACAD 
 
         arguments = NIL
 
