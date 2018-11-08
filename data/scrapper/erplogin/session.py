@@ -53,15 +53,11 @@ class ERPSession:
         Returns 
         > sessionToken
         """
-        print("Getting session cookies")
         response_erp = self.sess.get(ERP_HOME_URL)
-        try:
-            session_token = response_erp.cookies['JSESSIONID']
-        except:
-            print("Unable to connect to ERP")
-            exit()
+        if response_erp.status_code != 200:
+            return None
 
-        return (session_token)
+        return (response_erp.cookies['JSESSIONID'])
 
 
     def get_security_question(self):
@@ -75,12 +71,11 @@ class ERPSession:
         > question # Security question from ERP
         """
         response_security_question = self.sess.post (SECURITY_QUESTION_URL, data = {'user_id': self.roll_no},headers=self.headers)
-        if(response_security_question.text!= 'FALSE'):
-            return response_security_question.text
-        else:
-            print("Wrong roll number")
-            exit()
 
+        if(response_security_question.text== 'FALSE'):
+            return None
+
+        return response_security_question.text
 
     def LoginERP(self,answer):
         """
@@ -112,8 +107,6 @@ class ERPSession:
             try:
                 self.academicToken = response_acad.cookies["JSID#/Acad"]
             except:
-                print("Wrong details")
-                exit()
+                self.academicToken = None
         except:
-            print('Wrong details')
-            exit()
+            self.ssoToken = None
