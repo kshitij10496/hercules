@@ -1,19 +1,16 @@
 import requests
-import getpass
 
-ERP_HOME_URL = 'https://erp.iitkgp.ac.in/IIT_ERP3/' #to get the session cookie
+ERP_HOME_URL = 'https://erp.iitkgp.ac.in/IIT_ERP3/'
 SECURITY_QUESTION_URL = 'https://erp.iitkgp.ac.in/SSOAdministration/getSecurityQues.htm'
 LOGIN_URL = 'https://erp.iitkgp.ac.in/SSOAdministration/auth.htm'
 GET_ACAD_TOKEN_URL = 'https://erp.iitkgp.ac.in/Acad/central_breadth_tt.jsp?action=second'
-
 
 class ERPSession:
     """
     An erp session
 
-    Logs into erpr after prompting the user to enter details
+    Logs into erp after prompting the user to enter details
 
-    
     Class Attributes::
     -self.sessionToken #the erp SessionToken or JSESSIONID (as named by erp)
     -self.ssoToken    #the SSOToken obtained after loggin into erp
@@ -22,9 +19,12 @@ class ERPSession:
     Basic Usage::
 
     >>>from erplogin.session import ERPSession
-    >>>s = ERPSession()
-    >>>academicToken = s.academicToken
+    >>>s = ERPSession(roll_no, password)
+    >>>question = s.get_security_question() # Returns the security question from ERP
+    # User feeds the answer to security question.
+    >>>s.LoginERP(answer)
 
+    Obtain the cookies by accesing the corresponding attributes.
     """
 
     headers = {
@@ -32,79 +32,88 @@ class ERPSession:
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/51.0.2704.79 Chrome/51.0.2704.79 Safari/537.36',
     }
 
-    def __init__(self):
+    def __init__(self, roll_no, password):
         self.sess = requests.Session()
-        self.sessionToken = Session.__generate_session_cookie(self)
-        self.ssoToken = Session.__generate_sso_token(self)
-        self.academicToken = Session.__generate_acad_cookie(self)
+        self.roll_no = roll_no
+        self._password = password
+        self.sessionToken = ERPSession.__generate_session_cookie(self)
+        self.question_answer = ''
+        self.academicToken = ''
+        self.ssoToken = ''
+
 
     def __generate_session_cookie (self):
         """
+        Automatically called upon declaration
         Requests for the session id by requesting for erp home page.
 
         Arguments:
-        > self
+        > NIL
 
         Returns 
         > sessionToken
         """
         print("Getting session cookies")
         response_erp = self.sess.get(ERP_HOME_URL)
-        session_token = response_erp.cookies['JSESSIONID']
+        try:
+            session_token = response_erp.cookies['JSESSIONID']
+        else:
+            print("Unable to connect to ERP")
+            exit()
 
         return (session_token)
 
 
-    def __generate_sso_token(self):
+    def get_security_question(self):
         """
-        Prompts the user to enter the details and sign into erp with the entered details
+        Request the security question from ERP. 
 
-        Arguments:
-        > self
+        Argument: 
+        > NIL
 
-        Returns 
-        > ssoToken
+        Returns :
+        > question # Security question from ERP
         """
-        while (1):
-            while (1):
-                roll_no = input("Enter your roll number : ")
-                response_security_question = self.sess.post (SECURITY_QUESTION_URL, data = {'user_id': roll_no},headers=self.headers)
-                if(response_security_question.text!= 'FALSE'):
-                    break
-                print("Roll number is wrong\nPlease Enter the details again\n")
+        response_security_question = self.sess.post (SECURITY_QUESTION_URL, data = {'user_id': self.roll_no},headers=self.headers)
+        if(response_security_question.text!= 'FALSE'):
+            return response_security_question.text
+        else:
+            print("Wrong roll number")
+            exit()
 
-            password = getpass.getpass("Enter your password : ")
-            security_ans = getpass.getpass("Answer your security question - " + response_security_question.text + " : ")
 
-            login_details = {
-                            'user_id': roll_no,
-                            'password': password,
-                            'answer': security_ans,
-                            'sessionToken': self.sessionToken,
-                            'requestedUrl': 'https://erp.iitkgp.ac.in/IIT_ERP3',
-                        }
-
-            response_login_auth_htm = self.sess.post(LOGIN_URL
-                                                , data=login_details
-                                                , headers=self.headers
-                                                )
-
-            if len(response_login_auth_htm.history) >2 :
-
-                ssoToken = response_login_auth_htm.history[1].cookies['ssoToken']
-                return ssoToken
-
-            print("Wrong password/security answer\n")
-
-    def __generate_acad_cookie(self):
+    def LoginERP(self,answer):
         """
-        Gets the academicToken after loggin into erp
-        Arguments:
-        > self
+        Logs into ERP and sets the academicToken and SSOToken accordingly
 
-        Returns 
-        > academicToken
+        Argument:
+        > answer # answer to the secret question
+
+        >Returns the 
         """
-        response_acad = self.sess.get(GET_ACAD_TOKEN_URL)
-        academicToken = response_acad.cookies["JSID#/Acad"]
-        return academicToken
+        login_details = {
+                        'user_id': self.roll_no,
+                        'password': self._password,
+                        'answer': answer,
+                        'sessionToken': self.sessionToken,
+                        'requestedUrl': 'https://erp.iitkgp.ac.in/IIT_ERP3',
+                    }
+
+        response_login_auth_htm = self.sess.post(LOGIN_URL
+                                            , data=login_details
+                                            , headers=self.headers
+                                            )
+
+        try:
+            ssoToken = response_login_auth_htm.history[1].cookies['ssoToken']
+            self.ssoToken = ssoToken
+
+            response_acad = self.sess.get(GET_ACAD_TOKEN_URL)
+            try:
+                self.academicToken = response_acad.cookies["JSID#/Acad"]
+            except:
+                print("Wrong details")
+                exit()
+        except:
+            print('Wrong details')
+            exit()
