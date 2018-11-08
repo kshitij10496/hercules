@@ -40,8 +40,7 @@ class ERPSession:
         self.question_answer = ''
         self.academicToken = ''
         self.ssoToken = ''
-
-
+    
     def __generate_session_cookie (self):
         """
         Automatically called upon declaration
@@ -53,6 +52,7 @@ class ERPSession:
         Returns 
         > sessionToken
         """
+
         response_erp = self.sess.get(ERP_HOME_URL)
         if response_erp.status_code != 200:
             return None
@@ -72,17 +72,18 @@ class ERPSession:
         """
         response_security_question = self.sess.post (SECURITY_QUESTION_URL, data = {'user_id': self.roll_no},headers=self.headers)
 
-        if(response_security_question.text== 'FALSE'):
-            return None
+        if(response_security_question.status_code == 200):
+            if(response_security_question.text != 'FALSE'):
+                return response_security_question.text
 
-        return response_security_question.text
+        return None
 
     def LoginERP(self,answer):
         """
         Logs into ERP and sets the academicToken and SSOToken accordingly
 
         Argument:
-        > answer # answer to the secret question
+        > answer # answer to the security question
 
         >Returns the 
         """
@@ -99,14 +100,22 @@ class ERPSession:
                                             , headers=self.headers
                                             )
 
-        try:
+        if (response_login_auth_htm.status_code == 200 \
+            and len(response_login_auth_htm.history) == 2):
+
             ssoToken = response_login_auth_htm.history[1].cookies['ssoToken']
             self.ssoToken = ssoToken
 
             response_acad = self.sess.get(GET_ACAD_TOKEN_URL)
-            try:
-                self.academicToken = response_acad.cookies["JSID#/Acad"]
-            except:
-                self.academicToken = None
-        except:
-            self.ssoToken = None
+            if(response_acad.status_code == 200):
+                try:
+                    self.academicToken = response_acad.cookies["JSID#/Acad"]
+                except:
+                    self.academicToken = None
+                return
+
+            self.academicToken = None
+            return
+
+        self.ssoToken = None
+        self.academicToken = None
