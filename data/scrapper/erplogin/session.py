@@ -57,7 +57,7 @@ class ERPSession:
         response_erp = self.sess.get(ERP_HOME_URL)
         try:
             session_token = response_erp.cookies['JSESSIONID']
-        else:
+        except:
             print("Unable to connect to ERP")
             exit()
 
