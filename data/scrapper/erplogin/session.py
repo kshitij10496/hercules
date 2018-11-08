@@ -36,12 +36,12 @@ class ERPSession:
         self.sess = requests.Session()
         self.roll_no = roll_no
         self._password = password
-        self.sessionToken = ERPSession.__generate_session_cookie(self)
+        self.sessionToken = ERPSession.get_session_cookie(self)
         self.question_answer = ''
         self.academicToken = ''
         self.ssoToken = ''
-    
-    def __generate_session_cookie (self):
+
+    def get_session_cookie (self):
         """
         Automatically called upon declaration
         Requests for the session id by requesting for erp home page.
@@ -87,6 +87,7 @@ class ERPSession:
 
         >Returns the 
         """
+
         login_details = {
                         'user_id': self.roll_no,
                         'password': self._password,
