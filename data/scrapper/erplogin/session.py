@@ -91,7 +91,7 @@ class ERPSession:
                         'password': self._password,
                         'answer': answer,
                         'sessionToken': self.sessionToken,
-                        'requestedUrl': 'https://erp.iitkgp.ac.in/IIT_ERP3',
+                        'requestedUrl': ERP_HOME_URL,
                     }
 
         response_login_auth_htm = self.sess.post(LOGIN_URL
