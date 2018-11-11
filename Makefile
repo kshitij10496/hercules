@@ -11,10 +11,3 @@ test:
 authors:
 	rm AUTHORS
 	git log --pretty="%an <%ae>" | sort | uniq >> AUTHORS
-
-prepare:
-	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o hercules .
-
-update-bin: prepare
-	mkdir -p dev-env/binary/
-	mv hercules dev-env/binary/
