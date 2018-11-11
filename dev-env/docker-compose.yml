@@ -16,7 +16,7 @@ services:
     ports:
       - "8070:8080"
     volumes:
-      - ./binary:/app_binary
+      - ..:/go/src/github.com/kshitij10496/hercules
     networks:
       app_network:
     environment:
