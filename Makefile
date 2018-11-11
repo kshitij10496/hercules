@@ -14,4 +14,7 @@ authors:
 
 prepare:
 	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o hercules .
-	mv hercules dev-env/app/
+
+update-bin: prepare
+	mkdir -p dev-env/binary/
+	mv hercules dev-env/binary/
