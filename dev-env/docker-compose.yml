@@ -1,0 +1,27 @@
+version: '3'
+services:
+  hercules_db:
+    build: ./db
+    volumes:
+      - ./postgres-data:/var/lib/postgresql
+    environment:
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    networks:
+      app_network:
+        aliases:
+          - postgres
+
+  hercules_api:
+    build: app
+    ports:
+      - "8070:8080"
+    volumes:
+      - ..:/go/src/github.com/kshitij10496/hercules
+    networks:
+      app_network:
+    environment:
+      PORT: 8080
+      HERCULES_DATABASE: "user=postgres dbname=postgres sslmode=disable host=postgres password=${POSTGRES_PASSWORD}"
+
+networks:
+  app_network:
