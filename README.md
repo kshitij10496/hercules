@@ -61,4 +61,35 @@ Apart from contributing LoC, you can help us by discussing some of the techincal
 
 ### Local environment setup
 
+You can develop on and test hercules using Docker. Make sure that docker and
+docker-compose are installed on your computer before following the steps below.
+
+1. Start the app and DB containers
+
+    ```sh
+    cd dev-env
+    docker-compose up --build -d
+    ```
+
+2. Restore the initial data to your DB container's database
+
+    ```sh
+    cd dev-env/init-data
+    ./restore_init_data.sh
+    ```
+
+Now, you should be able to access the API. You can test this by visiting:
+`http://localhost:8070/api/v1/course/timetable/ME30005` or running:
+
+```sh
+curl http://localhost:8070/api/v1/course/timetable/ME30005
+```
+
+This setup uses [fresh](https://github.com/pilu/fresh) to rebuild the server
+binary and restart the server whenever files are edited on the host machine. So,
+you can edit the files on your host machine and save them. Wait for a while, and
+your new code will be built and served at the same location.
+
+You can look at the app logs using `docker logs -f devenv_hercules_api_1`.
+
 In order to know the requirements and setting up the project and database locally, visit [Development Workflow wiki](https://github.com/kshitij10496/hercules/wiki/Development-Workflow)
